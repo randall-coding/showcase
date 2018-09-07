@@ -6,15 +6,42 @@
   </head>
 
   <body>
-    <h1> Randall Coding: brief portfolio  </h1>
+    <h1> Randall Coding: brief portfolio  </h1>  <%= link_to '(github)' , 'https://github.com/randall-coding' %>
 
     <br>
     <br>
     <br>
+    <h2> Ruby on Rails projects </h2>
+    <div class='div_main'>
+      <ul>
+        <li>
+          <div class="div_description">
+            <h3> <%= link_to 'Elite Bank website', 'https://elitebank-randallcoding.herokuapp.com' %> </h3>  <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %>
+            <br>
+            <p> Simple RoR project based on a banking website. Makes use of REST framework, uses a Postgres database, has admin account, CRUD model implemented, and deployed on Heroku<p>
+            <p> Get started by logging in as "admin" with password "p".  View customer profiles, edit customers or delete </p>
+            <p> Log in as an individual customer using their first name as username and password as "p" </p>
+          </div>
+        </li>
+      </ul>
+        <div class='div_right'>
+        <%= image_tag 'cartoon.png', alt: 'profile picture',class: 'profile' %>
+        <p>  Hi all.  Ruby on Rails enthusiast, with background in scientific research.
+             I am a native born US citizen with a passion for web design and programming.
+        </p>
+        <br>
+        Overview of my skills:
+        <br><br> Experience building RoR (Ruby on Rails) web apps.  See my git repository below.
+        <br><br> Implementation of Stripe payment processing in RoR apps.
+        <br><br> Experience using MATLAB and C++ for computation of data sets.
+        <br><br> Bachelors in Chemistry University of California in Merced.
+        <br><br> Graduate work in computer science performed at Columbus State University
+        <br><br> Experience performing scientific research, reading research papers, and writing technical
+              papers </li>
+      </ul>
 
-    <h2> Elite Bank website </h2>
-    <p>    </p>
-
+      </div>
+    </div>
   </body>
 
 </html>
