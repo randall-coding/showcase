@@ -6,13 +6,13 @@
   </head>
 
   <body>
-    <h1> Randall Coding: brief portfolio  </h1>  <%= link_to '(github)' , 'https://github.com/randall-coding' %>
 
-    <br>
-    <br>
-    <br>
-    <h2> Ruby on Rails projects </h2>
+    <!-- <h1> Randall Coding: brief portfolio  </h1>  <%= link_to '(github)' , 'https://github.com/randall-coding' %> -->
+
+
     <div class='div_main'>
+      <%= image_tag 'randall_logo4.png', alt:'Randall Coding', id:'logo' %>
+      <h2> Ruby on Rails projects </h2>
       <ul>
         <li>
           <div class="div_description">
@@ -21,8 +21,8 @@
             <p> Simple RoR project based on a banking website. Makes use of REST framework,Postgres database, admin account / authorization, CRUD model, and is deployed on Heroku.
                <b> <i> Get started by logging in as "admin" with password "p". </b> </i> <p>
             <%= link_to image_tag('elite2.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
-            <p> Once logged in, view customer profiles, edit customers or delete </p>
-            <p> Log in as an individual customer using their first name as username and password simply "p" </p>
+            <p> Once logged in, view customer profiles, edit customers or delete. </p>
+            <p> Log in as an individual customer using their first name as username and password simply "p". </p>
           </div>
         </li>
       </ul>
@@ -32,7 +32,7 @@
              I am a native born US citizen with a passion for web design and programming.
         </p>
         <br>
-        Overview of my skills:
+        <p> Overview of my skills:
         <br><br> Experience building RoR (Ruby on Rails) web apps.  See my git repository below.
         <br><br> Implementation of Stripe payment processing in RoR apps.
         <br><br> Experience using MATLAB and C++ for computation of data sets.
@@ -40,6 +40,7 @@
         <br><br> Graduate work in computer science performed at Columbus State University
         <br><br> Experience performing scientific research, reading research papers, and writing technical
               papers </li>
+        </p>      
       </ul>
 
       </div>
