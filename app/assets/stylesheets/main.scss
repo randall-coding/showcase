@@ -18,7 +18,7 @@ a {
 }
 
 body {
-  background-image: image_url('blue_waves35.jpg');
+  //background-image: image_url('blue_waves35.jpg');
   //background-image: image_url('matrix_white20.png') ;
   background-position: center;
   background-size:cover;
@@ -80,5 +80,7 @@ ul {
 .profile {
   width:200px;
   border:6px solid;
-  margin-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
 }
