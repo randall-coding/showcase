@@ -13,27 +13,45 @@
     <div class='div_main'>
       <%= image_tag 'randall_logo4.png', alt:'Randall Coding', id:'logo' %>
       <h2> Ruby on Rails projects </h2>
+      <div class="div_description">
       <ul>
         <li>
-          <div class="div_description">
-            <h3> <%= link_to 'Elite Bank website', 'https://elitebank-randallcoding.herokuapp.com' %> </h3>
+            <h3> <%= link_to 'Elite Bank website', 'https://elitebank-randallcoding.herokuapp.com', class: "elite" %> </h3>
                 <!-- <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %> -->
             <br>
             <p> Simple RoR project based on a banking website. Makes use of REST framework,Postgres database, admin account / authorization, CRUD model, and is deployed on Heroku.
-               <i> Get started by logging in as "admin" with password "p".</i> <p>
+                <i> Get started by logging in as "admin" with password "p".</i> <p>
             <%= link_to image_tag('elite2.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
             <p> Once logged in, view customer profiles, edit customers or delete.
             <br> Log in as an individual customer using their first name as username and password simply "p". </p>
-          </div>
+
         </li>
-      </ul>
-        <div class='div_right'>
+
+        <br>
+        <hr></hr>
+        <br><br><br>
+
+        <li>
+          <h3> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper"%> </h3>
+              <!-- <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %> -->
+          <br>
+          <p> Web scraper that obtains names of items and prices from Amazon.  Uses search query box.  Number of pages
+            of reuslts can be specified to obtain more items displayed in our list.
+              <i> Get started by typing in a search term and clicking the submit query button</i> <p>
+          <%= link_to image_tag('scraper.png' , class: 'portfolio'), 'https://scraper-randallcoding.herokuapp.com' %>
+          <p>
+          <br>  </p>
+        </li>
+        </ul>
+      </div>
+
+      <div class='div_right'>
         <%= image_tag 'cartoon.png', alt: 'profile picture',class: 'profile' %>
         <p>  Hi all.  Ruby on Rails enthusiast, with background in scientific research.
              I am a native born US citizen with a passion for web design and programming.
         </p>
         <p> <b> <center> Overview of my skills: </center> </b>
-        <br> Experience building RoR (Ruby on Rails) web apps.  See my git repository below.
+        <br> Experience building RoR (Ruby on Rails) web apps.  See my <%= link_to 'git repository','https://github.com/Randall-Coding' %>.
         <br><br> Implementation of Stripe payment processing in RoR apps.
         <br><br> Experience using MATLAB and C++ for computation of data sets.
         <br><br> Bachelors in Chemistry University of California in Merced.
