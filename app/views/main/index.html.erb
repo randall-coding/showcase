@@ -14,34 +14,35 @@
       <%= image_tag 'randall_logo4.png', alt:'Randall Coding', id:'logo' %>
       <h2> Ruby on Rails projects </h2>
       <div class="div_description">
-      <ul>
-        <li>
-            <h3> <%= link_to 'Elite Bank website', 'https://elitebank-randallcoding.herokuapp.com', class: "elite" %> </h3>
+        <ul>
+          <li>
+              <h3> <%= link_to 'Elite Bank website', 'https://elitebank-randallcoding.herokuapp.com', class: "elite" %> </h3>
+                  <!-- <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %> -->
+              <br>
+              <p> Simple RoR project based on a banking website. Makes use of REST framework,Postgres database, admin account / authorization, CRUD model, and is deployed on Heroku.
+                  <i> Get started by logging in as "admin" with password "p".</i> <p>
+              <%= link_to image_tag('elite2.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
+              <p> Once logged in, view customer profiles, edit customers or delete.
+              <br> Log in as an individual customer using their first name as username and password simply "p". </p>
+
+          </li>
+
+
+          <hr></hr>
+          <br><br>
+
+          <li>
+            <h3> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper"%> </h3>
                 <!-- <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %> -->
             <br>
-            <p> Simple RoR project based on a banking website. Makes use of REST framework,Postgres database, admin account / authorization, CRUD model, and is deployed on Heroku.
-                <i> Get started by logging in as "admin" with password "p".</i> <p>
-            <%= link_to image_tag('elite2.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
-            <p> Once logged in, view customer profiles, edit customers or delete.
-            <br> Log in as an individual customer using their first name as username and password simply "p". </p>
-
-        </li>
-
-        <br>
-        <hr></hr>
-        <br><br><br>
-
-        <li>
-          <h3> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper"%> </h3>
-              <!-- <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %> -->
+            <p> Web scraper that obtains names of items and prices from Amazon.  Uses search query box.  Number of pages
+              of reuslts can be specified to obtain more items displayed in the list.
+                <i> Get started by typing in a search term and clicking the submit query button</i> <p>
+            <%= link_to image_tag('scraper.png' , class: 'portfolio'), 'https://scraper-randallcoding.herokuapp.com' %>
+            <p>
+            </p>
+          </li>
           <br>
-          <p> Web scraper that obtains names of items and prices from Amazon.  Uses search query box.  Number of pages
-            of reuslts can be specified to obtain more items displayed in our list.
-              <i> Get started by typing in a search term and clicking the submit query button</i> <p>
-          <%= link_to image_tag('scraper.png' , class: 'portfolio'), 'https://scraper-randallcoding.herokuapp.com' %>
-          <p>
-          <br>  </p>
-        </li>
         </ul>
       </div>
 
