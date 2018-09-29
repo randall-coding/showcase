@@ -11,6 +11,15 @@ margin-bottom: 0px;
 align-self: center;
 }
 
+#moustache{
+  height:50px;
+  width:50px;
+  position:relative;
+  visibility:hidden;
+  left:85px;
+  top:105px;
+  z-index:3;
+}
 
 a {
   text-decoration: none;
@@ -57,17 +66,34 @@ ul {
   list-style:none
 }
 
-
-
+.center{
+  margin-right: auto;
+  margin-left: auto;
+  display:block;
+}
 
 .div_description {
   width: 900px;
   float:left;
 }
 
+.div_profile{
+  width:220px;
+  height:210px;
+  //border: 1px solid orange;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  position:relative;
+  top: 0;
+  left: 0;
+  overflow:hidden;
+}
+
 .div_right {
   float:right;
   width: 370px;
+  overflow:hidden;
 }
 
 .div_main{
@@ -89,5 +115,8 @@ ul {
   border:6px solid;
   margin-left: auto;
   margin-right: auto;
-  display:block;
+  position:relative;
+  top:-55px;
+  left:5px;
+  z-index:1;
 }

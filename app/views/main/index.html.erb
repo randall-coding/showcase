@@ -19,12 +19,11 @@
               <h3> <%= link_to 'Elite Bank website', 'https://elitebank-randallcoding.herokuapp.com', class: "elite" %> </h3>
                   <!-- <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %> -->
               <br>
-              <p> Simple RoR project based on a banking website. Makes use of REST framework,Postgres database, admin account / authorization, CRUD model, and is deployed on Heroku.
+              <p> Simple RoR project based on a banking website. Features Postgres database, admin account / page authorization, and is deployed on Heroku.
                   <i> Get started by logging in as "admin" with password "p".</i> <p>
               <%= link_to image_tag('elite2.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
-              <p> Once logged in, view customer profiles, edit customers or delete.
-              <br> Log in as an individual customer using their first name as username and password simply "p". </p>
-
+              <p> Once logged in, view customer profiles, edit customers or delete them.
+              <br> Log in as an individual customer using their first name as username and "p" as their password. </p>
           </li>
 
 
@@ -46,8 +45,15 @@
         </ul>
       </div>
 
-      <div class='div_right'>
-        <%= image_tag 'cartoon.png', alt: 'profile picture',class: 'profile' %>
+      <div class='div_right' id='test'>
+        <button id='btn-profile' class='center'> Toggle Moustache  </button>
+        <!-- Debug css doesn't load in button
+            <%= button_to 'Toggle me' , class: "center", style: 'margin-left:200px;height:150px'%>
+        -->
+        <div id='dummy' class='div_profile'>
+          <%= image_tag 'moustache.png' , id:'moustache' %>
+          <%= image_tag 'cartoon.png', alt: 'profile picture',class: 'profile', id:'img' %>
+        </div>
         <p>  Hi all.  Ruby on Rails enthusiast, with background in scientific research.
              I am a native born US citizen with a passion for web design and programming.
         </p>
