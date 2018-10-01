@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#btn-profile{
+    margin-bottom:5px;
+}
+
 #logo {
  //align-self: center;
 margin-left: auto;
@@ -27,7 +31,7 @@ a {
 }
 
 a.scraper{
-  color:magenta;
+  color:red;
   font-style:italic;
 }
 
