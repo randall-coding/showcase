@@ -1,20 +1,19 @@
 <!DOCTYPE HTML>
 
 
-<html>
+<html lang="en">
   <head>
     <%= favicon_link_tag 'cartoon.ico' %>
   </head>
 
   <body>
-
     <!-- <h1> Randall Coding: brief portfolio  </h1>  <%= link_to '(github)' , 'https://github.com/randall-coding' %> -->
-
 
     <div class='div_main'>
       <%= image_tag 'randall_logo4.png', alt:'Randall Coding', id:'logo' %>
       <h2> Ruby on Rails projects </h2>
       <div class="div_description">
+      <main>
         <ul>
           <li>
               <h3> <%= link_to 'Elite Bank website', 'https://elitebank-randallcoding.herokuapp.com', class: "elite" %> </h3>
@@ -51,10 +50,12 @@
           </li>
           <br>
         </ul>
-      </div>
+       </main>
+      </div> <!-- div_left -->
+
 
       <div class='div_right' id='test'>
-        <button id='btn-profile' class='center'> Toggle Moustache  </button>
+        <button id='btn-profile' class='center' title='moustache'> Toggle Moustache  </button>
         <!-- Debug css doesn't load in button
             <%= button_to 'Toggle me' , class: "center", style: 'margin-left:200px;height:150px'%>
         -->
@@ -78,6 +79,7 @@
 
       </div>
     </div>
+
   </body>
 
 </html>

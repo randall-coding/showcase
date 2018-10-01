@@ -2,6 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+#this copy has the fade in / fade out slideshow function
+
 $(document).on "turbolinks:load", ->
   console.log('Javascript is running')
   time = 4000
@@ -20,34 +22,24 @@ $(document).on "turbolinks:load", ->
 
   ##functions
   nextSlide = (imgs) ->
-    #debug console.log('at first i is ' + i.toString())
-    #debug console.log("an img")
-
+    #console.log('at first i is ' + i.toString())
     if( i < (imgs.length)-1 )
-      $(imgs[i]).animate(
-        {left:"-910px"}
-        ->
-          $(imgs[i]).css('display','none').css('left','0')
-          $(imgs[i+1]).css('left','910px').css('display','inline')
-          $(imgs[i+1]).animate({left:"0px"})
-          increment()
-      )
+      $(imgs[i]).fadeOut()
+      $(imgs[i+1]).fadeIn()
+      #debug console.log("an img")
     else
-      $(imgs[i]).animate(
-        {left:"-910px"}
-        ->
-          $(imgs[i]).css('display','none').css('left','0')
-          $(imgs[0]).css('left','910px').css('display','inline')
-          $(imgs[0]).animate({left:"0px"})
-          increment()
-      )
-
-
-  increment = ->
+      $(imgs[i]).fadeOut()
+      $(imgs[0]).fadeIn()
     if (i < (imgs.length)-1 )
       i+=1
+      #debug console.log("incremented, imgs.length is " + (imgs.length))
+      #debug console.log('and i is ' + i.toString())
     else
       i=0
+      #debug console.log "i reset"
+      #debug console.log('and i is ' + i.toString())
+      #debug console.log("and imgs.length is " + (imgs.length))
+
 
 #leaving coffee script
 `function toggleMoustache(){
