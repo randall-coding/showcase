@@ -15,7 +15,10 @@ $(document).on "turbolinks:load", ->
 
   #moustache toggle
   $('#btn-profile').click ->
-    toggleMoustache()
+    if confirm('Are you sure?')
+      toggleMoustache()
+    else
+      return
     #debug doesn't work, odd $('#slideshow1').children( ".portfolio").css('visibility','hidden')
 
   ##functions
