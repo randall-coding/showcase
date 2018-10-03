@@ -19,7 +19,7 @@
               <h3> <%= link_to 'Elite Bank website', 'https://elitebank-randallcoding.herokuapp.com', class: "elite" %> </h3>
                   <!-- <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %> -->
               <br>
-              <p> Simple RoR project based on a banking website. Features Postgres database with user data, an admin account / page authorization, and deployed on Heroku.
+              <p> Simple RoR project based on a banking website. Features Postgres database for user data, an admin account / page authorization, and deployed on Heroku.
                   <i> Get started by logging in as "admin" with password "p".</i> <p>
               <div class="slideshow" id="slideshow1">
                 <%= link_to image_tag('elitebank1.png' , class: 'portfolio_first'), 'https://elitebank-randallcoding.herokuapp.com/' %>
@@ -55,7 +55,6 @@
 
 
       <div class='div_right' id='test'>
-        <button id='btn-profile' class='center' title='moustache'> Toggle Moustache  </button>
         <!-- Debug css doesn't load in button
             <%= button_to 'Toggle me' , class: "center", style: 'margin-left:200px;height:150px'%>
         -->
@@ -63,9 +62,19 @@
           <%= image_tag 'moustache.png' , id:'moustache' %>
           <%= image_tag 'cartoon.png', alt: 'profile picture',class: 'profile', id:'img' %>
         </div>
+        <button id='btn-profile' class='center' title='moustache' data-confirm="Are you sure?"> Toggle Moustache  </button>
         <p>  Hi all.  Ruby on Rails enthusiast, with background in scientific research.
              I am a native born US citizen with a passion for web design and programming.
         </p>
+        <address class="center">
+        <table class="contact_menu">
+          <tr>  <td> <%= link_to 'GitHub', 'https://www.github.com/randall-coding' %> </td> </tr>
+          <tr> <td> <%= mail_to "randall_abi@outlook.com", 'Contact' %> </td>  </tr>
+          <tr> <td> <%= link_to 'Paypal', "https://www.paypal.com" %> </td>  </tr>
+        </table>
+        </address>
+
+        <br><br>
         <p> <b> <center> Overview of my skills: </center> </b>
         <br> Experience building RoR (Ruby on Rails) web apps.  See my <%= link_to 'git repository','https://github.com/Randall-Coding' %>.
         <br><br> Implementation of Stripe payment processing in RoR apps.

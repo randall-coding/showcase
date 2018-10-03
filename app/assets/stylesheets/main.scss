@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #btn-profile{
-    margin-bottom:5px;
+    margin-top:5px;
 }
 
 #logo {
@@ -78,6 +78,45 @@ ul {
   margin-right: auto;
   margin-left: auto;
   display:block;
+}
+
+.contact_menu{
+  margin-right: auto;
+  margin-left: auto;
+  display:block;
+
+  background-color:#E6BF83;
+  width:200px;
+  height:auto;
+  font-size:20px;
+  font-weight:bold;
+  //text-shadow:1px 1px 1px black;
+  overflow:hidden;
+
+  border:4px brown solid;
+  border-collapse:collapse;
+
+  & a:link{
+    color:black;
+    padding-left:55px;
+    padding-right:55px;
+  }
+
+  & a:visited{
+    color:black;
+    padding-left:55px;
+    padding-right:55px;
+  }
+
+  & tr{
+    border-bottom:4px brown solid;
+  }
+
+  & td {
+    width:auto;
+    height:auto;
+  }
+
 }
 
 .div_description {
