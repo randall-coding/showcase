@@ -9,91 +9,97 @@
   <body>
     <!-- <h1> Randall Coding: brief portfolio  </h1>  <%= link_to '(github)' , 'https://github.com/randall-coding' %> -->
 
-    <div class='div_main'>
-      <%= image_tag 'randall_logo4.png', alt:'Randall Coding', id:'logo' %>
-      <div class="h1"> <h1> Showcase of my work below </h1> </div>
+    <div class='page'>
+      <div class="header">
+        <%= image_tag 'randall_logo4.png', alt:'Randall Coding', id:'logo' %>
+        <div class="h1"> <h1> Showcase of my work below </h1>
+        </div>
+      </div>
       <br><br>
-      <div class="div_description">
-      <main>
-        <h2> Ruby on Rails projects </h2>
-        <ul>
-          <li>
-              <h3> <%= link_to 'Elite Bank website', 'https://elitebank-randallcoding.herokuapp.com', class: "elite" %> </h3>
+      <div class="main">
+        <div class="left">
+        <main>
+          <h2> Ruby on Rails projects </h2>
+          <ul>
+            <li>
+                <h3> <%= link_to 'Elite Bank website', 'https://elitebank-randallcoding.herokuapp.com', class: "elite" %> </h3>
+                    <!-- <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %> -->
+                <br>
+                <p> Simple RoR project based on a banking website. Features Postgres database for user data, an admin account / page authorization, and deployed on Heroku.
+                    <i> Get started by logging in as "admin" with password "p".</i> <p>
+                <p> Once logged in, view customer profiles, edit customers or delete them.
+                    Log in as an individual customer using their first name as username and "p" as their password. </p>
+
+                <div class="slideshow" id="slideshow1">
+                  <%= link_to image_tag('elitebank1.png' , class: 'portfolio_first'), 'https://elitebank-randallcoding.herokuapp.com/' %>
+                  <%= link_to image_tag('elitebank2.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
+                  <%= link_to image_tag('elitebank3.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
+                  <%= link_to image_tag('elitebank4.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
+                  <%= link_to image_tag('elitebank5.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
+
+                </div>
+          </li>
+
+
+            <hr></hr>
+            <br><br>
+
+            <li>
+              <h3 id="last"> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper"%> </h3>
                   <!-- <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %> -->
               <br>
-              <p> Simple RoR project based on a banking website. Features Postgres database for user data, an admin account / page authorization, and deployed on Heroku.
-                  <i> Get started by logging in as "admin" with password "p".</i> <p>
-              <div class="slideshow" id="slideshow1">
-                <%= link_to image_tag('elitebank1.png' , class: 'portfolio_first'), 'https://elitebank-randallcoding.herokuapp.com/' %>
-                <%= link_to image_tag('elitebank2.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
-                <%= link_to image_tag('elitebank3.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
-                <%= link_to image_tag('elitebank4.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
-                <%= link_to image_tag('elitebank5.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
-
+              <p> Web scraper that obtains names of items and prices from Amazon.  Uses search query box.  Number of pages
+                of reuslts can be specified to obtain more items displayed in the list.
+                  <i> Get started by typing in a search term and clicking the submit query button.</i> <p>
+              <div id="slideshow2" class="slideshow">
+                <%= link_to image_tag('scraper.png' , class: 'portfolio_first'), 'https://scraper-randallcoding.herokuapp.com' %>
               </div>
-              <p> Once logged in, view customer profiles, edit customers or delete them.
-              <br> Log in as an individual customer using their first name as username and "p" as their password. </p>
-          </li>
-
-
-          <hr></hr>
-          <br><br>
-
-          <li>
-            <h3 id="last"> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper"%> </h3>
-                <!-- <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %> -->
+              <p>
+              </p>
+            </li>
             <br>
-            <p> Web scraper that obtains names of items and prices from Amazon.  Uses search query box.  Number of pages
-              of reuslts can be specified to obtain more items displayed in the list.
-                <i> Get started by typing in a search term and clicking the submit query button.</i> <p>
-            <div id="slideshow2" class="slideshow">
-              <%= link_to image_tag('scraper.png' , class: 'portfolio_first'), 'https://scraper-randallcoding.herokuapp.com' %>
-            </div>
-            <p>
-            </p>
-          </li>
-          <br>
-        </ul>
-       </main>
-      </div> <!-- div_left -->
+          </ul>
+         </main>
+        </div> <!-- div_left -->
 
 
-      <div class='div_right' id='test'>
-        <!-- Debug css doesn't load in button
-            <%= button_to 'Toggle me' , class: "center", style: 'margin-left:200px;height:150px'%>
-        -->
-        <div id='dummy' class='div_profile'>
-          <%= image_tag 'moustache.png' , id:'moustache' %>
-          <%= image_tag 'cartoon.png', alt: 'profile picture',class: 'profile', id:'img' %>
+        <div class='right' id='test'>
+          <!-- Debug css doesn't load in button
+              <%= button_to 'Toggle me' , class: "center", style: 'margin-left:200px;height:150px'%>
+          -->
+          <div id='dummy' class='profile'>
+            <%= image_tag 'moustache.png' , id:'moustache' %>
+            <%= image_tag 'cartoon.png', alt: 'profile picture',class: 'profile', id:'img' %>
+          </div>
+          <button id='btn-profile' class='center' title='moustache'> Toggle Moustache  </button>
+          <p>  Hi all.  Ruby on Rails enthusiast, with background in scientific research.
+               I am a native born US citizen with a passion for web design and programming.
+          </p>
+          <br><br>
+          <address class="center">
+          <table class="contact_menu">
+            <tr>  <td> <%= link_to 'GitHub', 'https://www.github.com/randall-coding' %> </td> </tr>
+            <tr> <td> <%= mail_to "randall_abi@outlook.com", 'Contact' %> </td>  </tr>
+            <tr> <td> <%= link_to 'Paypal', "https://www.paypal.me/randallcoding" %> </td>  </tr>
+            <tr style='border-bottom:0px none;'> <td> <%= link_to 'Lastest', "#last" %> </td>  </tr>
+          </table>
+          </address>
+
+          <br><br>
+          <p> <b> <center> Overview of my skills: </center> </b>
+          <br> Experience building RoR (Ruby on Rails) web apps.  See my <%= link_to 'git repository','https://github.com/Randall-Coding' %>.
+          <br><br> Postgres database implementation on Heroku servers
+          <br><br> JQuery, AJAX and Coffeescript
+          <br><br> MATLAB and C++ for computation of data sets
+          <br><br> Web scrapers using Ruby regular
+          <br><br> User databases, secure logins and admin authorization
+          <br><br> Implementation of Stripe payment processing in RoR apps
+          <br><br> Graduate work in computer science performed at Columbus State University
+
+          </p>
+
+
         </div>
-        <button id='btn-profile' class='center' title='moustache'> Toggle Moustache  </button>
-        <p>  Hi all.  Ruby on Rails enthusiast, with background in scientific research.
-             I am a native born US citizen with a passion for web design and programming.
-        </p>
-        <br><br>
-        <address class="center">
-        <table class="contact_menu">
-          <tr>  <td> <%= link_to 'GitHub', 'https://www.github.com/randall-coding' %> </td> </tr>
-          <tr> <td> <%= mail_to "randall_abi@outlook.com", 'Contact' %> </td>  </tr>
-          <tr> <td> <%= link_to 'Paypal', "https://www.paypal.me/randallcoding" %> </td>  </tr>
-          <tr style='border-bottom:0px none;'> <td> <%= link_to 'Lastest', "#last" %> </td>  </tr>
-        </table>
-        </address>
-
-        <br><br>
-        <p> <b> <center> Overview of my skills: </center> </b>
-        <br> Experience building RoR (Ruby on Rails) web apps.  See my <%= link_to 'git repository','https://github.com/Randall-Coding' %>.
-        <br><br> Postgres database implementation on Heroku servers
-        <br><br> JQuery, AJAX and Coffeescript
-        <br><br> MATLAB and C++ for computation of data sets
-        <br><br> Web scrapers using Ruby regular
-        <br><br> User databases, secure logins and admin authorization
-        <br><br> Implementation of Stripe payment processing in RoR apps
-        <br><br> Graduate work in computer science performed at Columbus State University
-
-        </p>
-
-
       </div>
     </div>
 

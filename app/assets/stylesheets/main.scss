@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
-  margin: 0;
-  padding: 0;
-}
 
 #btn-profile{
     margin-top:5px;
@@ -18,12 +14,12 @@ body{
 }
 
 #logo {
- //align-self: center;
-margin-left: auto;
-margin-right: auto;
-display:block;
-margin-bottom: 0px;
-align-self: center;
+   //align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  margin-bottom: 0px;
+  align-self: center;
 }
 
 #moustache{
@@ -31,8 +27,8 @@ align-self: center;
   width:50px;
   position:absolute;
   visibility:hidden;
-  left:80px;
-  top:105px;
+  left:89px;
+  top:112px;
   z-index:3;
 }
 
@@ -47,17 +43,64 @@ a.scraper{
 }
 
 body {
-  //background-image: image_url('blue_waves35.jpg');
   //background-image: image_url('matrix_white20.png') ;
   background-position: center;
   background-size:cover;
   background-color:#ffffcc;
   text-shadow: 0px 0px 0px red;
-  font-size: 20px;
+  font-size: 1.3em;
+  margin: 0;
+  padding: 0;
 }
 
 div .h1{
    text-align: center;
+}
+
+div .header{
+  background-color: #E6BF83;
+}
+
+div .page{
+  width: 1400px;
+  overflow:hidden;
+  margin-top: 0px;
+  background-color: green;
+}
+
+div .main{
+  width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  overflow:hidden;
+  //background-color: purple;
+}
+
+div .left {
+  width: 1100px;
+  float:left;
+  padding-left: 20px;
+}
+
+div .profile{
+  width:220px;
+  height:210px;
+  //border: 1px solid orange;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  position:relative;
+  top: 0;
+  left: 0;
+  overflow:hidden;
+}
+
+div .right {
+  float:right;
+  width: 470px;
+  overflow:hidden;
+  padding-right:50px;
 }
 
 h1{
@@ -153,39 +196,10 @@ ul {
 
 }
 
-.div_description {
-  width: 900px;
-  float:left;
-}
-
-.div_profile{
-  width:220px;
-  height:210px;
-  //border: 1px solid orange;
-  margin-left: auto;
-  margin-right: auto;
-  display:block;
-  position:relative;
-  top: 0;
-  left: 0;
-  overflow:hidden;
-}
-
-.div_right {
-  float:right;
-  width: 370px;
-  overflow:hidden;
-}
-
-.div_main{
-  width: 1400px;
-  overflow:hidden;
-  margin-top: 0px;
-}
 
 div .slideshow{
-  width: 900px;
-  height: 360px;
+  width: 1100px;
+  height: 560px;
   overflow:hidden;
   border: 6px solid;
   border-radius: 5px;
@@ -197,8 +211,8 @@ div .slideshow{
 }
 
 .portfolio{
-  width: 900px ;//890px;
-  height: 360px;
+  width: 1100px;
+  height: 560px;
   margin-left: auto;
   margin-right: auto;
   //border: 6px solid;
@@ -209,8 +223,8 @@ div .slideshow{
 }
 
 .portfolio_first{
-  width: 900px;
-  height: 360px;
+  width: 1100px;
+  height: 560px;
   margin-left: auto;
   margin-right: auto;
   //border: 6px solid;
