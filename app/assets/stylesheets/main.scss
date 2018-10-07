@@ -84,8 +84,8 @@ div .left {
 }
 
 div .profile{
-  width:220px;
-  height:210px;
+  width:270px;
+  height:260px;
   //border: 1px solid orange;
   margin-left: auto;
   margin-right: auto;
@@ -100,7 +100,7 @@ div .right {
   float:right;
   width: 470px;
   overflow:hidden;
-  padding-right:50px;
+  padding-right:90px;
 }
 
 h1{
@@ -152,9 +152,9 @@ ul {
   text-align:center;
 
   background-color:#E6BF83;
-  width:200px;
+  width:350px;
   height:auto;
-  font-size:20px;
+  font-size:30px;
   font-weight:bold;
   //text-shadow:1px 1px 1px black;
   overflow:hidden;
@@ -164,23 +164,18 @@ ul {
 
   & a:link{
     color:black;
-    padding-left:55px;
-    padding-right:90px;
+    padding-left:105px;
+    padding-right:290px;
   }
 
   & a:visited{
     color:black;
-    padding-left:55px;
-    padding-right:90px;
+    padding-left:105px;
+    padding-right:290px;
   }
-
-  & a:hover{
-    //font-size:22px;
-    //color:#9b111e;
-  }
-
 
   & tr{
+    width:350px;
     border-bottom:4px brown solid;
   }
 
@@ -235,7 +230,8 @@ div .slideshow{
 }
 
 .profile {
-  width:200px;
+  width:270px;
+  height:260px;
   border:6px solid;
   margin-left: auto;
   margin-right: auto;
