@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body{
+  margin: 0;
+  padding: 0;
+}
+
 #btn-profile{
     margin-top:5px;
     padding-left: 10px;
@@ -23,9 +28,9 @@ align-self: center;
 #moustache{
   height:50px;
   width:50px;
-  position:relative;
+  position:absolute;
   visibility:hidden;
-  left:85px;
+  left:80px;
   top:105px;
   z-index:3;
 }
@@ -176,6 +181,9 @@ div .slideshow{
   width: 900px;
   height: 360px;
   overflow:hidden;
+  border: 6px solid;
+  border-radius: 5px;
+  background-color:rgba(230,191,131,0.1);
 }
 
 .inactive{
@@ -183,11 +191,11 @@ div .slideshow{
 }
 
 .portfolio{
-  width: 890px;
-  height: 350px;
+  width: 900px ;//890px;
+  height: 360px;
   margin-left: auto;
   margin-right: auto;
-  border: 6px solid;
+  //border: 6px solid;
   display: none;
   position:relative;
   top:0;
@@ -195,11 +203,11 @@ div .slideshow{
 }
 
 .portfolio_first{
-  width: 890px;
-  height: 350px;
+  width: 900px;
+  height: 360px;
   margin-left: auto;
   margin-right: auto;
-  border: 6px solid;
+  //border: 6px solid;
   position:relative;
   top:0;
   left:0;
@@ -211,13 +219,9 @@ div .slideshow{
   border:6px solid;
   margin-left: auto;
   margin-right: auto;
-  position:relative;
-  top:-55px;
-  left:5px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  border-radius:10px;
   z-index:1;
-}
-
-.slideshow{
-  //border: 6px solid;
-
 }
