@@ -131,13 +131,18 @@ ul {
   }
 
   & a:hover{
-    font-size:22px;
-    color:#9b111e;
+    //font-size:22px;
+    //color:#9b111e;
   }
 
 
   & tr{
     border-bottom:4px brown solid;
+  }
+
+  & tr:hover{
+    background-color: silver;
+
   }
 
   & td {
