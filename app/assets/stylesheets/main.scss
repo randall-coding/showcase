@@ -23,12 +23,12 @@
 }
 
 #moustache{
-  height:50px;
-  width:50px;
+  height:100px;
+  width:100px;
   position:absolute;
   visibility:hidden;
   left:89px;
-  top:112px;
+  top:120px;
   z-index:3;
 }
 
@@ -62,10 +62,7 @@ div .header{
 }
 
 div .page{
-  width: 1400px;
-  overflow:hidden;
-  margin-top: 0px;
-  background-color: green;
+  //works better as expansive div anyway.  DEBUG could not modify width here
 }
 
 div .main{
