@@ -144,9 +144,9 @@ ul {
 }
 
 .contact_menu{
+  padding: 0;
   margin-right: auto;
   margin-left: auto;
-  display:block;
   text-align:center;
 
   background-color:#E6BF83;
@@ -156,35 +156,27 @@ ul {
   font-weight:bold;
   //text-shadow:1px 1px 1px black;
   overflow:hidden;
-
   border:4px brown solid;
   border-collapse:collapse;
 
   & a:link{
     color:black;
-    padding-left:105px;
-    padding-right:290px;
   }
 
   & a:visited{
     color:black;
-    padding-left:105px;
-    padding-right:290px;
   }
 
   & tr{
-    width:350px;
+    margin:0;
     border-bottom:4px brown solid;
   }
 
   & tr:hover{
     background-color: silver;
-
   }
 
   & td {
-    width:auto;
-    height:auto;
   }
 
 }
