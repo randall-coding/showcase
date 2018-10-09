@@ -10,7 +10,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight:bold;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 10px;
 }
 
@@ -49,25 +49,25 @@ body {
   background-size:cover;
   background-color:#ffffcc;
   text-shadow: 0px 0px 0px red;
-  font-size: 1.3em;
+  font-size: 90%;
   margin: 0;
   padding: 0;
 }
 
-div .h1{
+div.h1{
    text-align: center;
 }
 
-div .header{
+div.header{
   background-color: #E6BF83;
 }
 
-div .page{
+div.page{
   //works better as expansive div anyway.  DEBUG could not modify width here
 }
 
-div .main{
-  width: 2000px;
+div.main{
+  width: 1300px;
   margin-left: auto;
   margin-right: auto;
   position:relative;
@@ -75,15 +75,15 @@ div .main{
   //background-color: purple;
 }
 
-div .left {
-  width: 1100px;
+div.left {
+  width: 700px;
   float:left;
   padding-left: 20px;
 }
 
-div .profile{
-  width:270px;
-  height:260px;
+div.profile{
+  width:175px;
+  height:175px;
   //border: 1px solid orange;
   margin-left: auto;
   margin-right: auto;
@@ -96,7 +96,7 @@ div .profile{
 
 div .right {
   float:right;
-  width: 470px;
+  width: 300px;
   overflow:hidden;
   padding-right:90px;
 }
@@ -150,11 +150,11 @@ ul {
   text-align:center;
 
   background-color:#E6BF83;
-  width:350px;
+  width:220px;
   height:auto;
-  font-size:30px;
+  font-size:1.5em;
   font-weight:bold;
-  //text-shadow:1px 1px 1px black;
+  //note don't display as block
   overflow:hidden;
   border:4px brown solid;
   border-collapse:collapse;
@@ -182,9 +182,9 @@ ul {
 }
 
 
-div .slideshow{
-  width: 1100px;
-  height: 560px;
+div.slideshow{
+  width: 700px;
+  height: 400px;
   overflow:hidden;
   border: 6px solid;
   border-radius: 5px;
@@ -196,8 +196,8 @@ div .slideshow{
 }
 
 .portfolio{
-  width: 1100px;
-  height: 560px;
+  width: 700px;
+
   margin-left: auto;
   margin-right: auto;
   //border: 6px solid;
@@ -208,8 +208,8 @@ div .slideshow{
 }
 
 .portfolio_first{
-  width: 1100px;
-  height: 560px;
+  width: 700px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   //border: 6px solid;
@@ -220,8 +220,8 @@ div .slideshow{
 }
 
 .profile {
-  width:270px;
-  height:260px;
+  width:175px;
+  height:175px;
   border:6px solid;
   margin-left: auto;
   margin-right: auto;
