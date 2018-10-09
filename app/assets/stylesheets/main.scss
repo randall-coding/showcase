@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$left_width: 620px;
+$profile_dim: 130px;
 
 #btn-profile{
     margin-top:5px;
@@ -10,7 +12,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight:bold;
-    font-size: 16px;
+    font-size:0.9em;
     border-radius: 10px;
 }
 
@@ -24,12 +26,12 @@
 }
 
 #moustache{
-  height:100px;
-  width:100px;
+  height:50px;
+  width:50px;
   position:absolute;
   visibility:hidden;
-  left:89px;
-  top:120px;
+  left:41px;
+  top:60px;
   z-index:3;
 }
 
@@ -76,14 +78,14 @@ div.main{
 }
 
 div.left {
-  width: 700px;
+  width: $left_width;
   float:left;
-  padding-left: 20px;
+  padding-left: 80px;
 }
 
 div.profile{
-  width:175px;
-  height:175px;
+  width:$profile_dim;
+  height:$profile_dim;
   //border: 1px solid orange;
   margin-left: auto;
   margin-right: auto;
@@ -91,14 +93,14 @@ div.profile{
   position:relative;
   top: 0;
   left: 0;
-  overflow:hidden;
+  overflow:visible;
 }
 
-div .right {
+div.right {
   float:right;
   width: 300px;
   overflow:hidden;
-  padding-right:90px;
+  padding-right:140px;
 }
 
 h1{
@@ -152,7 +154,7 @@ ul {
   background-color:#E6BF83;
   width:220px;
   height:auto;
-  font-size:1.5em;
+  font-size:1.2em;
   font-weight:bold;
   //note don't display as block
   overflow:hidden;
@@ -183,7 +185,7 @@ ul {
 
 
 div.slideshow{
-  width: 700px;
+  width: $left_width;
   height: 400px;
   overflow:hidden;
   border: 6px solid;
@@ -196,8 +198,8 @@ div.slideshow{
 }
 
 .portfolio{
-  width: 700px;
-
+  width: $left_width;
+  height:400px;
   margin-left: auto;
   margin-right: auto;
   //border: 6px solid;
@@ -208,7 +210,7 @@ div.slideshow{
 }
 
 .portfolio_first{
-  width: 700px;
+  width: $left_width;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
@@ -220,9 +222,9 @@ div.slideshow{
 }
 
 .profile {
-  width:175px;
-  height:175px;
-  border:6px solid;
+  width:$profile_dim;
+  height:$profile_dim;
+  border:2px solid;
   margin-left: auto;
   margin-right: auto;
   position:absolute;
