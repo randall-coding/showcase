@@ -100,7 +100,14 @@ div.right {
   float:right;
   width: 300px;
   overflow:hidden;
-  padding-right:140px;
+  padding-right:40px;
+  padding-left: 40px;
+  padding-top: 20px;
+  margin-top:60px;
+  margin-right:100px;
+  background-color:white;
+  border-radius:50px;
+  border: 1px solid black;
 }
 
 h1{
