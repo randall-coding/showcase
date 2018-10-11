@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$left_width: 620px;
+$left_width: 650px;
 $profile_dim: 130px;
 
 #btn-profile{
@@ -80,7 +80,7 @@ div.main{
 div.left {
   width: $left_width;
   float:left;
-  padding-left: 80px;
+  padding-left: 40px;
 }
 
 div.profile{
@@ -98,10 +98,10 @@ div.profile{
 
 div.right {
   float:right;
-  width: 300px;
+  width: 270px;
   overflow:hidden;
-  padding-right:40px;
-  padding-left: 40px;
+  padding-right:20px;
+  padding-left: 20px;
   padding-top: 20px;
   margin-top:60px;
   margin-right:100px;
