@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $left_width: 650px;
+$slide_width: 500px;
+$slide_height: 350px;
 $profile_dim: 130px;
 
 #btn-profile{
@@ -81,6 +83,9 @@ div.left {
   width: $left_width;
   float:left;
   padding-left: 40px;
+  padding-right: 80px;
+  margin-right: 80px;
+  //border-right: 5px dotted black;
 }
 
 div.profile{
@@ -102,15 +107,15 @@ div.right {
   overflow:hidden;
   padding-right:20px;
   padding-left: 20px;
-  padding-top: 20px;
-  margin-top:60px;
+  padding-top: 5px;
+  margin-top:20px;
   margin-right:100px;
   background-color:white;
   border-radius:50px;
   border: 1px solid black;
 }
 
-h1{
+h1, h2{
   text-align:center;
   margin-left:auto;
   margin-right:auto;
@@ -192,12 +197,14 @@ ul {
 
 
 div.slideshow{
-  width: $left_width;
-  height: 400px;
+  width: $slide_width;
+  height: $slide_height;
   overflow:hidden;
   border: 6px solid;
   border-radius: 5px;
   background-color:rgba(230,191,131,0.1);
+  margin-left:auto;
+  margin-right: auto;
 }
 
 .inactive{
@@ -205,8 +212,8 @@ div.slideshow{
 }
 
 .portfolio{
-  width: $left_width;
-  height:400px;
+  width: $slide_width;
+  height:$slide_height;
   margin-left: auto;
   margin-right: auto;
   //border: 6px solid;
@@ -217,8 +224,8 @@ div.slideshow{
 }
 
 .portfolio_first{
-  width: $left_width;
-  height: 400px;
+  width: $slide_width;
+  height: $slide_height;
   margin-left: auto;
   margin-right: auto;
   //border: 6px solid;
