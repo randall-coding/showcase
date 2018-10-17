@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$left_width: 650px;
-$slide_width: 600px;
+$left_width: 55% ;  //650px;
+$slideshow_width: 92%;
 $slide_height: 350px;
 $profile_dim: 130px;
 
@@ -71,21 +71,23 @@ div.page{
 }
 
 div.main{
-  width: 1300px;
+  width: 100%; //width: 1300px;
+  min-width:400px;
   margin-left: auto;
   margin-right: auto;
   position:relative;
   overflow:hidden;
-  //background-color: purple;
 }
 
 div.left {
   width: $left_width;
+  min-width:500px;
+  max-width:700px;
   float:left;
-  padding-left: 40px;
+  padding-left: 20px;
   padding-right: 80px;
-  margin-right: 80px;
   //border-right: 5px dotted black;
+  margin-left: auto;
 }
 
 div.profile{
@@ -102,17 +104,20 @@ div.profile{
 }
 
 div.right {
-  float:right;
-  width: 270px;
+  float:left;
+  width: 20%; //270px;
+  min-width: 200px;
+  max-width:250px;
   overflow:hidden;
   padding-right:20px;
   padding-left: 20px;
   padding-top: 5px;
   margin-top:60px;
-  margin-right:100px;
+  margin-left:90px;
   background-color:white;
   border-radius:50px;
   border: 1px solid black;
+  margin-right:auto;
 }
 
 h1, h2{
@@ -197,7 +202,7 @@ ul {
 
 
 div.slideshow{
-  width: $slide_width;
+  width: $slideshow_width;
   height: $slide_height;
   overflow:hidden;
   border: 6px solid;
@@ -212,7 +217,7 @@ div.slideshow{
 }
 
 .portfolio{
-  width: $slide_width;
+  width: 100%;
   height:$slide_height;
   margin-left: auto;
   margin-right: auto;
@@ -224,7 +229,7 @@ div.slideshow{
 }
 
 .portfolio_first{
-  width: $slide_width;
+  width: 100%;
   height: $slide_height;
   margin-left: auto;
   margin-right: auto;
