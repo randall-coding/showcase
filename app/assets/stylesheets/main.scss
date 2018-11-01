@@ -84,7 +84,7 @@ div.left {
   min-width:500px;
   max-width:700px;
   float:left;
-  padding-left: 20px;
+  padding-left: 90px;
   padding-right: 80px;
   //border-right: 5px dotted black;
   margin-left: auto;
@@ -120,6 +120,17 @@ div.right {
   margin-right:auto;
 }
 
+form.contact_me{
+  & textarea{
+    width: $slideshow_width;
+    height: 400px;
+    margin-right: auto;
+  }
+  & * {
+    font-size: 16px;
+  }
+}
+
 h1, h2{
   text-align:center;
   margin-left:auto;
@@ -152,6 +163,15 @@ main{
     display:inline;
 }
 
+table.contact_me{
+  padding: 0px;
+  border: 1px solid black;
+  width: $slideshow_width;
+  & *{
+    padding: 0px;
+  }
+}
+
 ul {
   list-style:none
 }
@@ -160,6 +180,10 @@ ul {
   margin-right: auto;
   margin-left: auto;
   display:block;
+}
+
+.center-text{
+  text-align: center;
 }
 
 .contact_menu{

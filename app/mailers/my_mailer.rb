@@ -6,10 +6,12 @@ class MyMailer < ApplicationMailer
   #
   #   en.my_mailer.send.subject
   #
-  def contact_me
+  def contact_me(message)
     @greeting = "Hi"
+    @body = message.body
+    @email = message.email
+    @from = message.from
 
-    #mail to: "randall_abi@outlook.com", subject: "email from Showcase"
-    mail to: "randall_abi@outlook.com"
+    mail to: "randall_abi@outlook.com", subject: "Email from Showcase"
   end
 end

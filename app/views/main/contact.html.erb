@@ -19,47 +19,38 @@
       <div class="main">
         <div class="left">
         <main>
-          <h1 class="center"> Ruby on Rails projects </h1>
-          <ul>
-            <li>
-                <h3> <%= link_to 'Elite Bank website', 'https://elitebank-randallcoding.herokuapp.com', class: "elite" %> </h3>
-                    <!-- <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %> -->
-                <br>
-                <p> Simple RoR project based on a banking website. Features Postgres database for user data, an admin account / page authorization, and deployed on Heroku.
-                    <i> Get started by logging in as "admin" with password "p".</i> <p>
-                <p> Once logged in, view customer profiles, edit customers or delete them.
-                    Log in as an individual customer using their first name as username and "p" as their password. </p>
+             <h1 class='center'> Contact Us Page </h1>
+             <br>  
+             <h2 class='center-text center'> Write your message below </h2>
+             <%= form_for @message , url: contact_send_url, html: {class: 'contact_me'} do |f| %>
+             <%= f.text_area :body %>
 
-                <div class="slideshow" id="slideshow1">
-                  <%= link_to image_tag('elitebank1.png' , class: 'portfolio_first'), 'https://elitebank-randallcoding.herokuapp.com/' %>
-                  <%= link_to image_tag('elitebank2.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
-                  <%= link_to image_tag('elitebank3.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
-                  <%= link_to image_tag('elitebank4.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
-                  <%= link_to image_tag('elitebank5.png' , class: 'portfolio'), 'https://elitebank-randallcoding.herokuapp.com/' %>
+             <table class="contact_me">
+               <tr>
+                 <td> Your name*
 
-                </div>
-          </li>
+                 </td>
+                 <td> Your email address*
 
+                 </td>
+                 <td>
 
-            <hr></hr>
-            <br><br>
+                 </td>
+               </tr>
+               <tr>
+                 <td>
+                   <%= f.text_field :from %>
+                 </td>
+                 <td>
+                   <%= f.text_field :email %>
+                 </td>
+                 <td>
+                   <%= f.submit 'Send message' %>
+                 </td>
+               </tr>
+             </table>
+             <% end %>
 
-            <li>
-              <h3 id="last"> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper"%> </h3>
-                  <!-- <%= link_to '(site)' , 'https://elitebank-randallcoding.herokuapp.com' %> -->
-              <br>
-              <p> Web scraper that obtains names of items and prices from Amazon.  Use the search query box to search for listings of any items.  Number of pages
-                of results can be specified to obtain more results.
-                <i></i>
-              <p>
-              <div id="slideshow2" class="slideshow">
-                <%= link_to image_tag('scraper.png' , class: 'portfolio_first'), 'https://scraper-randallcoding.herokuapp.com' %>
-              </div>
-              <p>
-              </p>
-            </li>
-            <br>
-          </ul>
          </main>
         </div> <!-- div_left -->
 
@@ -84,7 +75,7 @@
             <tr>  <td> <%= link_to 'GitHub', 'https://www.github.com/randall-coding', target: "_blank" %> </td>  </tr>
             <tr> <td>
             <!-- <%= mail_to "randall_abi@outlook.com", 'Contact'%> -->
-            <%= link_to 'Contact' , main_contact_path %> 
+            <%= link_to 'Contact' , contact_me_url %>
            </td> </tr>
             <tr> <td> <%= link_to 'Paypal', "https://www.paypal.me/randallcoding", target:"_blank" %> </td>  </tr>
             <tr style='border-bottom:0px none;'> <td> <%= link_to 'Lastest', "#last" %> </td>  </tr>
