@@ -63,8 +63,6 @@
          </main>
         </div> <!-- div_left -->
 
-
-
         <div class='right' id='test'>
           <!-- Debug css doesn't load in button
               <%= button_to 'Toggle me' , class: "center", style: 'margin-left:200px;height:150px'%>
@@ -84,7 +82,7 @@
             <tr>  <td> <%= link_to 'GitHub', 'https://www.github.com/randall-coding', target: "_blank" %> </td>  </tr>
             <tr> <td>
             <!-- <%= mail_to "randall_abi@outlook.com", 'Contact'%> -->
-            <%= link_to 'Contact' , contact_me_url %>
+            <%= link_to 'Contact' , contact_me_url, remote: true %>
            </td> </tr>
             <tr> <td> <%= link_to 'Paypal', "https://www.paypal.me/randallcoding", target:"_blank" %> </td>  </tr>
             <tr style='border-bottom:0px none;'> <td> <%= link_to 'Lastest', "#last" %> </td>  </tr>
@@ -105,7 +103,12 @@
           </p>
 
 
-        </div>
+        </div> <!-- end div.right -->
+
+        <div class="contact_window" id='#contact_window'>
+            <%= render 'contact' %>
+        </div> <!-- end div.contact_form -->
+
       </div>
     </div>
 

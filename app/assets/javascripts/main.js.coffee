@@ -21,6 +21,10 @@ $(document).on "turbolinks:load", ->
       return
     #debug doesn't work, odd $('#slideshow1').children( ".portfolio").css('visibility','hidden')
 
+  #contact form close
+  $('#cancel').click ->
+    $('div.contact_window').css('display','none')
+     
   ##functions
   nextSlide = (imgs) ->
     #debug console.log('at first i is ' + i.toString())
