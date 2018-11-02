@@ -47,6 +47,11 @@ a.scraper{
   font-style:italic;
 }
 
+a.no-dec:visited{
+  text-decoration:none;
+  color:black;
+}
+
 body {
   //background-image: image_url('matrix_white20.png') ;
   background-position: center;
@@ -248,6 +253,8 @@ div.slideshow{
 .inactive{
   display:none;
 }
+
+
 
 .portfolio{
   width: 100%;
