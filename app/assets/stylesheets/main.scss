@@ -130,7 +130,7 @@ form.contact_me{
     margin-right: auto;
   }
   & * {
-    font-size: 1.2em;
+    font-size: 1.0em;
   }
 }
 
@@ -227,6 +227,9 @@ ul {
 
 }
 
+div.contact_me{
+  margin-left:60px;
+}
 
 div.slideshow{
   width: $slideshow_width;
