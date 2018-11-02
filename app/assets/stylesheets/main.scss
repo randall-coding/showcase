@@ -8,6 +8,7 @@ $slide_height: 300px;
 $profile_dim: 130px;
 $color_ruby: #E6BF83;
 $color_ruby_lt: #f4e3c8;
+$body: #ffffcc;
 
 #btn-profile{
     margin-top:5px;
@@ -22,14 +23,16 @@ $color_ruby_lt: #f4e3c8;
 
 #cancel{
   background-color: #FAF9F9;
-  border:0.5px black solid;
+  border:0.1px grey solid;
+  border-color: rbga(50,0,0,0.5);
   border-radius: 5px;
   padding-left: 5px;
   padding-right: 5px;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   margin-top: 1px;
   text-shadow: 0px 0px 0px black;
+
   //color:#4C4C65;
 }
 
@@ -71,7 +74,7 @@ body {
   //background-image: image_url('matrix_white20.png') ;
   background-position: center;
   background-size:cover;
-  background-color:#ffffcc;
+  background-color:$body;
   text-shadow: 0px 0px 0px red;
   font-size: 100%;
   margin: 0;
@@ -112,15 +115,6 @@ div.page{
   //works better as expansive div anyway.  DEBUG could not modify width here
 }
 
-div.main{
-  width: 100%; //width: 1300px;
-  min-width:400px;
-  margin-left: auto;
-  margin-right: auto;
-  position:relative;
-  overflow:hidden;
-}
-
 div.left {
   width: $left_width;
   min-width:500px;
@@ -132,6 +126,30 @@ div.left {
   margin-left: auto;
   font-size: 0.9em;
 }
+
+div.main{
+  width: 100%; //width: 1300px;
+  min-width:400px;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  overflow:hidden;
+}
+
+div.mask{
+  background-color: black;
+  opacity: 0.4;
+  position:fixed;
+  height:100%;
+  width: 100%;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  display:none;
+}
+
+
+
 
 div.profile{
   width:$profile_dim;
@@ -170,7 +188,7 @@ form.contact_me{
     width: $slideshow_width;
     height: 350px;
     margin-right: auto;
-    background-color: $color_ruby_lt;
+    background-color: $body;
     font-size: 1.4em;
     opacity: 0.9;
     border: 3px brown solid;
@@ -182,7 +200,7 @@ form.contact_me{
   & input[type="text"]{
     width:180px;
     opacity: 0.9;
-    background-color: $color_ruby_lt;
+    background-color: $body;
   }
 }
 

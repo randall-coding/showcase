@@ -24,6 +24,7 @@ $(document).on "turbolinks:load", ->
   #contact form close
   $('#cancel').click ->
     $('div.contact_window').css('display','none')
+    $('div.mask').css('display','none')
      
   ##functions
   nextSlide = (imgs) ->
