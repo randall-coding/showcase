@@ -12,15 +12,15 @@
     <div class='page'>
       <div class="header">
         <%= image_tag 'randall_logo4.png', alt:'Randall Coding', id:'logo' %>
-        <div class="h1"> <h1> Showcase of my work below </h1>
+        <div class="h1"> <h1> Contact Us </h1>
         </div>
       </div>
       <br><br>
       <div class="main">
         <div class="left">
         <main>
-             <h1 class='center'> Contact Us Page </h1>
-             <br>  
+            <!-- <h1 class='center'> Contact Us   </h1> -->
+             <br><br>
              <h2 class='center-text center'> Write your message below </h2>
              <%= form_for @message , url: contact_send_url, html: {class: 'contact_me'} do |f| %>
              <%= f.text_area :body %>
