@@ -14,18 +14,31 @@ $(document).on "turbolinks:load", ->
   , time
 
   #moustache toggle
-  $('#btn-profile').click ->
+  $('#btn-profile').on 'click', ->
     if confirm('Are you sure?')
       toggleMoustache()
     else
       return
     #debug doesn't work, odd $('#slideshow1').children( ".portfolio").css('visibility','hidden')
 
-  #contact form close
-  $('#cancel').click ->
+  #open contact form
+  $('a.contact').on 'click' , ->
+    #open contact window
+    $('textarea').textContent = ''
+    contact_window = $('div.contact_window')
+    contact_window.css('display','block')
+
+    #set up screen div / blocker
+    $('div.mask').css('display','block')
+    console.log 'async called'
+
+
+  #close contact form
+  $('#cancel').on 'click' , ->
     $('div.contact_window').css('display','none')
     $('div.mask').css('display','none')
-     
+
+
   ##functions
   nextSlide = (imgs) ->
     #debug console.log('at first i is ' + i.toString())
