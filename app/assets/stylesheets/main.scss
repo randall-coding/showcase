@@ -85,10 +85,10 @@ div.contact_window{
     //border-style:
     position:fixed;
     width: 60%;
-    height: 530px;
+    height: 520px;
     overflow:scroll;
     left:240px;
-    top: 10px;
+    top: 25px;
     z-index:10;
     display: none;
 }
@@ -225,7 +225,6 @@ table.contact_me{
   width: $slideshow_width;
   margin-top: 10px;
   margin-left:3.5px;
-  padding-bottom:3px;
   & *{
     padding: 0px;
   }
