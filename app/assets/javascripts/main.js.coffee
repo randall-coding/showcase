@@ -8,9 +8,15 @@ $(document).on "turbolinks:load", ->
   i = 0
   imgs = $('#slideshow1').find("img")
 
-  #run slide show
+  #run slideshow 1
   setInterval ->
     nextSlide(imgs)
+  , time
+
+  #run slideshow 3 
+  setInterval ->
+    a = $('#slideshow3').find("a")
+    nextSlide2(a)
   , time
 
   #moustache toggle
@@ -31,7 +37,6 @@ $(document).on "turbolinks:load", ->
     #set up screen div / blocker
     $('div.mask').css('display','block')
     console.log 'async called'
-
 
   #close contact form
   $('#cancel').on 'click' , ->
@@ -63,12 +68,36 @@ $(document).on "turbolinks:load", ->
           increment()
       )
 
-
   increment = ->
     if (i < (imgs.length)-1 )
       i+=1
     else
       i=0
+
+  nextSlide2 = (as) ->
+    a = as.find("img.portfolio_active").parent()
+    #if next exists, slide old out, new in
+    if a.next().length != 0
+      console.log('in if statement')
+      img_current = a.find('img')
+      img_current.animate(
+        {left: "-600px"}
+        ->
+          img_current.removeClass('portfolio_active').addClass('portfolio')
+          a.next().find("img").css('left','600px').removeClass('portfolio').addClass('portfolio_active')
+          a.next().find("img").animate({left:"0px"})
+      )
+    else #next is null, back to first
+      console.log('in else statement')
+      img_current = a.find('img')
+      img_current.animate(
+        {left: "-910px"}
+        ->
+          img_current.removeClass('portfolio_active').addClass('portfolio')
+          $(as[0]).find("img").css('left','910px').removeClass('portfolio').addClass('portfolio_active')
+          $(as[0]).find("img").animate({left:"0px"})
+      )
+
 
 #leaving coffee script
 `function toggleMoustache(){

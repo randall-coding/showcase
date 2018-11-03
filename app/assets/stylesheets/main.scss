@@ -70,6 +70,10 @@ a.no-dec:visited{
   color:black;
 }
 
+a.matlab{
+  color:red;
+}
+
 body {
   //background-image: image_url('matrix_white20.png') ;
   background-position: center;
@@ -174,7 +178,7 @@ div.right {
   padding-left: 20px;
   padding-top: 5px;
   margin-top:60px;
-  margin-left:115px;
+  margin-left:95px;
   margin-bottom:20px;
   background-color:white;
   border-radius:50px;
@@ -215,6 +219,8 @@ h1, h2{
 h1, h3 {
   display:inline;
 }
+
+
 
 h3 {
   font-size:1.6em;
@@ -343,7 +349,7 @@ div.slideshow{
   left:0;
 }
 
-.portfolio_first{
+.portfolio_active{
   width: 100%;
   height: $slide_height;
   margin-left: auto;
@@ -366,4 +372,8 @@ div.slideshow{
   left:0px;
   border-radius:10px;
   z-index:1;
+}
+
+#slideshow3{
+  width:75%;
 }
