@@ -2,7 +2,7 @@
   <!-- <h1 class='center'> Contact Us   </h1> -->
 
    <h2 class='center-text center'> Write your message below </h2>
-   <%= form_for @message , url: contact_send_url, html: {class: 'contact_me'} do |f| %>
+   <%= form_for @message , url: contact_send_url, html: {class: 'contact_form'} do |f| %>
      <%= f.text_area :body %>
      <table class="contact_me">
        <tr>

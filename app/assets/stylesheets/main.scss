@@ -92,6 +92,8 @@ div.contact_window{
     //border-style:
     position:fixed;
     width: 60%;
+    min-width:700px;
+    max-width:800px;
     height: 520px;
     overflow:scroll;
     left:240px;
@@ -113,6 +115,7 @@ div.h1{
 
 div.header{
   background-color: #E6BF83;
+  opacity:0;
 }
 
 div.page{
@@ -142,7 +145,7 @@ div.main{
 
 div.mask{
   background-color: black;
-  opacity: 0.4;
+  opacity: 0.6;
   position:fixed;
   height:100%;
   width: 100%;
@@ -187,7 +190,7 @@ div.right {
   font-size: 0.9em;
 }
 
-form.contact_me{
+form.contact_form{
   & textarea{
     width: $slideshow_width;
     height: 350px;
@@ -206,6 +209,7 @@ form.contact_me{
     width:180px;
     opacity: 0.9;
     background-color: $body;
+    border: 1px grey solid;
   }
 }
 
@@ -245,17 +249,17 @@ main{
 
 table.contact_me{
   padding: 0px;
-  //border: 1px solid black;
-  //border: 3px brown solid;
   width: $slideshow_width;
   margin-top: 10px;
   margin-left:3.5px;
+  border-collapse: collapse;
   & *{
     padding: 0px;
+    margin:0px;
   }
   & td{
     text-align: center;
-    padding-top:5px;
+
   }
 }
 
@@ -361,7 +365,7 @@ div.slideshow{
   display:inline;
 }
 
-.profile {
+img.profile {
   width:$profile_dim;
   height:$profile_dim;
   border:2px solid;
@@ -372,6 +376,7 @@ div.slideshow{
   left:0px;
   border-radius:10px;
   z-index:1;
+  opacity: 0;
 }
 
 #slideshow3{
