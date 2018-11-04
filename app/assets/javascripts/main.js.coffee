@@ -6,21 +6,32 @@
 $(document).on "turbolinks:load", ->
   console.log('Javascript is running')
 
-  #fade titles
+  #hide profile up top
+  $('div.right').css('overflow','visible')
+  $('div.main').css('overflow','visible')
+  $('img.profile').css('margin-top','-430px').css('opacity',1.0).css('z-index',4)
+
+  #intro animation
   $('div.header').children().css('opacity',0)
   $('div.header').animate(
+    #fade in blank bar
     {opacity: 1.0}    #meh with the pluggin  {backgroundColor: org_color}
     1000
-    ->
+    -> #fade titles
       $('div.header').children().animate(
         {opacity:1.0},
-        3000
+        1500
+        ->
+          #image drop
+          $('img.profile').animate(
+            {marginTop:'0px'}
+            1000
+            ->
+              $('div.right').css('overflow','hidden')
+              $('main').css('overflow','hidden')
+              $('img.profile').css('z-index',1)
+          )
       )
-
-  )
-  $('img.profile').animate(
-    {opacity:1.0},
-    2000
   )
 
   #run slideshow 1
