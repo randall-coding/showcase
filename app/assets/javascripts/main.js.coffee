@@ -28,7 +28,7 @@ $(document).on "turbolinks:load", ->
             1000
             ->
               $('div.right').css('overflow','hidden')
-              $('main').css('overflow','hidden')
+              $('div.main').css('overflow','hidden')
               $('img.profile').css('z-index',1)
           )
       )
