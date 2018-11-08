@@ -62,12 +62,13 @@ $(document).on "turbolinks:load", ->
   $('a.contact').on 'click' , ->
     #open contact window
     $('textarea').textContent = ''
+    $('textarea').val('')
+    $('input:text').val('')  
     contact_window = $('div.contact_window')
     contact_window.css('display','block')
 
     #set up screen div / blocker
     $('div.mask').css('display','block')
-    console.log 'async called'
 
   #close contact form
   $('#cancel').on 'click' , (e) ->
