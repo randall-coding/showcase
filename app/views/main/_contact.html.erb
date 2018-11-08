@@ -2,18 +2,15 @@
   <!-- <h1 class='center'> Contact Us   </h1> -->
 
    <h2 class='center-text center'> Write your message below </h2>
-   <%= form_for @message , url: contact_send_url, html: {class: 'contact_form'} do |f| %>
+   <%= form_for @message , url: contact_send_url, html: {class: 'contact_form'}, remote:true do |f| %>
      <%= f.text_area :body %>
      <table class="contact_me">
        <tr>
          <td> Full Name
-
          </td>
          <td> Email Address
-
          </td>
          <td>
-
          </td>
        </tr>
        <tr>
@@ -24,7 +21,7 @@
            <%= f.text_field :email %>
          </td>
          <td>
-           <%= f.submit 'Send message' %> <a id='cancel' href='javascript:void(0)'> Cancel </a>
+           <%= f.submit 'Send message' %>  <button id='cancel'> Cancel </a>  <!--  <a id='cancel' href='javascript:void(0)'> Cancel </a> -->
          </td>
        </tr>
      </table>

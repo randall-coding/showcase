@@ -3,10 +3,6 @@ class MainController < ApplicationController
       @message = Message.new
   end
 
-  def contact
-      @message = Message.new
-  end
-
   def contact_send
       message = Message.new
       message.body = params[:message][:body]
@@ -17,9 +13,12 @@ class MainController < ApplicationController
       if (message.save)
         MyMailer.contact_me(message).deliver_later
         message.destroy
-        redirect_to root_url
+        respond_to do |format|
+          format.js
+        end
+        #redirect_to root_url
       else
-        redirect_to contact_me_url
+        #redirect_to contact_me_url
       end
   end
 

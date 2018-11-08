@@ -9,7 +9,7 @@ $(document).on "turbolinks:load", ->
   #hide profile up top
   $('div.right').css('overflow','visible')
   $('div.main').css('overflow','visible')
-  $('img.profile').css('margin-top','-430px').css('opacity',1.0).css('z-index',4)
+  #$('img.profile').css('margin-top','-430px').css('opacity',1.0).css('z-index',4)
 
   #intro animation
   $('div.header').children().css('opacity',0)
@@ -19,7 +19,8 @@ $(document).on "turbolinks:load", ->
     1000
     ->#image drop
       $('img.profile').animate(
-        {marginTop:'0px'}
+        {opacity:1.0}
+        #{marginTop:'0px'}
         1000
         ->
           #fade titles
@@ -69,10 +70,10 @@ $(document).on "turbolinks:load", ->
     console.log 'async called'
 
   #close contact form
-  $('#cancel').on 'click' , ->
+  $('#cancel').on 'click' , (e) ->
     $('div.contact_window').css('display','none')
     $('div.mask').css('display','none')
-
+    e.preventDefault()
 
   ##functions
   nextSlide = (imgs) ->
@@ -116,7 +117,7 @@ $(document).on "turbolinks:load", ->
           a.next().find("img").css('left','600px').removeClass('portfolio').addClass('portfolio_active')
           a.next().find("img").animate({left:"0px"})
       )
-    else #next is null, back to first
+    else #next is empty, back to first
       img_current = a.find('img')
       img_current.animate(
         {left: "-910px"}
