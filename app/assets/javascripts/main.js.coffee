@@ -16,17 +16,17 @@ $(document).on "turbolinks:load", ->
   $('div.header').animate(
     #fade in blank bar
     {opacity: 1.0}    #meh with the pluggin  {backgroundColor: org_color}
-    1000
+    700
     ->#image drop
       $('img.profile').animate(
         {opacity:1.0}
         #{marginTop:'0px'}
-        1000
+        700
         ->
           #fade titles
           $('div.header').children().animate(
             {opacity:1.0},
-            1500
+            1000
             ->
           )
           #reset attributes
