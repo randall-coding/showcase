@@ -6,6 +6,41 @@
 $(document).on "turbolinks:load", ->
   console.log('Javascript is running')
 
+  $li = $('div.left li')
+  $h1 = $('div.left h1')
+  #offsets
+  $li_offsets = $li.map ->
+    $(this).offset().top
+  $h1_offsets = $h1.map ->
+    $(this).offset().top
+
+  $(window).on 'scroll', ->
+    scrollTop = $(window).scrollTop();
+    window_height = $(window).height();
+    my_view = scrollTop + window_height;
+
+    console.info $li_offsets
+    console.info $h1_offsets
+
+    i = 0;
+    #cycle through offsets and compare
+    $li_offsets.each ->
+      if this > (my_view + 20)  #if offset > my_view + 10  then animate
+        $li = $( $li[i] )
+        console.info "my li is " + $li
+        $($li).animate(
+          {opacity:1.0;}
+        )
+      i += 1
+
+
+    #console.info $offsets
+    #console.info $('div.left').find('li')
+    #console.info 'Offset is:' + $('#slideshow3').offset().top;
+    #console.info $('li')
+
+    #switch view
+
   #hide profile up top
   $('div.right').css('overflow','visible')
   $('div.main').css('overflow','visible')
@@ -63,7 +98,7 @@ $(document).on "turbolinks:load", ->
     #open contact window
     $('textarea').textContent = ''
     $('textarea').val('')
-    $('input:text').val('')  
+    $('input:text').val('')
     contact_window = $('div.contact_window')
     contact_window.css('display','block')
 

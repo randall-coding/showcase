@@ -97,7 +97,7 @@ div.h1{
 }
 
 div.header{
-  background-color: #E6BF83;
+  background-color: rgba(252,90,141,0.4); // #fc5a8d;
   opacity:0;
 }
 
@@ -249,7 +249,7 @@ table.contact_menu{
   margin-left: auto;
   text-align:center;
 
-  background-color:#E6BF83;
+  background-color: $body;
   width:100%;
   height:auto;
   font-size:1.2em;
