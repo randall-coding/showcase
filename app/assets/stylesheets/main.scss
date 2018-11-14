@@ -34,9 +34,9 @@ $body: #ffffcc;
   height:60px;
   width:35%;
   position:absolute;
-  visibility:hidden;
-  left:33%;
-  top:44%;
+  //visibility:hidden;
+  left:34%;
+  top:43%;
   z-index:3;
 }
 
@@ -140,7 +140,7 @@ ask{
 
 div.profile{
   width:$profile_width;
-  height: 150px;
+  height: 130px;
   //border: 1px solid orange;
   margin-left: auto;
   margin-right: auto;
