@@ -111,13 +111,13 @@ div.left {
   max-width:700px;
   float:left;
   padding-left: 55px;
-  padding-right: 80px;
+  padding-right: 20px;  // 80px;
   //border-right: 5px dotted black;
   margin-left: auto;
   font-size: 0.9em;
 }
 
-div.main{
+ain{
   width: 100%; //width: 1300px;
   min-width:400px;
   margin-left: auto;
@@ -126,7 +126,7 @@ div.main{
   overflow:hidden;
 }
 
-div.mask{
+ask{
   background-color: black;
   opacity: 0.6;
   position:fixed;
@@ -151,17 +151,24 @@ div.profile{
   overflow:visible;
 }
 
+div.mid{
+    float:left;
+    width:10%;
+    height:1000px;
+    //border:2px solid red;
+}
+
 div.right {
   float:left;
-  width: 18%; //270px;
+  width: 20%; //270px;
   min-width: 170px;
-  max-width:250px;
+  max-width:300px;
   overflow:hidden;
   padding-right:20px;
   padding-left: 20px;
   padding-top: 5px;
-  margin-top:60px;
-  margin-left:95px;
+  margin-top:45px;
+  margin-left:0px; //55px;
   margin-bottom:20px;
   background-color:white;
   border-radius:50px;
