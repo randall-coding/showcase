@@ -87,11 +87,7 @@ $(document).on "turbolinks:load", ->
 
   #moustache toggle
   $('#btn-profile').on 'click', ->
-    if confirm('Are you sure?')
-      toggleMoustache()
-    else
-      return
-    #debug doesn't work, odd $('#slideshow1').children( ".portfolio").css('visibility','hidden')
+    toggleMoustache()
 
   #open contact form
   $('a.contact').on 'click' , ->
