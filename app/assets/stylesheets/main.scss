@@ -374,7 +374,7 @@ img.profile {
 //smaller browser window or large tablet
 @media screen and (max-width:1050px){
     div.main{
-      font-size: 0.88em
+      //font-size: 0.88em
     }
     div.left{
       padding-left:15px;
@@ -382,7 +382,7 @@ img.profile {
 }
 
 //tablet portrait and smaller
-@media screen and (max-width:880px) {
+@media screen and (max-width:910px) {
   div.left{
     float:none;
     margin-left:auto;
