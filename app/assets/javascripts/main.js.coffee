@@ -89,7 +89,7 @@ $(document).on "turbolinks:load", ->
     $('textarea').val('')
     $('input:text').val('')
     scroll = $(window).scrollTop()   #track window scroll for modal
-    pos = scroll - 80
+    pos = scroll - 150
     contact_window = $('div.contact_window')
     contact_window.css('top',pos + 'px')
     contact_window.css('display','block')

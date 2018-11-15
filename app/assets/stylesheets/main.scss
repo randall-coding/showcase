@@ -64,7 +64,7 @@ body{
   background-size:cover;
   background-color:$body;
   text-shadow: 0px 0px 0px red;
-  font-size: 18px;
+  font-size: 17.5px;
   margin: 0;
   padding: 0;
 }
@@ -139,7 +139,7 @@ div.mask{
 }
 
 div.profile{
-  width: 145px;
+  width: 145px;  //$profile_width
   height: 145px;
   //border: 1px solid orange;
   margin-left: auto;
@@ -161,7 +161,7 @@ div.mid{
 div.right {
   float:left;
   width: 20%; //270px;
-  min-width: 170px;
+  min-width: 200px;
   max-width:300px;
   overflow:hidden;
   padding-right:20px;
@@ -368,4 +368,30 @@ img.profile {
 
 #slideshow3{
   width:75%;
+}
+
+/* Responsive Design. */
+//tablet and smaller
+@media screen and (max-width:960px) {
+  div.left{
+    float:none;
+    margin-left:auto;
+    margin-right: auto;
+    padding:0px;
+    width: 70%;
+  }
+  div.right{
+    float:none;
+    margin-left:auto;
+    margin-right: auto;
+    width:30%;
+    min-width:250px;
+  }
+  div.mid{
+    display:none;
+  }
+}
+//portrait mode of iphone and smaller
+@media screen and (max-width:760px){
+
 }
