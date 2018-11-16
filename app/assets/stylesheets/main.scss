@@ -268,11 +268,12 @@ table.contact_menu{
   overflow:hidden;
   border:4px brown solid;
   border-collapse:collapse;
+  //border-spacing:0px;
 
   & a {
       width:100%;
-      padding-left: 60px;
-      padding-right: 60px;
+    //  padding-left: 60px;
+    // padding-right: 60px;
   }
 
   & a:link{
@@ -391,7 +392,7 @@ img.profile {
     margin-left:auto;
     margin-right: auto;
     padding:0px;
-    width: 70%;
+    width: 80%;
   }
   div.right{
     float:none;
