@@ -13,8 +13,6 @@
     <div class='page'>
       <%= render 'header' %>
 
-      <br><br>
-      <div class="main">
         <div class="left">
         <main>
           <h1 class="center"> Ruby on Rails Projects </h1>
@@ -41,7 +39,7 @@
 
             <br> <br>
             <li>
-              <h3 id="last"> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper"%> </h3>
+              <h3> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper"%> </h3>
                   <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
               <br>
               <p> Web scraper that obtains names of items and prices from Amazon.  Use the search query box to search for listings of any items.  Number of pages
@@ -51,8 +49,8 @@
               <div id="slideshow2" class="slideshow">
                 <%= link_to image_tag('scraper.png' , class: 'portfolio_active'), 'https://scraper-randallcoding.herokuapp.com' %>
               </div>
-              <p>
               </p>
+              <p>
             </li>
             <hr></hr>
             <br>
@@ -61,7 +59,7 @@
           <h1 class="center"> Data Analytics Projects </h1>
           <ul>
             <li>
-                <h3> <%= link_to 'Ultrasound Data Visualization', 'javascript:void(0)', class: "matlab" %> </h3>
+                <h3> <%= link_to 'Ultrasound Data Visualization', 'javascript:void(0)', class: "matlab", id:"last" %> </h3>
                 <br>
                 <p> Version 1.0: This project creates a stand alone Windows app using MATLAB to process ultrasound data / page authorization.
                 <p>
@@ -105,13 +103,26 @@
 
           <address class="center">
           <table class="contact_menu">
-            <tr>  <td> <%= link_to 'GitHub', 'https://www.github.com/randall-coding', target: "_blank" %> </td>  </tr>
-            <tr> <td>
-            <!-- <%= mail_to "randall_abi@outlook.com", 'Contact'%> -->
-            <%= link_to 'Contact' , 'javascript:void(0)', remote: true, class:'contact' %>
+            <tr> <td>  <a href='https://www.github.com/randall-coding' target="_blank">
+                          <div>  GitHub </div>
+                       </a>
            </td> </tr>
-            <tr> <td> <%= link_to 'Paypal', "https://www.paypal.me/randallcoding", target:"_blank" %> </td>  </tr>
-            <tr style='border-bottom:0px none;'> <td> <%= link_to 'Lastest', "#last" %> </td>  </tr>
+           <tr> <td>
+              <a href='javascript:void(0)' data-remote="true" class="contact">
+                 <div> Contact </div>
+              </a>
+           </td> </tr>
+           <tr> <td>
+             <a href="https://www.paypal.me/randallcoding" target="_blank">
+                <div> Paypal </div>
+             </a>
+           </td>  </tr>
+           <tr style='border-bottom:0px none;'> <td>
+             <a href="#last">
+               <div> Latest </div>
+             </a>
+
+           </td>  </tr>
           </table>
           </address>
 

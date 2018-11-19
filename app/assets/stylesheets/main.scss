@@ -62,7 +62,7 @@ a.matlab{
 body{
   background-position: center;
   background-size:cover;
-  background-color:$body;
+  background-color: rgba(255,255,204,0.2); //$body;
   text-shadow: 0px 0px 0px red;
   font-size: 17.5px;
   font-family:Camphor,Open Sans,Segoe UI,sans-serif;
@@ -108,7 +108,7 @@ div.page{
 
 div.left {
   width: $left_width;
-  min-width:500px;
+  min-width:600px;
   max-width:700px;
   float:left;
   padding-left: 55px;
@@ -162,7 +162,7 @@ div.mid{
 div.right {
   float:left;
   width: 20%; //270px;
-  min-width: 200px;
+  min-width: 180px;
   max-width:300px;
   overflow:hidden;
   padding-right:20px;
@@ -374,6 +374,7 @@ img.profile {
   width:75%;
 }
 
+
 /* Responsive Design. */
 //smaller browser window or large tablet
 @media screen and (max-width:1050px){
@@ -381,7 +382,10 @@ img.profile {
       font-size: 0.93em
     }
     div.left{
-      padding-left:15px;
+      padding-left:5px;
+    }
+    div.mid{
+      width:7%;
     }
 }
 
@@ -391,6 +395,7 @@ img.profile {
     float:none;
     margin-left:auto;
     margin-right: auto;
+    min-width:0px;
     padding:0px;
     width: 80%;
   }
