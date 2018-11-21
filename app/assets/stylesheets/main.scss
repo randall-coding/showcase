@@ -112,8 +112,6 @@ div.left {
   max-width:700px;
   float:left;
   padding-left: 55px;
-  //padding-right: 20px;  // 80px;
-  //border-right: 5px dotted black;
   margin-left: auto;
   font-size: 0.9em;
 }
@@ -156,7 +154,6 @@ div.mid{
     float:left;
     width:12%;
     height:1000px;
-    //border:2px solid red;
 }
 
 div.right {
@@ -214,8 +211,6 @@ h1, h3 {
   font-family: "Times New Roman", Times, serif;
 }
 
-
-
 h3 {
   font-size:1.6em;
   //text-shadow: 1px 1px 2px red;
@@ -226,11 +221,6 @@ h3 {
 
 h3 a {
   color: orange;
-}
-
-
-p {
-
 }
 
 main{
@@ -312,9 +302,6 @@ ul {
   text-align: center;
 }
 
-
-
-
 div.slideshow{
   width: $slideshow_width;
   height: $slide_height;
@@ -329,8 +316,6 @@ div.slideshow{
 .inactive{
   display:none;
 }
-
-
 
 .portfolio{
   width: 100%;
