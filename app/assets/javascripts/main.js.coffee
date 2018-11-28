@@ -53,7 +53,7 @@ $(document).on "turbolinks:load", ->
   )
 
   #run slideshow 1
-  time = 4000
+  time = 4500
   i = 0
   imgs = $('#slideshow1').find("img")
   setInterval ->
@@ -92,24 +92,53 @@ $(document).on "turbolinks:load", ->
 
   ##functions
   nextSlide = (imgs) ->
-    #debug console.log('at first i is ' + i.toString())
-    #debug console.log("an img")
+    #move both by moving padding right (or left)
+    console.log i
+    $next = 0
+    $nextnext = 0
+    speed = 750
+    if( i < (imgs.length)-1 )  #regular case
+      $next = $(imgs[i+1])
+      $nextnext = $(imgs[i+2])
+    else                        #rlast image
+      $next = $(imgs[0])
+      $nextnext = $(imgs[1])
 
+    if( i + 1 ==  (imgs.length - 1) )  #second to last
+      $nextnext = $(imgs[0])
+
+    $(imgs[i]).animate(
+      {left: "-=100%"}
+      speed
+      ->
+        $(this).removeClass('active').addClass('inactive')
+    )
+    $next.animate(
+      {left: "-=100%"}
+      speed
+    )
+    increment()
+    console.log $nextnext
+    $nextnext.addClass('active').removeClass('inactive').css('left','100%')
+
+    #end nextSlide
+
+  nextSlide_old = (imgs) ->
     if( i < (imgs.length)-1 )
       $(imgs[i]).animate(
-        {left:"-910px"}
+        {left:"-610px"}
         ->
           $(imgs[i]).css('display','none').css('left','0')
-          $(imgs[i+1]).css('left','910px').css('display','inline')
+          $(imgs[i+1]).css('left','610px').css('display','inline')
           $(imgs[i+1]).animate({left:"0px"})
           increment()
       )
     else
       $(imgs[i]).animate(
-        {left:"-910px"}
+        {left:"-610px"}
         ->
           $(imgs[i]).css('display','none').css('left','0')
-          $(imgs[0]).css('left','910px').css('display','inline')
+          $(imgs[0]).css('left','610px').css('display','inline')
           $(imgs[0]).animate({left:"0px"})
           increment()
       )
@@ -126,22 +155,21 @@ $(document).on "turbolinks:load", ->
     if a.next().length != 0
       img_current = a.find('img')
       img_current.animate(
-        {left: "-600px"}
+        {left: "-400px"}
         ->
           img_current.removeClass('portfolio_active').addClass('portfolio')
-          a.next().find("img").css('left','600px').removeClass('portfolio').addClass('portfolio_active')
+          a.next().find("img").css('left','400px').removeClass('portfolio').addClass('portfolio_active')
           a.next().find("img").animate({left:"0px"})
       )
     else #next is empty, back to first
       img_current = a.find('img')
       img_current.animate(
-        {left: "-910px"}
+        {left: "-400px"}
         ->
           img_current.removeClass('portfolio_active').addClass('portfolio')
-          $(as[0]).find("img").css('left','910px').removeClass('portfolio').addClass('portfolio_active')
+          $(as[0]).find("img").css('left','400px').removeClass('portfolio').addClass('portfolio_active')
           $(as[0]).find("img").animate({left:"0px"})
       )
-
 
 #leaving coffee script
 `function toggleMoustache(){

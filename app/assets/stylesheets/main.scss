@@ -305,16 +305,14 @@ ul {
 div.slideshow{
   width: $slideshow_width;
   height: $slide_height;
+  //overflow:visible;
   overflow:hidden;
   border: 6px solid;
   border-radius: 5px;
   background-color:rgba(230,191,131,0.1);
   margin-left:auto;
   margin-right: auto;
-}
-
-.inactive{
-  display:none;
+  position:relative;
 }
 
 .portfolio{
@@ -324,9 +322,12 @@ div.slideshow{
   margin-right: auto;
   //border: 6px solid;
   display: none;
-  position:relative;
-  top:0;
-  left:0;
+  position:absolute;
+  top:0px;
+  left:0px;
+  //top:-100%;
+  //left: 100%;
+  float:right;
 }
 
 .portfolio_active{
@@ -335,10 +336,18 @@ div.slideshow{
   margin-left: auto;
   margin-right: auto;
   //border: 6px solid;
-  position:relative;
-  top:0;
-  left:0;
-  display:inline;
+  position:absolute;
+  top:0px;
+  left:0px;
+  display:block;
+  float:left;
+}
+
+.shifted{
+  top:0px;
+  left: 100%;
+  display:block;
+  float:right;
 }
 
 img.profile {
@@ -351,6 +360,13 @@ img.profile {
   top:0px;
   left:0px;
   border-radius:10px;
+}
+
+.active{
+  display:block;
+}
+.inactive{
+  display:none;
 }
 
 #slideshow3{
