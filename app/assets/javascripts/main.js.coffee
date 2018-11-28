@@ -45,22 +45,10 @@ $(document).on "turbolinks:load", ->
     #fade in blank bar
     {opacity: 1.0}    #meh with the pluggin  {backgroundColor: org_color}
     700
-    ->#image drop
-      $('img.profile').animate(
-        {opacity:1.0}
-        #{marginTop:'0px'}
-        700
-        ->
-          #fade titles
-          $('div.header').children().animate(
-            {opacity:1.0},
-            1000
-            ->
-          )
-          #reset attributes
-          $('div.right').css('overflow','hidden')
-          $('div.main').css('overflow','hidden')
-          $('img.profile').css('z-index',1)
+    ->#fade titles
+      $('div.header').children().animate(
+        {opacity:1.0},
+        1000
       )
   )
 
