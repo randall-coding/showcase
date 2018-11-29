@@ -72,17 +72,19 @@ $(document).on "turbolinks:load", ->
 
   #open contact window / contact form
   $('a.contact').on 'click' , ->
-    #open contact window (modal)
-    $('textarea').textContent = ''
+    #clear inputs
     $('textarea').val('')
     $('input:text').val('')
     scroll = $(window).scrollTop()   #track window scroll for modal
     pos = scroll + 20
+    #open contact window (modal)
     contact_window = $('div.contact_window')
     contact_window.css('top',pos + 'px')
     contact_window.css('display','block')
     #set up screen div / blocker
     $('div.mask').css('display','block')
+    #focus
+    $('textarea').focus()
 
   #close contact form
   $('#cancel').on 'click' , (e) ->
