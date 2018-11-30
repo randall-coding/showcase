@@ -100,15 +100,18 @@
               <%= button_to 'Toggle me' , class: "center", style: 'margin-left:200px;height:150px'%>
           -->
           <h2 class="center"> About me </h2>
-          <div id='dummy' class='profile'>
-            <%= image_tag 'moustache.png' , id:'moustache' %>
-            <%= image_tag 'cartoon.png', alt: 'profile picture',class: 'profile', id:'img' %>
+          <div class='profile-container'>
+            <div id='dummy' class='profile'>
+              <%= image_tag 'moustache.png' , id:'moustache' %>
+              <%= image_tag 'cartoon.png', alt: 'profile picture',class: 'profile', id:'img' %>
+            </div>
+            <button id='btn-profile' class='center' title='moustache'> Toggle Moustache  </button>
           </div>
-          <button id='btn-profile' class='center' title='moustache'> Toggle Moustache  </button>
-          <p>  Hi all.  Ruby on Rails enthusiast, with background in scientific research and freelance programming.
-               I am a native born US citizen with a passion for web dev and Linux.
-          </p>
-
+          <section class="bio">
+            <p>  &nbsp; &nbsp; &nbsp; Hi all.  Ruby on Rails enthusiast, with background in scientific research and freelance programming.
+                 I am a native born US citizen with a passion for web dev and Linux.
+            </p>
+          </section>
           <address class="center">
           <table class="contact_menu">
             <tr> <td>  <a href='https://www.github.com/randall-coding' target="_blank">
