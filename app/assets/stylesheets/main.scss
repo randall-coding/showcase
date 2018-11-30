@@ -10,6 +10,14 @@ $color_ruby: #E6BF83;
 $color_ruby_lt: #f4e3c8;
 $body: #ffffcc;
 
+body *{
+  //maybe later
+  // padding-top: 0;
+  // padding-bottom: 0;
+  // margin-top: 0;
+  // margin-bottom: 0;
+}
+
 #btn-profile{
     margin-top:5px;
     padding-left: 15px;
@@ -55,7 +63,7 @@ a.no-dec:visited{
   color:black;
 }
 
-a.matlab{
+.matlab{
   color:red;
 }
 
@@ -102,8 +110,13 @@ div.header{
   opacity:0;
 }
 
+div.description{
+  display:none;
+}
+
+
 div.page{
-  //works better as expansive div anyway.  DEBUG could not modify width here
+  //works better as expansive div anyway. could not modify width here
 }
 
 div.left {
@@ -217,6 +230,14 @@ h3 {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   //text-decoration: underline;
   margin-right:0px;
+  background-color:$color_ruby_lt;
+  border-radius:10px;
+  display:inline-block;
+  margin-top:0px;
+  margin-bottom:0px;
+  width:100%;
+
+  transition: all 2s ease;
 }
 
 h3 a {
@@ -386,6 +407,9 @@ img.profile {
     div.mid{
       width:7%;
     }
+    div.description{
+      display:none;
+    }
 }
 
 //tablet portrait and smaller
@@ -408,6 +432,9 @@ img.profile {
   }
   div.mid{
     display:none;
+  }
+  div.description{
+    display:block;
   }
 }
 //portrait mode of iphone and smaller

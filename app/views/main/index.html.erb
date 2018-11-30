@@ -20,11 +20,13 @@
             <li>
                 <h3> <%= link_to 'Elite Bank Website', 'https://elitebank.randallcoding.com', class: "elite" %> </h3>
                     <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
-                <br>
-                <p> Elite bank features Postgres database, admin account / page authorization, user sign in, Stripe payment membership subscriptions and is deployed on Heroku.
-                    <i> Get started by logging in as "admin" with password "p".</i> <p>
-                    Log in as an individual customer using their first name as username and "p" as their password. </p>
-                    <p> Once logged in, view customer profiles, edit customers or delete them. </p>
+
+                <div class="description">
+                  <p> Elite bank features Postgres database, admin account / page authorization, user sign in, Stripe payment membership subscriptions and is deployed on Heroku.
+                  <i> Get started by logging in as "admin" with password "p".</i> <p>
+                      Log in as an individual customer using their first name as username and "p" as their password. </p>
+                  <p> Once logged in, view customer profiles, edit customers or delete them. </p>
+                </div>
                 <div class="slideshow" id="slideshow1">
                   <%= link_to image_tag('elitebank1.png' , class: 'portfolio_active'), 'https://elitebank.randallcoding.com/' %>
                   <%= link_to image_tag('elitebank2.png' , class: 'portfolio shifted' ), 'https://elitebank.randallcoding.com/' %>
@@ -36,16 +38,16 @@
           </li>
             <hr></hr>
 
-
-            <br> <br>
             <li>
               <h3> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper"%> </h3>
                   <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
-              <br>
-              <p> Web scraper that obtains names of items and prices from Amazon.  Use the search query box to search for listings of any items.  Number of pages
-                of results can be specified to obtain more results.
-                <i></i>
-              <p>
+              <div class="description">
+                <p> Web scraper obtains product names and prices from Amazon based on a search.  Use the search query box to search for listings of any items.  Number of pages
+                  of results can be specified to obtain more results.
+                  <i></i>
+                <p>
+              </div>
+
               <div id="slideshow2" class="slideshow">
                 <%= link_to image_tag('scraper.png' , class: 'portfolio_active'), 'https://scraper-randallcoding.herokuapp.com' %>
               </div>
@@ -53,20 +55,20 @@
               <p>
             </li>
             <hr></hr>
-            <br>
+
           </ul>
 
           <h1 class="center"> Data Analytics Projects </h1>
           <ul>
             <li>
-                <h3> <%= link_to 'Ultrasound Data Visualization', 'javascript:void(0)', class: "matlab", id:"last" %> </h3>
-                <br>
-                <p> Version 1.0: This project creates a stand alone Windows app using MATLAB to process ultrasound data / page authorization.
-                <p>
-                <p> Version 2.0: This projects creates a stand alone Windows app with MATLAB GUI for file selection, sorting and listing.  It also creates
-                    and saves an animation made from the sorted files.  Sorts hundreds of files at one time.
-                </p>
-
+                <h3 class="matlab"> Ultrasound Data Visualization </h3> <!-- <%= link_to 'Ultrasound Data Visualization', 'javascript:void(0)', class: "matlab", id:"last" %> </h3> -->
+                <div class="description">
+                  <p> Version 1.0: This project creates a stand alone Windows app using MATLAB to process ultrasound data / page authorization.
+                  <p>
+                  <p> Version 2.0: This projects creates a stand alone Windows app with MATLAB GUI for file selection, sorting and listing.  It also creates
+                      and saves an animation made from the sorted files.  Sorts hundreds of files at one time.
+                  </p>
+                </div>
                 <div class="slideshow" id="slideshow3">
                   <%= link_to image_tag('matlab1.png' , class: 'portfolio_active'), 'javascript:void(0)' %>
                   <%= link_to image_tag('matlab2.png' , class: 'portfolio'), 'javascript:void(0)' %>

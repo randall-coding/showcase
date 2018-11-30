@@ -66,6 +66,7 @@ $(document).on "turbolinks:load", ->
     nextSlide2(a)
   , time
 
+  ##CALLBACKS
   #moustache toggle
   $('#btn-profile').on 'click', ->
     toggleMoustache()
@@ -92,7 +93,29 @@ $(document).on "turbolinks:load", ->
     $('div.mask').css('display','none')
     e.preventDefault()
 
-  ##functions
+  #accordians
+  #debug make only for phones
+  $h3 = $('h3')
+  $slideshows = $('div.slideshow')
+
+  $h3.on('mouseenter', ->
+    div = $(this).next();
+    $(div).slideDown();
+  )
+  $h3.on('click', ->
+    div = $(this).next();
+    $(div).slideUp();
+  )
+  $slideshows.on('mouseenter', ->
+    div = $(this).prev();
+    $(div).slideDown();
+  )
+  $('div.description').on('click', ->
+    $(this).slideUp();
+  )
+
+
+  ##FUNCTIONS
   nextSlide = (imgs) ->
     #move both by moving padding right (or left)
     console.log i
