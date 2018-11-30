@@ -110,9 +110,6 @@ $(document).on "turbolinks:load", ->
     div = $(this).prev();
     $(div).slideDown();
   )
-  $('div.description').on('click', ->
-    $(this).slideUp();
-  )
 
 
   ##FUNCTIONS
