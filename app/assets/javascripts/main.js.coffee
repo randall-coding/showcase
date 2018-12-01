@@ -115,7 +115,6 @@ $(document).on "turbolinks:load", ->
   ##FUNCTIONS
   nextSlide = (imgs) ->
     #move both by moving padding right (or left)
-    console.log i
     $next = 0
     $nextnext = 0
     speed = 750
@@ -140,7 +139,6 @@ $(document).on "turbolinks:load", ->
       speed
     )
     increment()
-    console.log $nextnext
     $nextnext.addClass('active').removeClass('inactive').css('left','100%')
 
     #end nextSlide
