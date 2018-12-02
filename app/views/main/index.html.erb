@@ -9,7 +9,6 @@
     <meta name="description" content="This is Randall's professional profile.
         He is a Ruby on Rails specialist, a Javascript junky and SEO optimizer.  A US based
         web designer deliveromg quality content on demand.  Phoenix Arizona resident">
-
     <% if Rails.env == "production" %>
       <!-- Matomo -->
       <script type="text/javascript">
@@ -31,7 +30,6 @@
 
   <body>
     <!-- <h1> Randall Coding: brief portfolio  </h1>  <%= link_to '(github)' , 'https://github.com/randall-coding' %> -->
-
     <div class='page'>
       <%= render 'header' %>
 
@@ -57,10 +55,9 @@
                   <%= link_to image_tag('elitebank3.png' , class: 'portfolio' , alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
                   <%= link_to image_tag('elitebank4.png' , class: 'portfolio' , alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
                   <%= link_to image_tag('elitebank5.png' , class: 'portfolio' , alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
-
                 </div>
-          </li>
-            <hr></hr>
+            </li>
+            <hr/>
 
             <li>
               <h3> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper", target:"_blank"%> </h3>
@@ -78,8 +75,25 @@
               </p>
               <p>
             </li>
-            <hr></hr>
+            <hr/>
+          </ul>
 
+          <h1 class="center"> Wordpress Projects </h1>
+          <ul>
+            <li>
+              <h3> <%= link_to 'Event planner website', 'javascript:void(0)' , class: "", target:"_blank"%> </h3>
+                  <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
+              <div class="description">
+                <p> Wordpress site for event planning company in Austin Texas.  Client needed help to fix the broken website functionaliy, re-write the styles on each page,
+                    customize the wordpress theme, and add page scrolling animations.  <b> <a href="javascript:void(0)" > (Visit) </a> </b>
+                  <i></i>
+                <p>
+              </div>
+              <div id="slideshow3" class="slideshow">
+                <%= link_to image_tag('xo_site.jpg' , class: 'portfolio_active', alt:'portfolio image of website'), 'javascript:void(0)'%>
+              </div>
+              <hr/>
+            </li>
           </ul>
 
           <h1 class="center"> Data Analytics Projects </h1>
@@ -93,7 +107,7 @@
                       sorting and creates an mp4 video from the sorted charts.  Sorts hundreds of files at one time.
                   </p>
                 </div>
-                <div class="slideshow" id="slideshow3">
+                <div id="slideshow4" class="slideshow" >
                   <%= link_to image_tag('matlab1.png' , class: 'portfolio_active'), 'javascript:void(0)', alt:'portfolio image of application' %>
                   <%= link_to image_tag('matlab2.png' , class: 'portfolio'), 'javascript:void(0)', alt:'portfolio image of application GUI' %>
                   <%= link_to image_tag('matlab3.png' , class: 'portfolio'), 'javascript:void(0)', alt:'portfolio image of application GUI' %>
@@ -101,11 +115,8 @@
                   <%= link_to image_tag('elitebank5.png' , class: 'portfolio'), 'https://elitebank.randallcoding.com/' %>
         -->        </div>
             </li>
-
-            <br><br>
-            <!-- next item -->
-            <br>
           </ul>
+
          </main>
         </div> <!-- div_left -->
 
@@ -126,7 +137,8 @@
             <button id='btn-profile' class='center' title='moustache'> Toggle Moustache  </button>
           </div>
           <section class="bio">
-            <p>  &nbsp; &nbsp; &nbsp; Hi all.  Ruby on Rails enthusiast, with background in scientific research and freelance programming.
+            <p>
+                 &nbsp; &nbsp; &nbsp; Hi all.  Ruby on Rails enthusiast, with background in scientific research and freelance programming.
                  I am a native born US citizen with a passion for web dev and Linux.
             </p>
           </section>

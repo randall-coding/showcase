@@ -60,9 +60,9 @@ $(document).on "turbolinks:load", ->
     nextSlide(imgs)
   , time
 
-  #run slideshow 3
+  #run slideshow 4
   setInterval ->
-    a = $('#slideshow3').find("a")
+    a = $('#slideshow4').find("a")
     nextSlide2(a)
   , time
 
