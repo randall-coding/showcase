@@ -94,22 +94,30 @@ $(document).on "turbolinks:load", ->
     e.preventDefault()
 
   #accordians
-  #debug make only for phones
   $h3 = $('h3')
+  $li = $('div.left li')
   $slideshows = $('div.slideshow')
-
-  $h3.on('mouseenter', ->
-    div = $(this).next();
-    $(div).slideDown();
+  $li.on('mouseenter', ->
+    div = $(this).find('div.description');
+    $(div).stop(true,true).slideDown();
   )
+  $li.on('mouseleave', ->
+    div = $(this).find('div.description');
+    $(div).stop(true,true).slideUp();
+  )
+
+  # $h3.on('mouseenter', ->
+  #   div = $(this).next();
+  #   $(div).slideDown();
+  # )
   $h3.on('click', ->
     div = $(this).next();
     $(div).slideUp();
   )
-  $slideshows.on('mouseenter', ->
-    div = $(this).prev();
-    $(div).slideDown();
-  )
+  # $slideshows.on('mouseenter', ->
+  #   div = $(this).prev();
+  #   $(div).slideDown();
+  # )
 
 
   ##FUNCTIONS
