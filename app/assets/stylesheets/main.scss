@@ -10,6 +10,10 @@ $color_ruby: #E6BF83;
 $manilla: #f4e3c8;
 $body: #ffffcc;
 
+html{
+    scroll-behavior: smooth;
+}
+
 body *{
   //maybe later
   // padding-top: 0;

@@ -119,6 +119,15 @@ $(document).on "turbolinks:load", ->
   #   $(div).slideDown();
   # )
 
+  $('a.last').on('click', (e) ->
+    e.preventDefault()
+    pos = $('#last').offset().top
+    `window.scroll({
+        top:pos,
+        left:0,
+        behavior:'smooth'
+    })`
+  )
 
   ##FUNCTIONS
   nextSlide = (imgs) ->
