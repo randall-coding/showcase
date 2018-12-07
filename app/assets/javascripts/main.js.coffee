@@ -121,7 +121,7 @@ $(document).on "turbolinks:load", ->
 
   $('a.last').on('click', (e) ->
     e.preventDefault()
-    pos = $('#last').offset().top
+    pos = $('#last').offset().top - 30
     `window.scroll({
         top:pos,
         left:0,
