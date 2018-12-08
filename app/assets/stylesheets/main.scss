@@ -8,7 +8,7 @@ $slide_height: 300px;
 $profile_width: 60%; //$profile_dim: 130px;
 $color_ruby: #E6BF83;
 $manilla: #f4e3c8;
-$body: #ffffcc;
+$body: rgba(255,255,204,0.2);
 
 html{
     scroll-behavior: smooth;
@@ -257,9 +257,8 @@ table.contact_menu{
   font-weight:bold;
   //note don't display as block
   overflow:hidden;
-  border:4px brown solid;
+  border:6px $manilla solid;
   border-collapse:collapse;
-  //border-spacing:0px;
 
   & a {
       width:100%;
@@ -277,7 +276,7 @@ table.contact_menu{
 
   & tr{
     margin:0;
-    border-bottom:4px brown solid;
+    border-bottom:2px $manilla solid;
   }
 
   & tr:hover{
