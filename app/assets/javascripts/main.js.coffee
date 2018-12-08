@@ -106,22 +106,14 @@ $(document).on "turbolinks:load", ->
     $(div).stop(true,true).slideUp();
   )
 
-  # $h3.on('mouseenter', ->
-  #   div = $(this).next();
-  #   $(div).slideDown();
-  # )
   $h3.on('click', ->
     div = $(this).next();
     $(div).slideUp();
   )
-  # $slideshows.on('mouseenter', ->
-  #   div = $(this).prev();
-  #   $(div).slideDown();
-  # )
 
   $('a.last').on('click', (e) ->
     e.preventDefault()
-    pos = $('#last').offset().top - 30
+    pos = $('#last').offset().top - 20
     `window.scroll({
         top:pos,
         left:0,
@@ -157,7 +149,6 @@ $(document).on "turbolinks:load", ->
     )
     increment()
     $nextnext.addClass('active').removeClass('inactive').css('left','100%')
-
     #end nextSlide
 
   nextSlide_old = (imgs) ->
