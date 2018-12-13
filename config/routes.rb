@@ -5,4 +5,7 @@ root 'main#index'
 get 'main/contact' => 'main#contact'  , as: :contact_me
 post 'main/contact_send' => 'main#contact_send' , as: :contact_send
 
+get 'api/ethereum' => 'transaction#index' , as: :ethereum
+post 'api/ethereum' => 'transaction#index' , as: :ethereum_post
+
 end
