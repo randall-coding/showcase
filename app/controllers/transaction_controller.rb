@@ -12,7 +12,7 @@ include TransactionHelper
     @txInfo = {}
     @txInfo['hash'] = params[:hash]? params[:hash].strip : 0
     @txInfo['response'] = nil
-
+    params[:mode] ||= 'mainnet'
     if( params[:mode] == "ropsten")
       #note, in production I would use ENV['eth_apikey'].  apikey is posted as plain text for demonstration.
       @url = "https://api-ropsten.etherscan.io/api?module=proxy&action=eth_getTransactionByHash&txhash=#{@txInfo['hash']}&apikey=7HH9ACPSQ4K45G31J8C488EUGMTRGYAI4J"
