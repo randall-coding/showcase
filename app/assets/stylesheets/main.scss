@@ -257,7 +257,7 @@ table.contact_menu{
   font-weight:bold;
   //note don't display as block
   overflow:hidden;
-  border:6px $manilla solid;
+  border:4px solid black;
   border-collapse:collapse;
 
   & a {
@@ -268,7 +268,7 @@ table.contact_menu{
 
   & a:link{
     color:black;
-    
+
   }
 
   & a:visited{
@@ -277,7 +277,7 @@ table.contact_menu{
 
   & tr{
     margin:0;
-    border-bottom:2px $manilla solid;
+    border-bottom:2px solid black;
   }
 
   & tr:hover{

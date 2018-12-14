@@ -1,7 +1,7 @@
 class MainController < ApplicationController
   def index
       @message = Message.new
-      redirect_to ethereum_path
+      #redirect_to ethereum_path
   end
 
   def contact_send
