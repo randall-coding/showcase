@@ -324,15 +324,6 @@ ul {
 }
 
 
-.active{
-  display:block;
-}
-
-
-.inactive{
-  display:none;
-}
-
 .center{
   margin-right: auto;
   margin-left: auto;
@@ -415,6 +406,14 @@ ul {
   width:80%;
 }
 
+
+.active{
+  display:block;
+}
+
+.inactive{
+  display:none;
+}
 
 /* Responsive Design. */
 //smaller browser window or large tablet
