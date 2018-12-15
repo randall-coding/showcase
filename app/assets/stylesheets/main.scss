@@ -8,6 +8,7 @@ $slide_height: 300px;
 $profile_width: 60%; //$profile_dim: 130px;
 $color_ruby: #E6BF83;
 $manilla: #f4e3c8;
+$baby_blue: rgb(217, 237, 247);
 $body: rgba(255,255,204,0.2);
 
 html{
@@ -25,6 +26,10 @@ body *{
 a {
   text-decoration: none;
   margin-right:0px;
+}
+a.ethereum{
+    color:black;
+    text-shadow: -2px 0 $baby_blue, 0 2px $baby_blue, 2px 0 $baby_blue, 0 -2px $baby_blue;
 }
 
 a.scraper{
@@ -167,6 +172,19 @@ div.right {
   font-size: 0.9em;
 }
 
+div.slideshow{
+  width: $slideshow_width;
+  height: $slide_height;
+  //overflow:visible;
+  overflow:hidden;
+  border: 6px solid;
+  border-radius: 5px;
+  background-color:rgba(230,191,131,0.1);
+  margin-left:auto;
+  margin-right: auto;
+  position:relative;
+}
+
 form.contact_form{
   & textarea{
     width: $slideshow_width;
@@ -221,6 +239,18 @@ h3 {
 
 h3 a {
   color: orange;
+}
+
+img.profile {
+  width:100%;
+  height: 100%; //sic. $profile_dim;
+  border:2px solid;
+  margin-left: auto;
+  margin-right: auto;
+  position:absolute;
+  top:0px;
+  left:0px;
+  border-radius:10px;
 }
 
 main{
@@ -293,6 +323,16 @@ ul {
   list-style:none
 }
 
+
+.active{
+  display:block;
+}
+
+
+.inactive{
+  display:none;
+}
+
 .center{
   margin-right: auto;
   margin-left: auto;
@@ -301,19 +341,6 @@ ul {
 
 .center-text{
   text-align: center;
-}
-
-div.slideshow{
-  width: $slideshow_width;
-  height: $slide_height;
-  //overflow:visible;
-  overflow:hidden;
-  border: 6px solid;
-  border-radius: 5px;
-  background-color:rgba(230,191,131,0.1);
-  margin-left:auto;
-  margin-right: auto;
-  position:relative;
 }
 
 .portfolio{
@@ -351,24 +378,8 @@ div.slideshow{
   float:right;
 }
 
-img.profile {
-  width:100%;
-  height: 100%; //sic. $profile_dim;
-  border:2px solid;
-  margin-left: auto;
-  margin-right: auto;
-  position:absolute;
-  top:0px;
-  left:0px;
-  border-radius:10px;
-}
 
-.active{
-  display:block;
-}
-.inactive{
-  display:none;
-}
+
 
 #btn-profile{
     margin-top:5px;

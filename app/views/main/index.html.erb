@@ -39,6 +39,23 @@
           <h1 class="center"> Ruby on Rails Projects </h1>
           <ul>
             <li>
+                <h3> <%= link_to 'Ethereum Blockchain API', 'https://www.randallcoding.com/api/ethereum', class: "ethereum", target:"_blank"%> </h3>
+                <div class="description">
+                  <p> Integration of Etherscan API to scan the Ethereum blockchain.  Works for Mainnet and Ropsten (testnet), and caches data for
+                      faster future retrieval.
+                  </p>
+                  <p> Click <a href="https://etherscan.io/txs" target="_blank"> here </a> for a list of transaction numbers you can use in the search </p>
+                  <p> NOTE: if the transaction is only a few seconds old it may not yet be obtainable.  </p>
+                  <b> <a href="https://www.randallcoding.com/api/ethereum" target="_blank"> (Visit) </a> </b>
+                  </p>
+                </div>
+                <div class="slideshow" id="slideshow">
+                  <%= link_to image_tag('ethereum1.png' , class: 'portfolio_active', alt:'portfolio image of website'), 'https://www.randallcoding.com/api/ethereum', target:"_blank" %>
+                </div>
+            </li>
+            <hr/>
+
+            <li>
                 <h3> <%= link_to 'Elite Bank Website', 'https://elitebank.randallcoding.com', class: "elite", target:"_blank"%> </h3>
                     <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
 
