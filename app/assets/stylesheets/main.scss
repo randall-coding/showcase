@@ -85,6 +85,15 @@ div.contact_me{
   margin-top: 0px;
 }
 
+div.description{
+  & a.visit {
+   float: right;
+   margin: 0px;
+   margin-right: 30px;
+   margin-top: 20px;
+  }
+}
+
 div.h1{
    text-align: center;
 }
