@@ -40,7 +40,7 @@ include TransactionHelper
       elsif (@status =='0')
         @status="Failed"
       else
-        @status = "Available for post BYZANTIUM blocks only"; @status_color = "orange";
+        @status = "Available for post BYZANTIUM blocks only"; @status_color = "rgb(255, 88, 0)";
       end
     end
   end #end index

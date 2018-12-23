@@ -3,4 +3,11 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-  #no longer needed
+  #Callbacks
+  $('a.examples').on('click' , ->
+    $('div.popup-txhash').slideToggle()
+  )
+
+  $('#btn-search1').on('click', ->
+    $('div.popup-txhash').slideUp() 
+  )
