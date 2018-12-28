@@ -1,5 +1,5 @@
 # Showcase website
-Showcase of my recent professional work in web development.
+Showcase of my recent work in web development and beyond (MATLAB).
  
 ## Specs
 Running Rails 5.2. &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ruby version 2.5.  &nbsp;&nbsp;&nbsp; Rspec 3.8/Capybara 3.12 for testing.  &nbsp;&nbsp;&nbsp; PostgreSQL database. &nbsp;&nbsp;&nbsp; <br>  Deployed on Heroku
