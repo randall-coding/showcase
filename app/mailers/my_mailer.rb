@@ -12,6 +12,5 @@ class MyMailer < ApplicationMailer
     @email = message.email
     @from = message.from
     mail to: 'randallcoding@protonmail.com', subject: 'Email from Showcase'
-    #mail to: "randall_abi@outlook.com", subject: "Email from Showcase"
   end
 end
