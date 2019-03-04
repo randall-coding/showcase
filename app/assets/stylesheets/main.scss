@@ -71,6 +71,12 @@ hr{
   opacity: 0;
 }
 
+div.content{
+    margin-left: 5%;
+    margin-right: 5%;
+    width:90%;
+}
+
 div.contact_window{
     background-color: white;
     //border-radius: 20px;  //debug rounding error
