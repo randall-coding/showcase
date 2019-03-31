@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$left_width: 55% ;  //650px;
+$left_width: 65% ;  //650px;
 $slideshow_width: 92%;
 $slide_height: 300px;
 $profile_width: 60%; //$profile_dim: 130px;
@@ -72,9 +72,9 @@ hr{
 }
 
 div.content{
-    margin-left: 5%;
-    margin-right: 5%;
-    width:90%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width:95%;
 }
 
 div.contact_window{
@@ -176,13 +176,13 @@ div.profile{
 
 div.mid{
     float:left;
-    width:12%;
+    width:7%;
     height:1000px;
 }
 
 div.right {
   float:left;
-  width: 20%; //270px;
+  width: 22%; //270px;
   min-width: 180px;
   max-width:300px;
   overflow:hidden;
