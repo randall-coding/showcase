@@ -94,17 +94,17 @@ $(document).on "turbolinks:load", ->
     e.preventDefault()
 
   #accordians
-  $h3 = $('h3')
-  $li = $('div.left li')
-  $slideshows = $('div.slideshow')
-  $li.on('mouseenter', ->
-    div = $(this).find('div.description');
-    $(div).stop(true,true).slideDown();
-  )
-  $li.on('mouseleave', ->
-    div = $(this).find('div.description');
-    $(div).stop(true,true).slideUp();
-  )
+  # $h3 = $('h3')
+  # $li = $('div.left li')
+  # $slideshows = $('div.slideshow')
+  # $li.on('mouseenter', ->
+  #   div = $(this).find('div.description');
+  #   $(div).stop(true,true).slideDown();
+  # )
+  # $li.on('mouseleave', ->
+  #   div = $(this).find('div.description');
+  #   $(div).stop(true,true).slideUp();
+  # )
 
   $h3.on('click', ->
     div = $(this).next();
