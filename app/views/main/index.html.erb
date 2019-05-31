@@ -30,18 +30,19 @@
   </head>
 
   <body>
-    <!-- <h1> Randall Coding: brief portfolio  </h1>  <%= link_to '(github)' , 'https://github.com/randall-coding' %> -->
+      <!-- <%= link_to '(github)' , 'https://github.com/randall-coding' %> -->
     <div class='page'>
       <%= render 'header' %>
 
       <div class="content">
         <div class="left">
         <main>
-          <h1 class="center"> Ruby on Rails Projects </h1>
+          <h1 class="center"> Brief portfolio  </h1>
+          <!-- <h1 class="center"> Ruby on Rails Projects </h1> -->
           <ul>
             <li>
-                <h3> <%= link_to 'Ethereum Blockchain API', ethereum_url, class: "ethereum", target:"_blank" , id:"last"%> </h3>
-                <div class="description">
+                <h3> <%= link_to 'Ethereum Blockchain API', ethereum_url, class: "ethereum", target:"_blank" , id:"last"%> </h3> <%= image_tag('rails_logo_small.png' , class: 'framework', alt:'framework used') %>
+                  <div class="description">
                   <p> Integration of Etherscan API to scan the Ethereum blockchain.  Works for Mainnet and Ropsten (testnet), and caches data for
                       faster future retrieval.
                   </p>
@@ -58,7 +59,7 @@
             <hr/>
 
             <li>
-                <h3> <%= link_to 'Elite Bank Website', 'https://elitebank.randallcoding.com', class: "elite", target:"_blank"%> </h3>
+                <h3> <%= link_to 'Elite Bank Website', 'https://elitebank.randallcoding.com', class: "elite", target:"_blank"%> </h3> <%= image_tag('rails_logo_small.png' , class: 'framework', alt:'framework used') %>
                     <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
 
                 <div class="description">
@@ -80,7 +81,7 @@
             <hr/>
 
             <li>
-              <h3> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper", target:"_blank"%> </h3>
+              <h3> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper", target:"_blank"%> </h3> <%= image_tag('rails_logo_small.png' , class: 'framework', alt:'framework used') %>
                   <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
               <div class="description">
                 <p> Web scraper obtains product names and prices from Amazon based on a search.  Use the search query box to search for listings of any items.  Number of pages
@@ -98,10 +99,10 @@
             <hr/>
           </ul>
 
-          <h1 class="center"> Wordpress Projects </h1>
+          <!-- <h1 class="center"> Wordpress Projects </h1> -->
           <ul>
             <li>
-              <h3> <%= link_to 'Event Planner\'s Website', 'javascript:void(0)' , class: "", target:"_blank"%> </h3>
+              <h3> <%= link_to 'Event Planner\'s Website', 'javascript:void(0)' , class: "", target:"_blank"%> </h3> <%= image_tag('wordpress_logo.png' , class: 'framework', alt:'framework used') %>
                   <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
               <div class="description">
                 <p> Wordpress site for event planning company in Austin Texas.  Client needed help to fix the broken website functionaliy, re-write the styles on each page,
@@ -116,10 +117,10 @@
             </li>
           </ul>
 
-          <h1 class="center"> Data Analytics Projects </h1>
+          <!--  <h1 class="center"> Data Analytics Projects </h1> -->
           <ul>
             <li>
-                <h3 class="matlab"> Ultrasound Data Visualization </h3> <!-- <%= link_to 'Ultrasound Data Visualization', 'javascript:void(0)', class: "matlab" %> </h3> -->
+                <h3 class="matlab"> Ultrasound Data Visualization </h3> <%= image_tag('matlab-logo.png' , class: 'framework matlab', alt:'framework used') %> <!-- <%= link_to 'Ultrasound Data Visualization', 'javascript:void(0)', class: "matlab" %> </h3> -->
                 <div class="description">
                   <p> Version 1.0: A stand alone Windows app using MATLAB to process ultrasound data and create color mapped image.
                   <p>
