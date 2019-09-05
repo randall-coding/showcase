@@ -1,0 +1,103 @@
+<div class="portfolio-container">
+<main>
+  <!-- <h1 class="center section"> Example Projects  </h1> -->
+  <!-- <h1 class="center"> Ruby on Rails Projects </h1> -->
+  <ul>
+    <li>
+        <h3> <%= link_to 'Ethereum Blockchain API', ethereum_url, class: "ethereum", target:"_blank" , id:"last"%> </h3> <%= image_tag('rails_logo_small.png' , class: 'framework', alt:'framework used') %>
+          <div class="description">
+          <p> Integration of Etherscan API to scan the Ethereum blockchain.  Displays information about given transaction and caches data for
+              faster future retrieval.
+          </p>
+          <p> Click <a href="https://etherscan.io/txs" target="_blank"> here </a> for a list of transaction numbers you can use in the search
+              <b> <a href= <%= ethereum_url%>  target="_blank"  class="visit"> (Visit) </a> </b>
+          </p>
+
+        </div>
+        <div class="slideshow" id="slideshow5">
+          <%= link_to image_tag('ethereum1.png' , class: 'portfolio_active', alt:'portfolio image of website'), 'api/ethereum', target:"_blank" %>
+        </div>
+    </li>
+    <hr/>
+
+    <li>
+        <h3> <%= link_to 'Elite Bank Website', 'https://elitebank.randallcoding.com', class: "elite", target:"_blank"%> </h3> <%= image_tag('rails_logo_small.png' , class: 'framework', alt:'framework used') %>
+            <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
+
+        <div class="description">
+          <p> Elite bank features Postgres database, admin account / page authorization, user sign in, Stripe payment membership subscriptions and is deployed on Heroku.
+          <i> Get started by logging in as "admin" with password "p".</i>
+          <p> Log in as an individual customer using their first name as username and "p" as their password.
+              <b> <a href="https://elitebank.randallcoding.com" target="_blank" class="visit"> (Visit) </a> </b>
+          </p>
+
+        </div>
+        <div class="slideshow" id="slideshow1">
+          <%= link_to image_tag('elitebank1.png' , class: 'portfolio_active', alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
+          <%= link_to image_tag('elitebank2.png' , class: 'portfolio shifted', alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
+          <%= link_to image_tag('elitebank3.png' , class: 'portfolio' , alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
+          <%= link_to image_tag('elitebank4.png' , class: 'portfolio' , alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
+          <%= link_to image_tag('elitebank5.png' , class: 'portfolio' , alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
+        </div>
+    </li>
+    <hr/>
+
+    <li>
+      <h3> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper", target:"_blank"%> </h3> <%= image_tag('rails_logo_small.png' , class: 'framework', alt:'framework used') %>
+          <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
+      <div class="description">
+        <p> Web scraper obtains product names and prices from Amazon based on a search.  Use the search query box to search for listings of any items.  Number of pages
+          of results can be specified to obtain more results.  <b> <a href="https://scraper-randallcoding.herokuapp.com" target="_blank" class="visit"> (Visit) </a> </b>
+          <i></i>
+        <p>
+      </div>
+
+      <div id="slideshow2" class="slideshow">
+        <%= link_to image_tag('scraper.png' , class: 'portfolio_active', alt:'portfolio image of website'), 'https://scraper-randallcoding.herokuapp.com', target:"_blank"%>
+      </div>
+      </p>
+      <p>
+    </li>
+    <hr/>
+  </ul>
+
+  <!-- <h1 class="center section"> Work for clients  </h1> -->
+  <!-- <h1 class="center"> Wordpress Projects </h1> -->
+
+  <ul>
+    <li>
+      <h3> <%= link_to 'Event Planner\'s Website', 'https://simplyxoevents.com/' , class: "", target:"_blank"%> </h3> <%= image_tag('wordpress_logo.png' , class: 'framework', alt:'framework used') %>
+      <div class="description">
+        <p> Wordpress site for event planning company in Austin Texas.  Client needed help to fix the broken website functionaliy, re-write the styles on each page,
+            customize the wordpress theme, and add page scrolling animations.<b> <a href="https://www.upwork.com/fl/randallbabaoye3" target="_blank" class="visit"> (Review) </a> </b>
+          <i></i>
+        <p>
+      </div>
+      <div id="slideshow3" class="slideshow">
+        <%= link_to image_tag('xo_site.jpg' , class: 'portfolio_active', alt:'portfolio image of website'), 'https://simplyxoevents.com/' , target:"_blank" %>
+      </div>
+      <hr/>
+    </li>
+  </ul>
+
+  <!--  <h1 class="center"> Data Analytics Projects </h1> -->
+  <ul>
+    <li>
+        <h3 class="matlab"> Ultrasound Data Visualization </h3> <%= image_tag('matlab-logo.png' , class: 'framework matlab', alt:'framework used') %> <!-- <%= link_to 'Ultrasound Data Visualization', 'javascript:void(0)', class: "matlab" %> </h3> -->
+        <div class="description">
+          <p> Version 1.0: A stand alone Windows app using MATLAB to process ultrasound data and create color mapped image.
+          <p>
+          <p> Version 2.0: A stand alone Windows app using MATLAB GUI which performs file selection,
+              sorting and creates an mp4 video from the sorted charts.  Sorts hundreds of files at one time.
+          </p>
+        </div>
+        <div id="slideshow4" class="slideshow" >
+          <%= link_to image_tag('matlab1.png' , class: 'portfolio_active'), 'javascript:void(0)', alt:'portfolio image of application' %>
+          <%= link_to image_tag('matlab2.png' , class: 'portfolio'), 'javascript:void(0)', alt:'portfolio image of application GUI' %>
+          <%= link_to image_tag('matlab3.png' , class: 'portfolio'), 'javascript:void(0)', alt:'portfolio image of application GUI' %>
+        </div>
+    </li>
+  </ul>
+
+ </main>
+</div> <!-- div.portfolio-container -->

@@ -72,12 +72,12 @@ $(document).on "turbolinks:load", ->
     toggleMoustache()
 
   #open contact window / contact form
-  $('a.contact').on 'click' , ->
+  $('#contact').on 'click' , ->
     #clear inputs
     $('textarea').val('')
     $('input:text').val('')
     scroll = $(window).scrollTop()   #track window scroll for modal
-    pos = scroll + 20
+    pos = scroll + 30
     #open contact window (modal)
     contact_window = $('div.contact_window')
     contact_window.css('top',pos + 'px')
