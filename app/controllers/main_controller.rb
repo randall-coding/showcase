@@ -1,7 +1,6 @@
 class MainController < ApplicationController
   def index
       @message = Message.new
-      #redirect_to ethereum_path
   end
 
   def contact_send
@@ -16,10 +15,17 @@ class MainController < ApplicationController
         respond_to do |format|
           format.js
         end
-        #redirect_to root_url
+        #stay at root
       else
         #redirect_to contact_me_url
       end
   end
 
+  def aboutme
+    render layout: false
+  end
+
+  def portfolio
+    render layout: false
+  end
 end

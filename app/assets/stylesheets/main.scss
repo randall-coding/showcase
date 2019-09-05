@@ -132,7 +132,7 @@ div.page{
   //works better as expansive div anyway. could not modify width here
 }
 
-div.left {
+div.portfolio-container {
   width: $left_width;
   min-width:500px;
   //max-width:650px;
@@ -182,43 +182,45 @@ div.mid{
 }
 
 div.nav-container{
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: auto;
+  margin-right: auto;
   width: 60%;
   height: 40px;
+  min-width: 730px;
+  overflow:auto;
 }
 
 div.nav-item{
   float: left;
   text-align:center;
+  background-color: $ruby;
+  color:black;
   position: relative;
   width:20%;
+  min-width:150px;
   margin-left: 4%;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: $ruby;
-  color:black;
   font-weight:bold;
   border-radius: 5px;
+  cursor:pointer;
 }
 
-div.right {
-  float:right; //float:left;
-  width: 22%; //270px;
+div.about-me {
+  width: 35%;
   min-width: 180px;
-  max-width:300px;
   overflow:hidden;
   padding-right:20px;
   padding-left: 20px;
   padding-top: 5px;
   margin-top:45px;
-  margin-left:0px; //55px;
+  margin-left:auto;
+  margin-right:auto;
   margin-bottom:20px;
   background-color:white;
   border-radius:50px;
   border: 1px solid black;
-  margin-right:auto;
-  font-size: 0.80em;
+  font-size: 1.0em;
 }
 
 div.slideshow{
@@ -492,12 +494,6 @@ ul {
     div.main{
       font-size: 0.93em
     }
-    div.left{
-      padding-left:5px;
-    }
-    div.mid{
-      width: 0% ; //width:7%;
-    }
     div.description{
       //display:none;
     }
@@ -505,15 +501,13 @@ ul {
 
 //tablet portrait and smaller
 @media screen and (max-width:910px) {
-  div.left{
-    float:none;
+  div.portfolio-container{
     margin-left:auto;
     margin-right: auto;
     min-width:450px;
-    padding:0px;
     width: 80%;
   }
-  div.right{
+  div.about-me{
     float:none;
     margin-left:auto;
     margin-right: auto;
@@ -536,9 +530,17 @@ ul {
   div.description{
     //display:block;
   }
+  div.nav-container{
+      width:95%;
+  }
 
+  div.nav-item{
+
+  }
 }
 //portrait mode of iphone and smaller
 @media screen and (max-width:760px){
-
+  div.slideshow{
+    height:250px;
+  }
 }

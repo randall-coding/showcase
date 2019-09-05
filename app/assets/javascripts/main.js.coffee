@@ -53,18 +53,18 @@ $(document).on "turbolinks:load", ->
   )
 
   #run slideshow 1
-  time = 4500
-  i = 0
-  imgs = $('#slideshow1').find("img")
-  setInterval ->
-    nextSlide(imgs)
-  , time
-
-  #run slideshow 4
-  setInterval ->
-    a = $('#slideshow4').find("a")
-    nextSlide2(a)
-  , time
+  # time = 4500
+  # i = 0
+  # imgs = $('#slideshow1').find("img")
+  # setInterval ->
+  #   nextSlide(imgs)
+  # , time
+  #
+  # #run slideshow 4
+  # setInterval ->
+  #   a = $('#slideshow4').find("a")
+  #   nextSlide2(a)
+  # , time
 
   ##CALLBACKS
   #moustache toggle
@@ -93,24 +93,7 @@ $(document).on "turbolinks:load", ->
     $('div.mask').css('display','none')
     e.preventDefault()
 
-  #accordians
-  # $h3 = $('h3')
-  # $li = $('div.left li')
-  # $slideshows = $('div.slideshow')
-  # $li.on('mouseenter', ->
-  #   div = $(this).find('div.description');
-  #   $(div).stop(true,true).slideDown();
-  # )
-  # $li.on('mouseleave', ->
-  #   div = $(this).find('div.description');
-  #   $(div).stop(true,true).slideUp();
-  # )
-
-  $h3.on('click', ->
-    div = $(this).next();
-    $(div).slideUp();
-  )
-
+  # last article button
   $('a.last').on('click', (e) ->
     e.preventDefault()
     pos = $('#last').offset().top - 20
@@ -119,6 +102,34 @@ $(document).on "turbolinks:load", ->
         left:0,
         behavior:'smooth'
     })`
+  )
+
+  # About me tab
+  $('#about-me').on('click', (e) ->
+    console.log('About me called')
+    $.get('aboutme', (data, status) ->
+       console.log('About me AJAX status')
+       console.log(status)
+
+       content = $('div.content')
+       content.fadeOut(700, ->
+         $(this).html(data).fadeIn(700)
+      );
+    );
+  )
+
+  # About me tab
+  $('#portfolio').on('click', (e) ->
+    console.log('Portfolio  called')
+    $.get('portfolio', (data, status) ->
+       console.log('Portfolio  AJAX status')
+       console.log(status)
+
+       content = $('div.content')
+       content.fadeOut(700, ->
+         $(this).html(data).fadeIn(700)
+      );
+    );
   )
 
   ##FUNCTIONS
