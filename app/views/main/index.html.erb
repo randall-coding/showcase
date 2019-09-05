@@ -50,7 +50,6 @@
                       <b> <a href= <%= ethereum_url%>  target="_blank"  class="visit"> (Visit) </a> </b>
                   </p>
 
-
                 </div>
                 <div class="slideshow" id="slideshow5">
                   <%= link_to image_tag('ethereum1.png' , class: 'portfolio_active', alt:'portfolio image of website'), 'api/ethereum', target:"_blank" %>
@@ -98,12 +97,13 @@
             </li>
             <hr/>
           </ul>
+
           <!-- <h1 class="center section"> Work for clients  </h1> -->
           <!-- <h1 class="center"> Wordpress Projects </h1> -->
+
           <ul>
             <li>
               <h3> <%= link_to 'Event Planner\'s Website', 'https://simplyxoevents.com/' , class: "", target:"_blank"%> </h3> <%= image_tag('wordpress_logo.png' , class: 'framework', alt:'framework used') %>
-                  <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
               <div class="description">
                 <p> Wordpress site for event planning company in Austin Texas.  Client needed help to fix the broken website functionaliy, re-write the styles on each page,
                     customize the wordpress theme, and add page scrolling animations.<b> <a href="https://www.upwork.com/fl/randallbabaoye3" target="_blank" class="visit"> (Review) </a> </b>
@@ -132,77 +132,18 @@
                   <%= link_to image_tag('matlab1.png' , class: 'portfolio_active'), 'javascript:void(0)', alt:'portfolio image of application' %>
                   <%= link_to image_tag('matlab2.png' , class: 'portfolio'), 'javascript:void(0)', alt:'portfolio image of application GUI' %>
                   <%= link_to image_tag('matlab3.png' , class: 'portfolio'), 'javascript:void(0)', alt:'portfolio image of application GUI' %>
-        <!--          <%= link_to image_tag('elitebank4.png' , class: 'portfolio'), 'https://elitebank.randallcoding.com/' %>
-                  <%= link_to image_tag('elitebank5.png' , class: 'portfolio'), 'https://elitebank.randallcoding.com/' %>
-        -->        </div>
+                </div>
             </li>
           </ul>
 
          </main>
         </div> <!-- div_left -->
 
-        <div class="mid">
-          <!-- spacer div -->
-        </div>
-
-        <div class='right'>
-          <!-- Debug css doesn't load in button
-              <%= button_to 'Toggle me' , class: "center", style: 'margin-left:200px;height:150px'%>
-          -->
-          <h2 class="center"> About me </h2>
-          <div class='profile-container'>
-            <div id='dummy' class='profile'>
-              <%= image_tag 'moustache.png' , id:'moustache' %>
-              <%= image_tag 'cartoon.png', alt: 'profile picture. avatar',class: 'profile', id:'img' %>
-            </div>
-            <button id='btn-profile' class='center' title='moustache'> Toggle Moustache  </button>
-          </div>
-          <section class="bio">
-            <p>
-                 &nbsp; &nbsp; Randall here.  I'm a Ruby on Rails web developer with a strong analytical background. JQuery, HTML5/CSS3, APIs, Ruby, web scraping, data analysis?  I've got you covered.  <br>  &nbsp; &nbsp; Native born US citizen, living in Phoenix, Arizona.
-            </p>
-          </section>
-          <address class="center">
-          <table class="contact_menu">
-            <tr> <td>  <a href='https://www.github.com/randall-coding' target="_blank">
-                          <div>  GitHub </div>
-                       </a>
-           </td> </tr>
-           <tr> <td>
-              <a href='javascript:void(0)' data-remote="true" class="contact">
-                 <div> Contact </div>
-              </a>
-           </td> </tr>
-           <tr> <td>
-             <a href="https://www.paypal.me/randallcoding" target="_blank">
-                <div> Paypal </div>
-             </a>
-           </td>  </tr>
-           <tr style='border-bottom:0px none;'> <td>
-             <a href="#last" class="last">
-               <div> Latest </div>
-             </a>
-
-           </td>  </tr>
-          </table>
-          </address>
-
-          <br>
-          <p> <b> <center> Overview of my skills: </center> </b>
-          <br> Ruby on Rails web applications.
-          <br><br> Postgres database implementation
-          <br><br> Heroku deployments
-          <br><br> JQuery, AJAX and Coffeescript
-          <br><br> MATLAB and C++ for computation of data sets
-          <br><br> Web scraping with Ruby
-          <br><br> API integrations, JSON and XML parsing
-          <br><br> User databases, secure logins and admin authorization
-          <br><br> Stripe payment processing
-          <br><br> Graduate work in computer science
-          </p>
+         <!-- <div class="mid"> -->
+           <!-- spacer div -->
+        <!-- </div> -->
 
 
-        </div> <!-- end div.right -->
       </div> <!-- end div.all-content -->
         <div class="contact_window" id='#contact_window'>
             <%= render 'contact' %>

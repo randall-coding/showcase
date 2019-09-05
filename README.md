@@ -18,3 +18,9 @@ Running Rails 5.2. &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ruby version 2.5.  &nbs
 ## Tests
 * Run test suites with `bundle exec rspec spec` after installing rspec with `rails generate rspec:install`
 * Tests are up to date and passing
+
+## Updates
+* Making portfolio items REST resources
+* UI changes
+  * Making top navbar
+  * Using AJAX rendering on tabs 
