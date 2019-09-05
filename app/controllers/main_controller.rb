@@ -26,6 +26,6 @@ class MainController < ApplicationController
   end
 
   def portfolio
-    render layout: false
+    render '_portfolio', layout: false
   end
 end

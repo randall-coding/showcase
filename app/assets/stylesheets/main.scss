@@ -199,7 +199,12 @@ div.nav-item{
   padding-bottom: 5px;
   font-weight:bold;
   border-radius: 5px;
+  border: 1px solid black;
   cursor:pointer;
+}
+
+.nav-item-active{
+  background-color: lighten($ruby,15%) !important; //gold !important;
 }
 
 div.about-me {

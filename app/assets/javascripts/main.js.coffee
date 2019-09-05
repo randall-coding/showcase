@@ -100,7 +100,7 @@ $(document).on "turbolinks:load", ->
         behavior:'smooth'
     })`
   )
-
+  # Tabs
   # About me tab
   $('#about-me').on('click', (e) ->
     console.log('About me called')
@@ -109,13 +109,14 @@ $(document).on "turbolinks:load", ->
        console.log(status)
 
        content = $('div.content')
+       changeTabColor($('#about-me'))
        content.fadeOut(700, ->
          $(this).html(data).fadeIn(700)
       );
     );
   )
 
-  # About me tab
+  # Portfolio tab
   $('#portfolio').on('click', (e) ->
     console.log('Portfolio  called')
     $.get('portfolio', (data, status) ->
@@ -123,6 +124,7 @@ $(document).on "turbolinks:load", ->
        console.log(status)
 
        content = $('div.content')
+       changeTabColor($('#portfolio'))
        content.fadeOut(700, ->
          $(this).html(data).fadeIn(700)
       );
@@ -130,6 +132,15 @@ $(document).on "turbolinks:load", ->
   )
 
   ##FUNCTIONS
+
+  # Change tab colors
+  changeTabColor = (newTab) ->
+    oldTab = $('.nav-item-active')
+    oldTab.removeClass('nav-item-active')
+    console.log(newTab)
+    newTab.addClass('nav-item-active')
+
+  # Change slides
   nextSlide = (imgs) ->
     #move both by moving padding right (or left)
     $next = 0
