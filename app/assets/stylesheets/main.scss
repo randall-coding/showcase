@@ -130,11 +130,11 @@ div.page{
 
 div.portfolio-container {
   width: $left_width;
-  min-width:500px;
+  // min-width:500px;
   //max-width:650px;
   margin-right: auto;
   margin-left: auto;
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
 
 div.main{
@@ -450,7 +450,7 @@ ul {
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight:bold;
-    font-size:0.9em;
+    font-size:0.95em;
     border-radius: 10px;
 }
 
@@ -503,22 +503,18 @@ ul {
 //tablet portrait and smaller
 @media screen and (max-width:910px) {
   div.portfolio-container{
-    margin-left:auto;
-    margin-right: auto;
-    min-width:450px;
+    // min-width:450px;
     width: 80%;
   }
   div.about-me{
     float:none;
     margin-left:auto;
     margin-right: auto;
-    margin-top:0px;
     width:60%;
     min-width:250px;
     max-width:inherit;
   }
   div.profile-container{
-    float:left;
     margin-right:5px;
     margin-bottom: 10px;
   }
@@ -541,7 +537,31 @@ ul {
 }
 //portrait mode of iphone and smaller
 @media screen and (max-width:760px){
+  body{
+    font-size:14px;
+  }
   div.slideshow{
     height:250px;
+  }
+  div.nav-container{
+    min-width:600px;
+  }
+  div.nav-item{
+    min-width:100px;
+  }
+  #logo{
+    width:80%
+  }
+}
+
+@media screen and (max-width:500px){
+  body{
+    font-size:12px;
+  }
+  div.nav-item{
+    min-width: 80px;
+  }
+  div.nav-container{
+    min-width:400px;
   }
 }
