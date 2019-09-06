@@ -85,11 +85,24 @@ div.contact_window{
     position:absolute;
     width: 60%;
     min-width:700px;
-    height: 520px;
+    height: 536px;
     left:20%;
     top: 130px;
     z-index:10;
     display: none;
+}
+
+div.sendbtn-container{
+  width:50%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: 40px;
+  margin-top:10px;
+  float:right;
+  padding-right:10px;
+  & input, button{
+    float:right;
+  }
 }
 
 div.contact_me{
@@ -254,7 +267,7 @@ form.contact_form{
     color: black;
   }
   & input[type="text"]{
-    width:180px;
+    width:95%;
     opacity: 0.9;
     background-color: $body;
     border: 1px grey solid;
@@ -530,9 +543,9 @@ ul {
   div.nav-container{
       width:95%;
   }
-
-  div.nav-item{
-
+  #contact_window{
+    min-width:600px;
+    left:10%;
   }
 }
 //portrait mode of iphone and smaller
@@ -551,6 +564,11 @@ ul {
   }
   #logo{
     width:80%
+  }
+  #contact_window{
+    width:80%;
+    left:10%;
+    min-width:456px
   }
 }
 

@@ -21,9 +21,13 @@
            <%= f.text_field :email %>
          </td>
          <td>
-           <%= f.submit 'Send message' %>  <button id='cancel'> Cancel </a>  <!--  <a id='cancel' href='javascript:void(0)'> Cancel </a> -->
+            <!--  <a id='cancel' href='javascript:void(0)'> Cancel </a> -->
          </td>
        </tr>
      </table>
+     <div class="sendbtn-container">
+       <button id='cancel'> Cancel </button> 
+       <%= f.submit 'Send message' %>
+     </div>
    <% end %>
 </div> <!-- contact_me -->
