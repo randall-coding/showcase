@@ -30,12 +30,6 @@ $(document).on "turbolinks:load", ->
   #       )
   #     i += 1
 
-
-  #hide profile up top
-  #$('div.right').css('overflow','visible')
-  #$('div.main').css('overflow','visible')
-  #$('img.profile').css('margin-top','-430px').css('opacity',1.0).css('z-index',4)
-
   #intro animation
   $('div.header').children().css('opacity',0)
   $('div.header').animate(
@@ -64,33 +58,35 @@ $(document).on "turbolinks:load", ->
   # , time
 
   ##CALLBACKS
-  #moustache toggle
+  # Moustache toggle
   $('#btn-profile').on 'click', ->
     toggleMoustache()
 
-  #open contact window / contact form
+  # Open contact window / contact form
   $('#contact').on 'click' , ->
-    #clear inputs
+    # Clear inputs
     $('textarea').val('')
     $('input:text').val('')
     scroll = $(window).scrollTop()   #track window scroll for modal
     pos = scroll + 30
-    #open contact window (modal)
+    # Set up screen div / blocker
+    $('div.mask').css('display','block')
+    # Open contact window (modal)
     contact_window = $('div.contact_window')
     contact_window.css('top',pos + 'px')
     contact_window.css('display','block')
-    #set up screen div / blocker
-    $('div.mask').css('display','block')
-    #focus
+    contact_window.animate({opacity:1},325)
+    # Focus
     $('textarea').focus()
 
-  #close contact form
+  # Close contact form
   $('#cancel').on 'click' , (e) ->
     $('div.contact_window').css('display','none')
+    $('div.contact_window').css('opacity',0)
     $('div.mask').css('display','none')
     e.preventDefault()
 
-  # last article button
+  # Last article button
   $('a.last').on('click', (e) ->
     e.preventDefault()
     pos = $('#last').offset().top - 20
@@ -100,7 +96,7 @@ $(document).on "turbolinks:load", ->
         behavior:'smooth'
     })`
   )
-  # Tabs
+
   # About me tab
   $('#about-me').on('click', (e) ->
     console.log('About me called')
@@ -132,7 +128,6 @@ $(document).on "turbolinks:load", ->
   )
 
   ##FUNCTIONS
-
   # Change tab colors
   changeTabColor = (newTab) ->
     oldTab = $('.nav-item-active')
