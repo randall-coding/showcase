@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_12_015853) do
+ActiveRecord::Schema.define(version: 2019_10_22_050522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
+    t.string "password_digest"
+    t.string "password_confirmation"
+    t.string "token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "messages", force: :cascade do |t|
     t.string "body"
@@ -21,6 +31,17 @@ ActiveRecord::Schema.define(version: 2018_12_12_015853) do
     t.string "from"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "portfolio_items", force: :cascade do |t|
+    t.string "css_class"
+    t.string "title"
+    t.string "logo"
+    t.string "url"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_url"
   end
 
   create_table "transactions", force: :cascade do |t|

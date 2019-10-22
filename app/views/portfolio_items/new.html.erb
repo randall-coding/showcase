@@ -1,0 +1,39 @@
+<%= stylesheet_link_tag 'portfolio_items' %>
+
+<h1>Add a New Portfolio Item</h1>
+<%= form_for @portfolio_item do |f| %>
+  <div class="input-container">
+    <%= f.label :css_class %>
+    <%= f.text_field :css_class %>
+  </div>
+
+  <div class="input-container">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+
+  <div class="input-container">
+    <%= f.label :logo %>
+    <%= f.text_field :logo %>
+  </div>
+
+
+  <div class="input-container">
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </div>
+
+
+  <div class="input-container">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="input-container">
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </div>
+
+  <%= f.submit :submit %>
+<% end %>

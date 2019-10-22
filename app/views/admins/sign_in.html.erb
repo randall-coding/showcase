@@ -1,0 +1,15 @@
+
+
+<div id="sign-in-container">
+  <h1>Admin Sign In</h1>
+  <%= form_tag admin_create_session_url, method:'post'  do |f| %>
+    <%= text_field_tag :username %>
+    <%=  password_field_tag :password %>
+    <br>
+    <%=  submit_tag :submit %>
+  <% end %>
+
+  <form id="sign-in-form">
+
+  </form>
+</div>

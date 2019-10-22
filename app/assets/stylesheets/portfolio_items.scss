@@ -1,0 +1,13 @@
+// Place all the styles related to the portfolio_items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#new_portfolio_item{
+  width:35%;
+  & input{
+    float:right;
+  }
+  div.input-container{
+    height:35px;
+  }
+}
