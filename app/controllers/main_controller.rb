@@ -1,5 +1,6 @@
 class MainController < ApplicationController
   def index
+      @portfolio_items = PortfolioItem.all
       @message = Message.new
   end
 
@@ -26,6 +27,7 @@ class MainController < ApplicationController
   end
 
   def portfolio
+    @portfolio_items = PortfolioItem.all
     render '_portfolio', layout: false
   end
 end
