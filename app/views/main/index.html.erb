@@ -31,22 +31,21 @@
 
       <body>
         <!-- <%= link_to '(github)' , 'https://github.com/randall-coding' %> -->
+
+        <!-- Main content area -->
         <div class='page'>
           <%= render 'header' %>
-
           <div class="content">
             <%= render 'portfolio' %>
           </div> <!-- end div.content -->
-
-          <div class="contact_window" id='contact_window'>
-                <%= render 'contact' %>
-            </div> <!-- end div.contact_form -->
-
-            <div class="mask">
-
-            </div>     <!-- end div.mask -->
-          </div>
         </div>
+
+        <!-- Contact window and mask -->
+        <div class="contact_window" id='contact_window'>
+              <%= render 'contact' %>
+          </div> <!-- end div.contact_form -->
+          <div class="mask">
+          </div>     <!-- end div.mask -->
 
       </body>
     </html>
