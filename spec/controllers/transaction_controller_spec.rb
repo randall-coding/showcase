@@ -2,12 +2,6 @@ require 'rails_helper'
 require 'factories/transaction_factory'
 
 RSpec.describe TransactionController, type: :controller, :aggregate_failures => true do
-  before(:all) do
-    clearDB()
-  end
-  after(:all) do
-    clearDB()
-  end
 
    describe "caching" do
     context "uses cache object if already in database, it" do

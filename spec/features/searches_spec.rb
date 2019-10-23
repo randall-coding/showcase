@@ -2,13 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "Search page",  :type => :feature , :aggregate_failures => true  do
 
-  before(:all) do
-    Transaction.delete_all
-  end
-  after(:all) do
-    Transaction.delete_all
-  end
-
   def persistCapy()
     Capybara.current_session.instance_variable_set(:@touched, false)
   end

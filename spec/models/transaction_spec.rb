@@ -4,13 +4,6 @@ require 'factories/transaction_factory'
 RSpec.describe Transaction, type: :model do
   tx_good = makeTransaction1()
 
-  before(:all) do
-    clearDB()
-  end
-  after(:all) do
-    clearDB()
-  end
-
   it "saves good transaction" do
     expect(tx_good.save).to be true
   end
@@ -32,6 +25,8 @@ RSpec.describe Transaction, type: :model do
       expect(tx_bad_nil.save).to be_falsey
     end
     it "doesn't save duplicate hash values" do
+      tx_orig = makeTransaction1()
+      tx_orig.save
       tx_bad_dup = makeTransaction1()
       expect(tx_bad_dup.save).to be_falsey
     end
