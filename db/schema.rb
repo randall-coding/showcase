@@ -39,9 +39,9 @@ ActiveRecord::Schema.define(version: 2019_10_22_050522) do
     t.string "logo"
     t.string "url"
     t.string "description"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image_url"
   end
 
   create_table "transactions", force: :cascade do |t|
