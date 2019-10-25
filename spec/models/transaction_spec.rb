@@ -31,8 +31,4 @@ RSpec.describe Transaction, type: :model do
       expect(tx_bad_dup.save).to be_falsey
     end
   end
-
-  describe "makes API calls", :aggregate_failures => true do
-    pending "need to finish this one"
-  end
 end #end transaction spec

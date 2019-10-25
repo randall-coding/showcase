@@ -7,25 +7,20 @@ RSpec.describe PortfolioItemsController, type: :controller do
     create(:admin)
   end
 
-  pending "methods missing implementation"
-
-  describe "GET #index" do
-    # it "returns http success" do
-    #   get :index
-    #   expect(response).to have_http_status(:success)
-    # end
-  end
+  # describe "GET #index" do
+  # end
 
   describe "GET #new" do
     it "returns http success if signed in" do
       # Sign in
       session[:user_token] = "token"
-      # Try new page
+      # Try
       get :new
       expect(response).to have_http_status(:success)
     end
 
     it "returns error if not signed in" do
+      # session[:user_token] is nil
       expect{(get :new) }.to raise_error
     end
 
@@ -45,7 +40,7 @@ RSpec.describe PortfolioItemsController, type: :controller do
     it "returns http success" do
       # Sign in
       session[:user_token] = "token"
-      # Try create
+      # Try
       get :create, params:params
       expect(response).to have_http_status(:success)
     end
@@ -56,25 +51,13 @@ RSpec.describe PortfolioItemsController, type: :controller do
 
   end
 
-  describe "GET #edit" do
-    # it "returns http success" do
-    #   get :edit
-    #   expect(response).to have_http_status(:success)
-    # end
-  end
-
-  describe "GET #update" do
-    # it "returns http success" do
-    #   get :update
-    #   expect(response).to have_http_status(:success)
-    # end
-  end
-
-  describe "GET #destroy" do
-    # it "returns http success" do
-    #   get :destroy
-    #   expect(response).to have_http_status(:success)
-    # end
-  end
+  # describe "GET #edit" do
+  # end
+  #
+  # describe "GET #update" do
+  # end
+  #
+  # describe "GET #destroy" do
+  # end
 
 end
