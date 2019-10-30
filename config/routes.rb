@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  get 'admins/sign_in'
-  get 'portfolio_items/index'
-  get 'portfolio_items/new'
-  get 'portfolio_items/create'
-  get 'portfolio_items/edit'
-  get 'portfolio_items/update'
-  get 'portfolio_items/destroy'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+get 'admins/sign_in'
+get 'portfolio_items/index'
+get 'portfolio_items/new'
+get 'portfolio_items/create'
+get 'portfolio_items/edit'
+get 'portfolio_items/update'
+get 'portfolio_items/destroy'
 
 root 'main#index'
 get '/portfolio' => 'main#portfolio', as: :portfolio
@@ -23,4 +23,5 @@ post '/sign_in' => 'admins#create_session', as: :admin_create_session
 get '/portfolio_item/new' => 'portfolio_items#new', as: :portfolio_item
 post '/portfolio_tem/new' => 'portfolio_items#create', as: :portfolio_items
 
+get '/react/task-manager' => 'react_task_manager#index', as: :task_manager
 end
