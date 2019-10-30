@@ -32,6 +32,22 @@
   display:table-cell;
 }
 
+th.name{
+  min-width:28%;
+}
+
+th.description{
+  min-width:40%;
+}
+
+th.status, th.priority{
+  min-width:12%;
+}
+
+th.cancel{
+  min-width: 8%;
+}
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -58,7 +74,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	  line-height: 1;
 	  background-attachment: scroll, scroll, fixed  !important;
-    background-image: url("images/top-3200??.svg"), image_url("header_singapore_skyline.jpeg") !important;
+    background-image: url("images/top-3200??.svg"), url("../../images/header_singapore_skyline.jpeg")!important;
     background-position: top!important;
     background-repeat: repeat-x, no-repeat, no-repeat!important;
     background-size: 100% 800px!important;
