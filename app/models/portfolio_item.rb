@@ -8,5 +8,15 @@ class PortfolioItem < ApplicationRecord
 
   default_scope { order('id ASC') }
   scope :title_ids, -> { pluck([:id,:title]) }
-  # TODO class logic
+
+  def self.switch_ids(item1, item2)
+    switcher_id = item2.id
+    item2.id = item1.id
+    item1.id = PortfolioItem.last.id + 1
+    item1.save!
+
+    item2.save!
+    item1.id = switcher_id
+    item1.save!
+  end
 end
