@@ -36,24 +36,24 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   config.action_mailer.delivery_method = :smtp
+  
+  # config.action_mailer.smtp_settings = {
+  #   address: 'smtp.gmail.com',
+  #   port: 587,
+  #   user_name: 'feekneem500@gmail.com' ,
+  #   password: ENV['PASS_EMAIL2'],
+  #   authentication: :login,
+  #   enable_starttls_auto: true
+  # }
 
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
-    port: 587,
-    user_name: 'feekneem500@gmail.com' ,
-    password: ENV['PASS_EMAIL2'],
-    authentication: :login,
-    enable_starttls_auto: true
+    # domain: 'www.startuphappy.com',
+    address:        "smtp.sendgrid.net",
+    port:            587,
+    authentication: :plain,
+    user_name:      'apikey',
+    password:       ENV['SENDGRID_API_KEY']
   }
-
-#  config.action_mailer.smtp_settings = {
-#      address:     'smtp.office365.com',
-#      port:        587,  #domain:      'localhost:3000',
-#      user_name:     'randall_abi@outlook.com',
-#      password:      ENV['PASS_EMAIL'],
-#      authentication:  'login',
-#      enable_starttls_auto: true
-#  }
 
   config.action_mailer.perform_deliveries = true
 

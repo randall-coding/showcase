@@ -51,7 +51,7 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :debug
+  config.log_level = :log
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
@@ -72,22 +72,12 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
-    port: 587,
-    user_name: 'feekneem500@gmail.com' ,
-    password: ENV['PASS_EMAIL2'],
-    authentication: :login,
-    enable_starttls_auto: true
+    address:        "smtp.sendgrid.net",
+    port:            587,
+    authentication: :plain,
+    user_name:      'apikey',
+    password:       ENV['SENDGRID_API_KEY']
   }
-
-  #  config.action_mailer.smtp_settings = {
-  #      address:     'smtp.office365.com',
-  #      port:        587,  #domain:      'localhost:3000',
-  #      user_name:     'randall_abi@outlook.com',
-  #      password:      ENV['PASS_EMAIL'],
-  #      authentication:  'login',
-  #      enable_starttls_auto: true
-  #  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

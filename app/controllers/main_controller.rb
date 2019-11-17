@@ -12,7 +12,6 @@ class MainController < ApplicationController
 
       if (message.save)
         MyMailer.contact_me(message).deliver_later
-        message.destroy
         respond_to do |format|
           format.js
         end
