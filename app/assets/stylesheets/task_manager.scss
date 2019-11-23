@@ -128,6 +128,7 @@ input, select, textarea {
 
 	html {
 		box-sizing: border-box;
+    scroll-behavior: smooth !important; 
 	}
 
 	*, *:before, *:after {
