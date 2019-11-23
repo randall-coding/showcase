@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: '"Randall Coding" <no-reply@randallcoding.com>'
+  default from: '"Randall Coding Website" <randallcoding@protonmail.com>'
   layout 'mailer'
 end

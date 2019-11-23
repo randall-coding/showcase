@@ -1,7 +1,6 @@
 class MyMailer < ApplicationMailer
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
-  #
   #   en.my_mailer.send.subject
   #
   def contact_me(message)
@@ -9,6 +8,7 @@ class MyMailer < ApplicationMailer
     @body = message.body
     @email = message.email
     @from = message.from
-    mail to: 'randallcoding@protonmail.com', subject: 'Email from Showcase'
+    mail to: 'randallwork500@gmail.com', subject: 'Email from Showcase'
+    # mail to: 'randallcoding@protonmail.com', subject: 'Email from Showcase'
   end
 end

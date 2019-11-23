@@ -47,12 +47,11 @@ Rails.application.configure do
   # }
 
   config.action_mailer.smtp_settings = {
-    # domain: 'www.startuphappy.com',
-    address:        "smtp.sendgrid.net",
-    port:            587,
+    address:        "smtp.elasticemail.com",
+    port:            2525,
     authentication: :plain,
-    user_name:      'apikey',
-    password:       ENV['SENDGRID_KEY']
+    user_name:      ENV['ELASTIC_EMAIL_USERNAME'],
+    password:       ENV['ELASTIC_EMAIL_KEY']
   }
 
   config.action_mailer.perform_deliveries = true

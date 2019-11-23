@@ -74,10 +74,11 @@ footer, header, hgroup, menu, nav, section {
 body {
 	  line-height: 1;
 	  background-attachment: scroll, scroll, fixed  !important;
-    background-image: url("images/top-3200??.svg"), url("../../images/header_singapore_skyline.jpeg")!important;
-    background-position: top!important;
-    background-repeat: repeat-x, no-repeat, no-repeat!important;
-    background-size: 100% 800px!important;
+    // background-image: 0url("images/top-3200??.svg"), url("../../images/header_singapore_skyline.jpeg")
+    background-image: image-url('header_singapore_skyline.jpeg') !important;
+    background-position: 50% 20px !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-size: 100% 800px !important;
     color: rgba(255, 255, 255, 0.8)!important;
     padding: 5em 0 20em 0!important;
     position: relative;
@@ -2969,6 +2970,7 @@ input, select, textarea {
 	#main {
 		padding: 6em 0 5em 0;
 		position: relative;
+    margin-top: 40px;
 		z-index: 1;
 	}
 
