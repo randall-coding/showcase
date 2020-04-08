@@ -7,9 +7,6 @@ RSpec.describe PortfolioItemsController, type: :controller do
     create(:admin)
   end
 
-  # describe "GET #index" do
-  # end
-
   describe "GET #new" do
     it "returns http success if signed in" do
       # Sign in
@@ -20,8 +17,7 @@ RSpec.describe PortfolioItemsController, type: :controller do
     end
 
     it "returns error if not signed in" do
-      # session[:user_token] is nil
-      expect{(get :new) }.to raise_error
+      expect{(get :new) }.to raise_error(StandardError)
     end
 
   end
@@ -46,18 +42,8 @@ RSpec.describe PortfolioItemsController, type: :controller do
     end
 
     it "returns error if not signed in" do
-      expect{ (get :create, params:params) }.to raise_error
+      expect{ (get :create, params:params) }.to raise_error(StandardError)
     end
 
   end
-
-  # describe "GET #edit" do
-  # end
-  #
-  # describe "GET #update" do
-  # end
-  #
-  # describe "GET #destroy" do
-  # end
-
 end

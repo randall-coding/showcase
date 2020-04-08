@@ -129,7 +129,7 @@ div.page{
 }
 
 div.portfolio-container {
-  width: $left_width;
+  width: 55%;  //$left_width;
   margin-right: auto;
   margin-left: auto;
   font-size: 0.95em;
@@ -301,7 +301,7 @@ img.framework{
   display:inline;
   margin-left: 10px;
   &.matlab{
-    margin-bottom:-10px;
+    margin-bottom:-20px;
   }
 }
 

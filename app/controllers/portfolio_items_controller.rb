@@ -2,9 +2,6 @@ class PortfolioItemsController < ApplicationController
   include PortfolioItemsHelper
   before_action :require_admin
 
-  def index
-  end
-
   def new
     @portfolio_item = PortfolioItem.new
   end
@@ -24,14 +21,5 @@ class PortfolioItemsController < ApplicationController
       render plain: "no good: #{@new_item.errors.full_messages}"
     end
 
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
   end
 end
