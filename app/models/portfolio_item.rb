@@ -9,6 +9,12 @@ class PortfolioItem < ApplicationRecord
   default_scope { order('position ASC') }
   scope :title_ids, -> { pluck([:id,:title]) }
 
+  before_create :set_defaults
+
+  def set_defaults
+    position = PortfolioItem.count + 1
+  end
+
   def self.switch_ids(item1, item2)
     switcher_position = item2.position
     item2.position = item1.position
