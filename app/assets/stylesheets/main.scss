@@ -198,10 +198,12 @@ div.nav-item{
   border-radius: 5px;
   border: 1px solid black;
   cursor:pointer;
+  box-shadow: black 2px 3px;
 }
 
 .nav-item-active{
   background-color: lighten($ruby,15%) !important;
+  box-shadow: none !important;
 }
 
 div.about-me {
