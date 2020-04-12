@@ -8,7 +8,6 @@ class MyMailer < ApplicationMailer
     @body = message.body
     @email = message.email
     @from = message.from
-    mail to: 'randallwork500@gmail.com', subject: 'Email from Showcase'
-    # mail to: 'randallcoding@protonmail.com', subject: 'Email from Showcase'
+    mail to: ENV['RECEIVER_EMAIL'], subject: 'Email from Showcase'
   end
 end
