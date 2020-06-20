@@ -1,61 +1,17 @@
 
 $(document).on "turbolinks:load", ->
-
-  # contemplating fade in.
-  # $li = $('div.left li')
-  # $h1 = $('div.left h1')
-  #
-  # #offsets
-  # $li_offsets = $li.map ->
-  #   $(this).offset().top
-  # $h1_offsets = $h1.map ->
-  #   $(this).offset().top
-  #
-  # $(window).on 'scroll', ->
-  #   scrollTop = $(window).scrollTop();
-  #   window_height = $(window).height();
-  #   my_view = scrollTop + window_height;
-  #
-  #   console.info $li_offsets
-  #   console.info $h1_offsets
-  #
-  #   i = 0;
-  #   #cycle through offsets and compare
-  #   $li_offsets.each ->
-  #     if this > (my_view + 20)  #if offset > my_view + 10  then animate
-  #       $li = $( $li[i] )
-  #       console.info "my li is " + $li
-  #       $($li).animate(
-  #         {opacity:1.0;}
-  #       )
-  #     i += 1
-
   #intro animation
-  $('div.header').children().css('opacity',0)
-  $('div.header').animate(
+  $('nav.header').children().css('opacity',0)
+  $('nav.header').animate(
     #fade in blank bar
     {opacity: 1.0}    #meh with the pluggin  {backgroundColor: org_color}
     700
     ->#fade titles
-      $('div.header').children().animate(
+      $('nav.header').children().animate(
         {opacity:1.0},
         1000
       )
   )
-
-  #run slideshow 1
-  # time = 4500
-  # i = 0
-  # imgs = $('#slideshow1').find("img")
-  # setInterval ->
-  #   nextSlide(imgs)
-  # , time
-  #
-  # #run slideshow 4
-  # setInterval ->
-  #   a = $('#slideshow4').find("a")
-  #   nextSlide2(a)
-  # , time
 
   ##CALLBACKS
   # Moustache toggle
