@@ -1,7 +1,8 @@
 $left_width: 75% ;
 $slideshow_width: 92%;
 $slide_max_width: 700px;
-$slide_height: 400px;
+$slide_height_sm: 400px;
+$slide_height: 200px;
 $profile_width: 60%; //$profile_dim: 130px;
 $ruby: #ED2939;
 $manilla: #ffe4b7;
@@ -98,6 +99,9 @@ div.contact_me{
 }
 
 div.description{
+  max-height: 150px;
+  min-height: 150px;
+  overflow: scroll;
   & a.visit {
    float: right;
    margin: 0px;
@@ -121,7 +125,7 @@ div.page{
 }
 
 div.portfolio-container {
-  width: 55%;  //$left_width;
+  width: 80%;  //$left_width;
   margin-right: auto;
   margin-left: auto;
   font-size: 0.95em;
@@ -294,7 +298,7 @@ img.framework{
   display:inline;
   margin-left: 10px;
   &.matlab{
-    margin-bottom:-20px;
+    // margin-bottom:-20px;
   }
 }
 
@@ -311,7 +315,7 @@ img.profile {
 }
 
 li.portfolio_item{
-  margin-top:50px;
+  margin-top:10px;
   margin-bottom:50px;
 }
 
@@ -485,6 +489,9 @@ ul {
     }
     div.description{
       //display:none;
+    }
+    div.slideshow, img.portfolio_active{
+      height:$slide_height_sm;
     }
 }
 
