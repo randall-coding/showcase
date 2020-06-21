@@ -125,7 +125,7 @@ div.page{
 }
 
 div.portfolio-container {
-  width: 95%;  //$left_width;
+  width: 100%;  //$left_width;
   margin-right: auto;
   margin-left: auto;
   font-size: 0.95em;
@@ -204,7 +204,6 @@ div.nav-item{
 }
 
 div.about-me {
-  width: 35%;
   min-width: 180px;
   overflow:hidden;
   padding-right:20px;
@@ -486,14 +485,9 @@ ul {
 
 //tablet portrait and smaller
 @media screen and (max-width:910px) {
-  div.portfolio-container{
-    width: 80%;
-  }
   div.about-me{
-    float:none;
     margin-left:auto;
     margin-right: auto;
-    width:60%;
     min-width:250px;
     max-width:inherit;
   }
@@ -512,7 +506,7 @@ ul {
 //portrait mode of iphone and smaller
 @media screen and (max-width:760px){
   body{
-    font-size:14px;
+    font-size:16px;
   }
   div.nav-container{
     min-width:600px;
@@ -532,7 +526,13 @@ ul {
 
 @media (max-width: 576px) {
   body{
-    font-size:12px;
+    font-size:16px;
+  }
+  div.about-me{
+    font-size:1.2em
+  }
+  div.content{
+    width:95%
   }
   div.nav-item{
     min-width: 80px;
