@@ -3,6 +3,7 @@ $slideshow_width: 92%;
 $slide_max_width: 700px;
 $slide_height_sm: 300px;
 $slide_height_md: 400px;
+$slide_height_lg: 200px;
 $slide_height: 200px;
 $profile_width: 60%; //$profile_dim: 130px;
 $ruby: #ED2939;
@@ -20,8 +21,6 @@ $body: rgba(255,255,204,0.2);
 
 .riser:hover{
     transform: scale(1.07,1.07);
-    transform: 1.05s ease-in-out;
-    will-change: transform;
 }
 
 html{
@@ -483,7 +482,7 @@ ul {
       //display:none;
     }
     img.portfolio_active{
-      height:$slide_height_md;
+      height:$slide_height_lg;
     }
 }
 
@@ -508,7 +507,7 @@ ul {
   }
 }
 //portrait mode of iphone and smaller
-@media screen and (max-width:760px){
+@media screen and (max-width:768px){
   body{
     font-size:16px;
   }
@@ -518,8 +517,11 @@ ul {
   div.nav-item{
     min-width:100px;
   }
-  #logo{
-    // width:60%
+  .riser:hover{
+      transform: none;
+  }
+  img.portfolio_active{
+    height:$slide_height_md;
   }
   #contact_window{
     width:80%;
