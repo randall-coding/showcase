@@ -1,13 +1,13 @@
 <div id="portfolio-carousel" class="carousel slide pb-2" data-ride="false">
 
   <ol class="carousel-indicators">
-    <% portfolio_items.each_slice(3).with_index do | three_items, i | %>
+    <% portfolio_items.each_slice(4).with_index do | three_items, i | %>
       <li data-target="#portfolio-carousel" data-slide-to= <%=i%> class= "bg-danger" <%= "active" if i == 0%> ></li>
     <% end %>
   </ol>
 
   <div class="carousel-inner">
-    <% portfolio_items.each_slice(3).with_index do | three_items, i | %>
+    <% portfolio_items.each_slice(4).with_index do | three_items, i | %>
       <div class="carousel-item <%="active" if i == 0%>">
 
       <!-- Row of items -->
