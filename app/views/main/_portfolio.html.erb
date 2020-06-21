@@ -1,27 +1,8 @@
 <div class="portfolio-container">
-  <h1 class="text-center d-block"> Portfolio </h1> 
-<main>
-  <ul>
-  <div class="row">
-    <% @portfolio_items.each do |item| %>
-    <div class="col-lg-6 col-xl-4 p-2">
-      <div class="card">
-        <li class="portfolio_item">
-          <%= image_tag(item.logo + '_logo.png' , class: 'framework ' + item.css_class, alt:'framework used') %>
-          <br><br>
-          <h3> <%= link_to item.title, item.url, class:item.css_class,target:"_blank" %> </h3>
-
-          <div class="description">
-            <p> <%= raw item.description %> </p>
-          </div>
-
-          <div class="slideshow">
-            <%= link_to image_tag(item.image_url, class: 'portfolio_active', alt:'portfolio image of website'), item.url, target:"_blank" %>
-          </div>
-        </li>
-      </div>
-    </div>
+  <h1 class="text-center d-block"> Portfolio </h1>
+  <main>
+      <!-- portfolio carousel -->
+      <%= render partial: 'portfolio_carousel', locals:{portfolio_items:@portfolio_items} %>
       <hr/>
-    <% end %>
-  </div>
-  </ul>
+  </main>
+</div>
