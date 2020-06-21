@@ -17,6 +17,10 @@ $body: rgba(255,255,204,0.2);
   border-radius: $rounding1 ;
 }
 
+.riser:hover{
+    transform:scale(1.07,1.07);
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -92,7 +96,7 @@ div.sendbtn-container{
 }
 
 div.spacer{
-  height:200px;  
+  height:200px;
 }
 
 div.contact_me{
