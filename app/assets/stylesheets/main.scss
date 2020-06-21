@@ -18,7 +18,9 @@ $body: rgba(255,255,204,0.2);
 }
 
 .riser:hover{
-    transform:scale(1.07,1.07);
+    transform: scale(1.07,1.07);
+    transform: 1.05s ease-in-out;
+    will-change: transform;
 }
 
 html{

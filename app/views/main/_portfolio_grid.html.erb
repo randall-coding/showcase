@@ -1,0 +1,9 @@
+<% portfolio_items.each_slice(4).with_index do | three_items, i | %>
+  <!-- Row of items -->
+  <div class="row mx-0 p-3">
+    <% three_items.each do |item| %>
+      <%= render partial: 'portfolio_items/item', locals:{item:item} %>
+    <% end %>
+  </div>
+  </div>
+<% end %>
