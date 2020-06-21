@@ -1,5 +1,4 @@
     <!DOCTYPE HTML>
-
     <html lang="en">
       <head>
         <%= stylesheet_link_tag 'main' %>
@@ -16,22 +15,23 @@
       </head>
 
       <body>
-        <!-- <%= link_to '(github)' , 'https://github.com/randall-coding' %> -->
-
-        <!-- Main content area -->
+        
+      <!-- Main content area -->
         <div class='page'>
           <%= render 'header' %>
           <div class="content pt-3">
             <%= render 'portfolio' %>
-          </div> <!-- end div.content -->
+          </div>
         </div>
+        <!-- end Main content area -->
 
         <!-- Contact window and mask -->
         <div class="contact_window" id='contact_window'>
               <%= render 'contact' %>
-        </div> <!-- end div.contact_form -->
+        </div>
         <div class="mask">
-        </div> <!-- end div.mask -->
+        </div>
+        <!-- end Contact window and mask -->
 
       </body>
     </html>

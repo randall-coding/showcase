@@ -220,20 +220,6 @@ div.about-me {
   font-size: 1.0em;
 }
 
-div.slideshow{
-  width: $slideshow_width;
-  height: $slide_height;
-  max-width: $slide_max_width;
-  overflow:hidden;
-  border: 6px solid $manilla;
-  border-radius: 5px;
-  background-color:rgba(230,191,131,0.1);
-  margin-left:auto;
-  margin-right: auto;
-
-  position:relative;
-}
-
 form.contact_form{
   & textarea{
     width: $slideshow_width;
@@ -493,7 +479,7 @@ ul {
     div.description{
       //display:none;
     }
-    div.slideshow, img.portfolio_active{
+    img.portfolio_active{
       height:$slide_height_sm;
     }
 }
@@ -527,9 +513,6 @@ ul {
 @media screen and (max-width:760px){
   body{
     font-size:14px;
-  }
-  div.slideshow{
-    height:250px;
   }
   div.nav-container{
     min-width:600px;
