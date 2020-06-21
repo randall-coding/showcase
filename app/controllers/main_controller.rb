@@ -1,4 +1,6 @@
 class MainController < ApplicationController
+  layout 'homepage'
+
   def index
       @portfolio_items = PortfolioItem.all
       @message = Message.new
@@ -15,9 +17,8 @@ class MainController < ApplicationController
         respond_to do |format|
           format.js
         end
-        #stay at root
       else
-        #redirect_to contact_me_url
+        Rails.logger.error {'Error sending and saving message'}
       end
   end
 
