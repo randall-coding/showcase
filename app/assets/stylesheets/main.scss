@@ -1,7 +1,8 @@
 $left_width: 75% ;
 $slideshow_width: 92%;
 $slide_max_width: 700px;
-$slide_height_sm: 400px;
+$slide_height_sm: 300px;
+$slide_height_md: 400px;
 $slide_height: 200px;
 $profile_width: 60%; //$profile_dim: 130px;
 $ruby: #ED2939;
@@ -288,10 +289,7 @@ h3 a {
 img.framework{
   width:20%;
   display:inline;
-  margin-left: 10px;
-  &.matlab{
-    // margin-bottom:-20px;
-  }
+  margin-left: 5px;;
 }
 
 img.profile {
@@ -485,7 +483,7 @@ ul {
       //display:none;
     }
     img.portfolio_active{
-      height:$slide_height_sm;
+      height:$slide_height_md;
     }
 }
 
@@ -545,5 +543,8 @@ ul {
   }
   div.nav-container{
     min-width:400px;
+  }
+  img.portfolio_active{
+    height:$slide_height_sm;
   }
 }
