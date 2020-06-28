@@ -18,7 +18,7 @@ $(document).on("turbolinks:load", function() {
       $('textarea').val('');
       $('input:text').val('');
       scroll = $(window).scrollTop();
-      pos = scroll + 30;
+      pos = scroll + 100;
       $('div.mask').css('display', 'block');
       contact_window = $('div.contact_window');
       contact_window.css('top', pos + 'px');
@@ -40,7 +40,7 @@ $(document).on("turbolinks:load", function() {
       $.get(e.target.dataset.name, function(data, status) {
         var content;
         content = $('div.content');
-        changeTabColor($(this));
+        changeTabColor($(e.target));
         console.log(content[0]);
         content.fadeOut(700, function() {
           $(this).html(data).fadeIn(700, function(){
@@ -56,7 +56,6 @@ $(document).on("turbolinks:load", function() {
       var oldTab;
       oldTab = $('.nav-item-active');
       oldTab.removeClass('nav-item-active');
-      console.log(newTab);
       return newTab.addClass('nav-item-active');
     };
     nextSlide = function(imgs) {
