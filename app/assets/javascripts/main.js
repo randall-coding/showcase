@@ -48,8 +48,9 @@ $(document).on("turbolinks:load", function() {
           $('#' + e.target.dataset.name + '-container').css({'display':'block','opacity':1})
           $(this).fadeIn(500, function(){
             $('html').animate({
-                scrollTop: content[0].offsetTop - 40,
-            })
+              scrollTop: content[0].offsetTop - 40,
+            },700
+            )
           })
         })
     });
