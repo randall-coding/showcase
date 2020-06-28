@@ -63,6 +63,10 @@ hr{
   opacity: 0;
 }
 
+.alert, .notice{
+  position:absolute;
+  z-index: 10;
+}
 div.content{
     margin-left: auto;
     margin-right: auto;
@@ -130,6 +134,28 @@ nav.header{
   opacity:0;
 }
 
+.intro-image{
+  background-image:image-url('cool_library.jpeg');
+  background-size:100% 100%;
+  height:800px;
+}
+.intro-grid-container{
+  display:grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.intro-item-container{
+  height: auto;
+  width: 510px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#intro-message{
+  font-size: 4.3rem;
+}
 div.portfolio-container {
   width: 100%;  //$left_width;
   margin-right: auto;
