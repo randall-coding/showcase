@@ -41,12 +41,10 @@ $(document).on("turbolinks:load", function() {
     });
 
     $('.my-tabs').on('click', function(e) {
+      changeTabColor($(e.target));
       $.get(e.target.dataset.name, function(data, status) {
-        var content;
         content = $('div.content');
-        changeTabColor($(e.target));
-        console.log(content[0]);
-        content.fadeOut(500, function() {
+        content.fadeOut(300, function() {
           $(this).html(data).fadeIn(500, function(){
             $('html').animate({
                 scrollTop: content[0].offsetTop - 40,

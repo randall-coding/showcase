@@ -23,7 +23,7 @@ class MainController < ApplicationController
   end
 
   def aboutme
-    render layout: false
+    render '_aboutme', layout: false
   end
 
   def portfolio

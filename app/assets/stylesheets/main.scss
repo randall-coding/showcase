@@ -19,6 +19,11 @@ $body: rgba(255,255,204,0.2);
   border-radius: $rounding1 ;
 }
 
+#aboutme-container{
+  display:none;
+  opacity:0;
+}
+
 .riser:hover{
     transform: scale(1.07,1.07);
 }
