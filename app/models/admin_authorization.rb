@@ -1,7 +1,7 @@
 class AdminAuthorization < ActiveAdmin::AuthorizationAdapter
-  include PortfolioItemsHelper
+  include ApplicationHelper
 
   def authorized?(action,subject = nil)
-    require_admin
+    user.site_admin?
   end
 end
