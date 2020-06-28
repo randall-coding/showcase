@@ -4,9 +4,13 @@ $(document).on("turbolinks:load", function() {
     $('nav.header').animate({
       opacity: 1.0
     }, 700, function() {
-      return $('nav.header').children().animate({
+      $('nav.header').children().animate({
         opacity: 1.0
-      }, 1000);
+      }, 1000, function(){
+        $('.intro-image , #main-content').animate({
+          opacity: 1.0
+        }, 1000)
+      });
     });
 
     $('#btn-profile').on('click', function() {
@@ -42,8 +46,8 @@ $(document).on("turbolinks:load", function() {
         content = $('div.content');
         changeTabColor($(e.target));
         console.log(content[0]);
-        content.fadeOut(700, function() {
-          $(this).html(data).fadeIn(700, function(){
+        content.fadeOut(500, function() {
+          $(this).html(data).fadeIn(500, function(){
             $('html').animate({
                 scrollTop: content[0].offsetTop - 40,
             })
