@@ -42,16 +42,16 @@ $(document).on("turbolinks:load", function() {
 
     $('.my-tabs').on('click', function(e) {
       changeTabColor($(e.target));
-      $.get(e.target.dataset.name, function(data, status) {
         content = $('div.content');
-        content.fadeOut(300, function() {
-          $(this).html(data).fadeIn(500, function(){
+        content.fadeOut(500, function() {
+          $(this).children().css({'display':'none','opacity':0})
+          $('#' + e.target.dataset.name + '-container').css({'display':'block','opacity':1})
+          $(this).fadeIn(500, function(){
             $('html').animate({
                 scrollTop: content[0].offsetTop - 40,
             })
           })
         })
-      });
     });
 
     changeTabColor = function(newTab) {
