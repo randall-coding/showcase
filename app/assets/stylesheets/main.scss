@@ -5,7 +5,6 @@ $slide_height_sm: 300px;
 $slide_height_md: 400px;
 $slide_height_lg: 200px;
 $slide_height: 200px;
-$profile_width: 60%; //$profile_dim: 130px;
 $ruby: #ED2939;
 $manilla: #ffe4b7;
 $baby_blue: rgb(217, 237, 247);
@@ -17,11 +16,6 @@ $body: rgba(255,255,204,0.2);
   -o-border-radius: $rounding1 ;
   -khtml-border-radius: $rounding1 ;
   border-radius: $rounding1 ;
-}
-
-#aboutme-container{
-  display:none;
-  opacity:0;
 }
 
 .riser:hover{
@@ -166,6 +160,7 @@ nav.header{
 #intro-message{
   font-size: 4.3rem;
 }
+
 div.portfolio-container {
   width: 100%;  //$left_width;
   margin-right: auto;
@@ -192,18 +187,6 @@ div.mask{
   top: 0px;
   left: 0px;
   display:none;
-}
-
-div.profile{
-  width: 180px;  //$profile_width
-  height: 180px;
-  margin-left: auto;
-  margin-right: auto;
-  display:block;
-  position:relative;
-  top: 0;
-  left: 0;
-  overflow:visible;
 }
 
 div.mid{
@@ -243,22 +226,6 @@ div.nav-item{
 .nav-item-active{
   background-color: lighten($ruby,15%) !important;
   box-shadow: none !important;
-}
-
-div.about-me {
-  min-width: 180px;
-  overflow:hidden;
-  padding-right:20px;
-  padding-left: 20px;
-  padding-top: 5px;
-  margin-top:45px;
-  margin-left:auto;
-  margin-right:auto;
-  margin-bottom:20px;
-  background-color:white;
-  border-radius:50px;
-  border: 1px solid black;
-  font-size: 1.0em;
 }
 
 form.contact_form{
@@ -327,17 +294,6 @@ img.framework{
   margin-left: 5px;;
 }
 
-img.profile {
-  width:100%;
-  height: 100%; //sic. $profile_dim;
-  border:2px solid;
-  margin-left: auto;
-  margin-right: auto;
-  position:absolute;
-  top:0px;
-  left:0px;
-  border-radius:10px;
-}
 
 .portfolio_item{
   margin-top:10px;
@@ -466,17 +422,6 @@ ul {
   float:right;
 }
 
-#btn-profile{
-    margin-top:5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight:bold;
-    font-size:0.95em;
-    border-radius: 10px;
-}
-
 #logo {
   margin-right: auto;
   display:block;
@@ -489,15 +434,6 @@ ul {
     opacity:0;
 }
 
-#moustache{
-  height:60px;
-  width:35%;
-  position:absolute;
-  visibility:hidden;
-  left:34%;
-  top:43%;
-  z-index:3;
-}
 
 #slideshow4{
   width:80%;
@@ -529,34 +465,22 @@ ul {
     div.main{
       font-size: 0.93em
     }
-    div.description{
-      //display:none;
-    }
     img.portfolio_active{
       height:$slide_height_lg;
+    }
+    div.description{
+      //display:none;
     }
 }
 
 //tablet portrait and smaller
 @media screen and (max-width:910px) {
-  div.about-me{
-    margin-left:auto;
-    margin-right: auto;
-    min-width:250px;
-    max-width:inherit;
-  }
-  div.profile-container{
-    margin-right:5px;
-    margin-bottom: 10px;
-  }
-  section.bio{
-    padding-top:15px;
-  }
   #contact_window{
     min-width:600px;
     left:10%;
   }
 }
+
 //portrait mode of iphone and smaller
 @media screen and (max-width:768px){
   body{
@@ -584,9 +508,6 @@ ul {
 @media (max-width: 576px) {
   body{
     font-size:16px;
-  }
-  div.about-me{
-    font-size:1.2em
   }
   div.content{
     width:95%
