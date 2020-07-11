@@ -32,7 +32,7 @@ $body: rgba(255,255,204,0.2);
 
   .loading{
     display:none;
-    img{    
+    img{
       height:100px;
       width:auto;
     }
@@ -76,6 +76,7 @@ a {
   text-decoration: none;
   margin-right:0px;
 }
+
 .ethereum{
     color:black;
     text-shadow: -2px 0 $baby_blue, 0 2px $baby_blue, 2px 0 $baby_blue, 0 -2px $baby_blue;
@@ -151,15 +152,15 @@ div.sendbtn-container{
   }
 }
 
-div.spacer{
-  height:50px;
-}
-
 div.contact_me{
   margin-left:60px;
   height: 90%;
   margin-top: 0px;
   @include roundborder(20px);
+}
+
+div.spacer{
+  height:50px;
 }
 
 div.description{
@@ -180,7 +181,7 @@ div.h1{
 }
 
 nav.header{
-  background-color: $manilla;  //rgba(252,90,141,0.4); // #fc5a8d;
+  background-color: $manilla;
   opacity:0;
 }
 
@@ -209,7 +210,7 @@ nav.header{
 }
 
 div.portfolio-container {
-  width: 100%;  //$left_width;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   font-size: 0.95em;
@@ -238,7 +239,7 @@ div.mask{
 
 div.mid{
     float:left;
-    width: 0% ; // width:7%;
+    width: 0% ;
     height:1000px;
 }
 
@@ -254,7 +255,6 @@ div.nav-container{
 div.nav-item{
   float: left;
   text-align:center;
-  // background-color: $ruby;
   color:black;
   position: relative;
   width:auto;
