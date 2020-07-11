@@ -25,25 +25,39 @@ $body: rgba(255,255,204,0.2);
 #zoomed-portfolio-item{
   height: auto;
   min-width: 600px;
-  max-width: 50%;
+  max-width: 60%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  .portfolio_active{
-    height:450px;
-    width:auto;
+  .framework{
+    width:15%;
+  }
+
+  h3{
+    font-size: 3rem;
+  }
+
+  img.portfolio_active{
+    height: auto; //550px;
     float:none;
+    max-width: 80%;
+    width:80%
   }
 
   div.description{
     max-height:none;
-    min-height: none;
+    min-height: unset;
+    max-width: 80%;
   }
 
   .close{
     width: max-content;
     margin-left: auto;
+    margin-top: -10px;
+    position: absolute;
+    right: 10px;
+
     span{
       font-size:40px;
     }
