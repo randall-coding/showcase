@@ -71,12 +71,12 @@ a {
   text-decoration: none;
   margin-right:0px;
 }
-a.ethereum{
+.ethereum{
     color:black;
     text-shadow: -2px 0 $baby_blue, 0 2px $baby_blue, 2px 0 $baby_blue, 0 -2px $baby_blue;
 }
 
-a.scraper{
+.scraper{
   color:red;
   font-style:italic;
 }
@@ -325,7 +325,7 @@ h3 {
   transition: all 2s ease;
 }
 
-h3 a {
+h3{
   color: orange;
 }
 
@@ -339,6 +339,7 @@ img.framework{
 
 .portfolio_item{
   margin-top:10px;
+  cursor:zoom-in;
 }
 
 main{
