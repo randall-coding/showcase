@@ -55,6 +55,16 @@ $(document).on("turbolinks:load", function() {
         })
     });
 
+    $('.portfolio-container .portfolio_item').on('click',function(e){
+      var id = e.currentTarget.dataset.id;
+      $.get( "portfolio_items/zoomed_item?id=" + id, function(response) {
+        $('#zoomed-portfolio-item').html(response)
+      })
+        .fail(function() {
+          console.log("Javascript error on portfolio-item click");
+        })
+    })
+
     function changeTabColor(newTab) {
       var oldTab;
       oldTab = $('.nav-item-active');

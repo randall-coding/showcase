@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'portfolio_items/edit'
   get 'portfolio_items/update'
   get 'portfolio_items/destroy'
+  get 'portfolio_items/zoomed_item', as: :zoomed_item
 
   get '/portfolio' => 'main#portfolio', as: :portfolio
   get '/aboutme' => 'main#aboutme', as: :aboutme

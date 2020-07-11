@@ -1,46 +1,51 @@
-    <!DOCTYPE HTML>
-    <html lang="en">
-      <head>
-        <%= stylesheet_link_tag 'main' %>
-        <%= favicon_link_tag 'cartoon.ico' %>
-        <meta name="viewport" content="width=device-width, initial-scale=1" >
-        <title> Randall Coding | Ruby on Rails Freelancer For Hire </title>
-        <meta name="description" content="Randall's professional portfolio page.
-            Ruby on Rails specialist and freelance full stack developer for hire.  I work 100% remotely and am top rated in my field. Javascript junky and SEO optimizer.  USA based web designer delivering quality content on demand. US citizens, local to Phoenix Arizona.  Randall Coding LLC.">
-        <% if Rails.env == "production" %>
-          <!-- Matomo -->
-          <script type="text/javascript"> var _paq = _paq || []; /* tracker methods like "setCustomDimension" should be called before "trackPageView" */ _paq.push(['trackPageView']); _paq.push(['enableLinkTracking']); (function() { var u="https://randallcoding.matomo.cloud/"; _paq.push(['setTrackerUrl', u+'piwik.php']); _paq.push(['setSiteId', '1']); var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src='//cdn.matomo.cloud/randallcoding.matomo.cloud/piwik.js'; s.parentNode.insertBefore(g,s); })(); </script>
-          <!-- End Matomo Code -->
-        <% end %>
-      </head>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <%= stylesheet_link_tag 'main' %>
+  <%= favicon_link_tag 'cartoon.ico' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title> Randall Coding | Ruby on Rails Freelancer For Hire </title>
+  <meta name="description" content="Randall's professional portfolio page.
+  Ruby on Rails specialist and freelance full stack developer for hire.  I work 100% remotely and am top rated in my field. Javascript junky and SEO optimizer.  USA based web designer delivering quality content on demand. US citizens, local to Phoenix Arizona.  Randall Coding LLC.">
+  <% if Rails.env == "production" %>
+  <!-- Matomo -->
+  <script type="text/javascript"> var _paq = _paq || []; /* tracker methods like "setCustomDimension" should be called before "trackPageView" */ _paq.push(['trackPageView']); _paq.push(['enableLinkTracking']); (function() { var u="https://randallcoding.matomo.cloud/"; _paq.push(['setTrackerUrl', u+'piwik.php']); _paq.push(['setSiteId', '1']); var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src='//cdn.matomo.cloud/randallcoding.matomo.cloud/piwik.js'; s.parentNode.insertBefore(g,s); })(); </script>
+  <!-- End Matomo Code -->
+  <% end %>
+</head>
 
-      <body>
-        <!-- Main content area -->
-          <div class="row intro-image">
-            <div class="intro-grid-container w-100 h-100">
-              <div class="intro-item-container py-5">
-                <h1 id="intro-message"> Randall Coding </h1>
-                <h3>  Freelance Ruby on Rails Web Development </h3>
-              </div>
-            </div>
-          </div>
+<body>
+  <!-- Zoomed item modal -->
+  <div id="zoomed-portfolio-item" class="mx-auto modal">
+    <%= render partial: 'portfolio_items/zoomed_item' %>
+  </div>
 
-          <div id="main-content" class="content pt-3">
-            <div id="portfolio-container">
-              <%= render 'portfolio' %>
-            </div>
+  <!-- Main content area -->
+  <div class="row intro-image">
+    <div class="intro-grid-container w-100 h-100">
+      <div class="intro-item-container py-5">
+        <h1 id="intro-message"> Randall Coding </h1>
+        <h3>  Freelance Ruby on Rails Web Development </h3>
+      </div>
+    </div>
+  </div>
 
-            <div id="aboutme-container">
-              <%= render 'aboutme' %>
-            </div>
-        </div>
+  <div id="main-content" class="content pt-3">
+    <div id="portfolio-container">
+      <%= render 'portfolio' %>
+    </div>
 
-        <!-- Contact window and mask -->
-        <div class="contact_window py-2" id='contact_window'>
-              <%= render 'contact' %>
-        </div>
-        <div class="mask">
-        </div>
+    <div id="aboutme-container">
+      <%= render 'aboutme' %>
+    </div>
+  </div>
 
-      </body>
-    </html>
+  <!-- Contact window and mask -->
+  <div class="contact_window py-2" id='contact_window'>
+    <%= render 'contact' %>
+  </div>
+  <div class="mask">
+  </div>
+
+</body>
+</html>

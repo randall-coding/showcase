@@ -1,7 +1,7 @@
 class PortfolioItemsController < ApplicationController
   include ApplicationHelper
-  before_action :authenticate_user!
-  before_action :require_admin
+  before_action :authenticate_user!, except: [:zoomed_item]
+  before_action :require_admin, except: [:zoomed_item]
 
   def new
     @portfolio_item = PortfolioItem.new
@@ -22,5 +22,10 @@ class PortfolioItemsController < ApplicationController
       render plain: "no good: #{@new_item.errors.full_messages}"
     end
 
+  end
+
+  def zoomed_item
+    item = PortfolioItem.find(params[:id])
+    render partial: 'zoomed_item', layout: false, locals:{item:item}
   end
 end
