@@ -30,6 +30,14 @@ $body: rgba(255,255,204,0.2);
   left: 50%;
   transform: translate(-50%, -50%);
 
+  .loading{
+    display:none;
+    img{    
+      height:100px;
+      width:auto;
+    }
+  }
+
   .framework{
     width:15%;
   }
@@ -62,9 +70,6 @@ $body: rgba(255,255,204,0.2);
       font-size:40px;
     }
   }
-}
-
-html{
 }
 
 a {
@@ -211,7 +216,7 @@ div.portfolio-container {
 }
 
 div.main{
-  width: 100%; //width: 1300px;
+  width: 100%;
   min-width:400px;
   margin-left: auto;
   margin-right: auto;
@@ -310,7 +315,6 @@ h1, h3 {
   font-family: "Times New Roman", Times, serif;
 }
 
-
 h3 {
   font-size:1.6em;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -363,59 +367,8 @@ table.contact_me{
   }
   & td{
     text-align: center;
-
   }
 }
-
-table.contact_menu{
-  padding: 0;
-  margin-right: auto;
-  margin-left: auto;
-  text-align:center;
-
-  background-color: $body;
-  width:100%;
-  max-width:400px;
-  height:auto;
-  font-size:1.2em;
-  font-weight:bold;
-  //note don't display as block
-  overflow:hidden;
-  border:2px solid black;
-  border-collapse:collapse;
-
-  & a {
-      width:100%;
-  }
-
-  & a:link{
-    color:black;
-
-  }
-
-  & a:visited{
-    color:black;
-  }
-
-  & tr{
-    margin:0;
-    border-bottom:2px solid black;
-  }
-
-  & tr:hover{
-    background-color: silver;
-  }
-
-  & td {
-  }
-
-}
-
-ul {
-  list-style:none;
-  padding:0;
-}
-
 
 .center{
   margin-right: auto;
@@ -456,13 +409,6 @@ ul {
 
 .carousel-indicators{
   bottom: -35px;
-}
-
-.shifted{
-  top:0px;
-  left: 100%;
-  display:block;
-  float:right;
 }
 
 #logo {

@@ -16,8 +16,14 @@
 
 <body>
   <!-- Zoomed item modal -->
-  <div id="zoomed-portfolio-item" class="mx-auto modal">
-  </div>
+    <div id="zoomed-portfolio-item" class="mx-auto modal">
+      <div class="loading w-100 h-100">
+        <%= image_tag 'loading.gif', class: "center" %>
+      </div>
+
+      <div class="zoom-content">
+      </div>
+    </div>
 
   <!-- Main content area -->
   <div class="row intro-image">

@@ -55,11 +55,16 @@ $(document).on("turbolinks:load", function() {
         })
     });
 
+    // Zoom portfolio item
     $('.portfolio-container .portfolio_item').click(function(e){
       var id = e.currentTarget.dataset.id;
+      $('#zoomed-portfolio-item .zoom-content').html('')
+      $('#zoomed-portfolio-item').modal('toggle')
+      $('#zoomed-portfolio-item .loading').show()
+
       $.get( "portfolio_items/zoomed_item?id=" + id, function(response) {
-        $('#zoomed-portfolio-item').html(response)
-        $('#zoomed-portfolio-item').modal('toggle')
+        $('#zoomed-portfolio-item .loading').hide()
+        $('#zoomed-portfolio-item .zoom-content').html(response)
       })
         .fail(function() {
           console.log("Javascript error on portfolio-item click");
