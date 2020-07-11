@@ -1,11 +1,9 @@
-<% item ||= PortfolioItem.first %>
-
-<div class="inner-zoom card w-100 h-100 px-5 py-2 shadow">
+<div class="inner-zoom card w-100 h-100 p-3 shadow">
   <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
   <div class="portfolio_item">
-    <%= image_tag(item.logo + '_logo.png' , class: 'framework mb-2 d-block mx-auto' + item.css_class, alt:'framework used') %>
+    <%= image_tag item.logo + '_logo.png' , class: 'framework mb-2 d-block' + item.css_class, alt:'framework used' %>
     <h3 class="mb-2"> <%= link_to item.title, item.url, class:item.css_class, target:"_blank" %> </h3>
 
     <div class="description">
