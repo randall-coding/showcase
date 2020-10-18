@@ -7,7 +7,9 @@ class User < ApplicationRecord
 
   private
   def validate_only_one
-    errors.add(:base, "There can be only one!") if User.count >= 1
-    throw :abort
+    if User.count >= 1
+      errors.add(:base, "There can be only one!")
+      throw :abort
+    end
   end
 end

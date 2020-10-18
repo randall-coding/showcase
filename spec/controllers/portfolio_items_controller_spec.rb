@@ -2,22 +2,20 @@ require 'rails_helper'
 
 RSpec.describe PortfolioItemsController, type: :controller do
   let(:params) { {} }
-
-  before do
-    create(:admin)
-  end
+  let(:user) {create(:user,site_admin:true)}
 
   describe "GET #new" do
     it "returns http success if signed in" do
       # Sign in
-      session[:user_token] = "token"
+      sign_in user
       # Try
       get :new
       expect(response).to have_http_status(:success)
     end
 
     it "returns error if not signed in" do
-      expect{(get :new) }.to raise_error(StandardError)
+      get :new
+      expect(response).to redirect_to(new_user_session_path)
     end
 
   end
@@ -35,14 +33,16 @@ RSpec.describe PortfolioItemsController, type: :controller do
 
     it "returns http success" do
       # Sign in
-      session[:user_token] = "token"
+      sign_in user
       # Try
       get :create, params:params
       expect(response).to have_http_status(:success)
     end
 
     it "returns error if not signed in" do
-      expect{ (get :create, params:params) }.to raise_error(StandardError)
+      get :create, params:params
+      expect(response).to redirect_to(new_user_session_path)
+
     end
 
   end
