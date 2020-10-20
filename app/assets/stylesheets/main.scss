@@ -448,6 +448,13 @@ table.contact_me{
   display:none;
 }
 
+.toast.email-toast{
+  position: fixed;
+  top: 100px;
+  z-index: 1021;
+  right: calc(50% - 175px);
+}
+
 @media (max-width: 1563px){
     div.content{
       width:95%;
