@@ -131,7 +131,7 @@ div.contact_window{
     position:absolute;
     width: 60%;
     min-width:700px;
-    height: 536px;
+    height: 556px;
     left:20%;
     top: 100px;
     z-index:10;
@@ -148,7 +148,7 @@ div.sendbtn-container{
   width:50%;
   overflow: hidden;
   margin-left: auto;
-  margin-right: 40px;
+  margin-right: 70px;
   margin-top:10px;
   float:right;
   padding-right:10px;
@@ -286,7 +286,7 @@ form.contact_form{
     height: 350px;
     margin-right: auto;
     background-color: $body;
-    font-size: 1.4em;
+    font-size: 1.1em;
     opacity: 0.9;
     border: 1px grey solid;
   }
