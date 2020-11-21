@@ -10,9 +10,14 @@ class PortfolioItem < ApplicationRecord
   scope :title_ids, -> { pluck([:id,:title]) }
 
   before_create :set_defaults
+  before_save :expire_cache
 
   def set_defaults
-    position = PortfolioItem.count + 1
+    self.position = PortfolioItem.count + 1
+  end
+
+  def expire_cache
+    ActionController::Base.expire_page(Rails.application.routes.url_helpers.root_path)
   end
 
   def self.switch_ids(item1, item2)
