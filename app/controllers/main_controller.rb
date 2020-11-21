@@ -1,5 +1,6 @@
 class MainController < ApplicationController
   layout 'homepage'
+  caches_page :index, :portfolio
 
   def index
       @portfolio_items = PortfolioItem.all

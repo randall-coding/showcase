@@ -41,6 +41,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
 gem 'activeadmin'
 gem 'devise'
+gem 'actionpack-page_caching'
 
 group :development, :test do
   gem 'awesome_print'
