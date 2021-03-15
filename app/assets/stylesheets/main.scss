@@ -171,7 +171,7 @@ div.spacer{
 div.description{
   max-height: 150px;
   min-height: 150px;
-  overflow: scroll;
+  overflow-y: scroll;
   & a.visit {
    float: right;
    margin: 0px;
