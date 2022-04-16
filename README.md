@@ -1,15 +1,15 @@
 # Showcase website
-Showcase of my recent work in web development.
- 
+Showcase of my recent work in web development
+
 ## Specs
 Running Rails 5.2. &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ruby version 2.5.  &nbsp;&nbsp;&nbsp; Rspec 3.8/Capybara 3.12.  &nbsp;&nbsp;&nbsp; PostgreSQL database. &nbsp;&nbsp;&nbsp; <br>  Deployed on Heroku
 
 ## Features
-* Recent web development work (Ruby on Rails) 
+* Recent web development work (Ruby on Rails)
 
 * Other software development (such as MATLAB for data analysis)
 
-* Demos of several external APIs including Ethereum blockchain scanner 
+* Demos of several external APIs including Ethereum blockchain scanner
 
 * Contact form to e-mail me directly
 
@@ -23,4 +23,4 @@ Running Rails 5.2. &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ruby version 2.5.  &nbs
 * Making portfolio items REST resources
 * UI changes
   * Making top navbar
-  * Using AJAX rendering on tabs 
+  * Using AJAX rendering on tabs
