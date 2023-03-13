@@ -37,15 +37,6 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
 
-  # config.action_mailer.smtp_settings = {
-  #   address: 'smtp.gmail.com',
-  #   port: 587,
-  #   user_name: 'feekneem500@gmail.com' ,
-  #   password: ENV['PASS_EMAIL2'],
-  #   authentication: :login,
-  #   enable_starttls_auto: true
-  # }
-
   config.action_mailer.smtp_settings = {
     address:        "smtp.elasticemail.com",
     port:            2525,
@@ -53,8 +44,6 @@ Rails.application.configure do
     user_name: ENV['ELASTIC_EMAIL_USERNAME'],
     password:ENV['ELASTIC_SMTP_KEY']
   }
-
-
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
