@@ -38,7 +38,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'bootstrap'
+gem 'bootstrap', '4.6.0'
 gem 'activeadmin'
 gem 'devise'
 gem 'actionpack-page_caching'
