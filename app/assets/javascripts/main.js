@@ -43,10 +43,10 @@ $(document).on("turbolinks:load", function() {
     $('.my-tabs').on('click', function(e) {
       changeTabColor($(e.target));
         content = $('div.content');
-        content.fadeOut(500, function() {
+        content.fadeOut(250, function() {
           $(this).children().css({'display':'none','opacity':0})
           $('#' + e.target.dataset.name + '-container').css({'display':'block','opacity':1})
-          $(this).fadeIn(500, function(){
+          $(this).fadeIn(250, function(){
             $('html').animate({
               scrollTop: content[0].offsetTop - 40,
             },700
