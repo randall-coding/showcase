@@ -33,7 +33,7 @@ ActiveAdmin.register PortfolioItem do
       f.input :position
       if f.object.image.attached?
         # Display the existing image preview
-        f.input :image, as: :file, hint: image_tag(f.object.image, style:"width:200px")
+        f.input :image, as: :file, value: f.object.image.id, hint: image_tag(f.object.image, style:"width:200px")
       else
         f.input :image, as: :file
       end    end
