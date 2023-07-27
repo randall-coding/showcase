@@ -4,7 +4,7 @@ class PortfolioItem < ApplicationRecord
   CSS_CLASSES = ['rails','wordpress','matlab','ethereum','elite','framework', 'framework matlab']
   validates :logo, inclusion: {in: LOGOS}
   validates :css_class, inclusion: {in: CSS_CLASSES}
-  validates :logo,:css_class,:title,:url,:description,
+  validates :logo,:css_class,:title, :description,
     presence:true
 
   default_scope { order('position ASC') }
