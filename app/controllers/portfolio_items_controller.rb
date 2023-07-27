@@ -7,6 +7,7 @@ class PortfolioItemsController < ApplicationController
     @portfolio_item = PortfolioItem.new
   end
 
+  # TODO I don't think this even gets used (we use ActiveAdmin)
   def create
     @new_item = PortfolioItem.new(
       css_class: params[:portfolio_item][:css_class],

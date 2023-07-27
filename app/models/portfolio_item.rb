@@ -1,4 +1,5 @@
 class PortfolioItem < ApplicationRecord
+  has_one_attached :image  
   LOGOS = ['rails','wordpress','matlab']
   CSS_CLASSES = ['rails','wordpress','matlab','ethereum','elite','framework', 'framework matlab']
   validates :logo, inclusion: {in: LOGOS}
