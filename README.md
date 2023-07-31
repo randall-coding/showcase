@@ -2,7 +2,7 @@
 Showcase of my recent work in web development
 
 ## Specs
-Running Rails 5.2. &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ruby version 2.5.  &nbsp;&nbsp;&nbsp; Rspec 3.8/Capybara 3.12.  &nbsp;&nbsp;&nbsp; PostgreSQL database. &nbsp;&nbsp;&nbsp; <br>  Deployed on Heroku
+Running Rails 6.1.7 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ruby version 2.7.6  &nbsp;&nbsp;&nbsp; Rspec 3.8/Capybara 3.12.  &nbsp;&nbsp;&nbsp; PostgreSQL database. &nbsp;&nbsp;&nbsp; <br>  Deployed on Heroku
 
 ## Features
 * Recent web development work (Ruby on Rails)
@@ -24,3 +24,8 @@ Running Rails 5.2. &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ruby version 2.5.  &nbs
 * UI changes
   * Making top navbar
   * Using AJAX rendering on tabs
+
+## Docker
+docker build . -t showcase
+docker run -p 3000:3000 showcase
+
