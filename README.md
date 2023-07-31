@@ -29,3 +29,13 @@ Running Rails 6.1.7 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ruby version 2.7.6  &n
 docker build . -t showcase
 docker run -p 3000:3000 showcase
 
+docker-compose up
+
+  ### Create database
+  docker-compose exec web rails db:create
+  docker-compose exec web rails db:migrate
+  
+  ### Copy database 
+  docker cp your_dump_file.dump your_db_container_name:/your_dump_file.dump
+  docker-compose exec db pg_restore -U your_postgres_username -d your_database_name -1 /your_dump_file.dump
+
