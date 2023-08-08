@@ -19,3 +19,13 @@ services:
       DATABASE_URL: postgresql://db:5432/showcase_production
     depends_on:
       - db
+  nginx:
+    build:
+      context: ./
+      dockerfile: Dockerfile-Nginx
+    ports:
+      - "80:80"
+    depends_on: 
+      - web
+    # volumes:
+    #   - ./nginx:/usr/share/nginx/html:ro
