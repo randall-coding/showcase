@@ -39,3 +39,5 @@ docker-compose up
   docker cp your_dump_file.dump your_db_container_name:/your_dump_file.dump
   docker-compose exec db pg_restore -U your_postgres_username -d your_database_name -1 /your_dump_file.dump
 
+  ### Ansible
+  ansible-playbook -i hosts.ini deploy.yml -u your_ssh_user --key-file=path_to_ssh_key

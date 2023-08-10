@@ -3,7 +3,7 @@ services:
   db:
     image: postgres
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/data
     environment: 
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
@@ -29,3 +29,5 @@ services:
       - web
     # volumes:
     #   - ./nginx:/usr/share/nginx/html:ro
+volumes:
+  db_data:
