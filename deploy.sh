@@ -8,7 +8,7 @@ APP_DIR="/home/deploy/app"
 # Function to execute SSH command
 execute_ssh() {
     echo "ssh command: $1"
-    ssh -t -o StrictHostKeyChecking=no "$REMOTE_USER@$REMOTE_HOST" "cd $APP_DIR; $1; exit 0"
+    ssh -t -o StrictHostKeyChecking=no "$REMOTE_USER@$REMOTE_HOST" "cd $APP_DIR; $1"
     if [ $? -ne 0 ]; then
         echo "Error executing command: $1"
         exit 1
@@ -19,7 +19,7 @@ execute_ssh() {
 execute_ssh "docker-compose down"
 
 # Pull the latest code from the git repo
-execute_ssh "git pull origin master"
+execute_ssh "source ~/.start_ssh && git pull origin master"
 
 # Build using docker-compose
 execute_ssh "docker-compose build"
