@@ -171,7 +171,8 @@ div.spacer{
 div.description{
   max-height: 60px;
   min-height: 60px;
-  overflow-y: scroll;
+  text-overflow: ellipsis;
+  text-align: center;
   & a.visit {
    float: right;
    margin: 0px;
@@ -321,7 +322,7 @@ h1, h3 {
 
 h3 {
   font-size:1.6em;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   margin-right:0px;
   border-radius:10px;
   display: block;
@@ -329,20 +330,21 @@ h3 {
   margin-bottom:0px;
   width:100%;
   height:60px;
-
+  text-align: center;
   transition: all 2s ease;
+  text-decoration: underline;
 }
 
 h3{
-  color: orange;
+  // color: orange;
 }
 
 h3 a{
-  color: orange;
+  color: rgb(33, 37, 41);
 }
 
 h3 a:hover{
-  color: orange;
+  color: rgb(33, 37, 41);
 }
 
 img.framework{
