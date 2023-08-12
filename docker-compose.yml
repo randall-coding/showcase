@@ -30,6 +30,7 @@ services:
       - web
     volumes:
       - rails_public:/home/public
+      - ./ssl:/home/ssl
 volumes:
   db_data:
   rails_public:
