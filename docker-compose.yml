@@ -13,8 +13,6 @@ services:
     volumes:
       - '.:/app'
       - rails_public:/app/public 
-    ports:
-      - '3000:3000'
     environment:
       RAILS_ENV: production
       DATABASE_URL: postgresql://db:5432/showcase_production
@@ -26,6 +24,7 @@ services:
       dockerfile: Dockerfile-Nginx
     ports:
       - "80:80"
+      - "443:443"
     depends_on: 
       - web
     volumes:
