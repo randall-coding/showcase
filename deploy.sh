@@ -15,6 +15,14 @@ execute_ssh() {
     fi
 }
 
+opt_execute_ssh() {
+    echo "(optional) ssh command: $1"
+    ssh -t -o StrictHostKeyChecking=no "$REMOTE_USER@$REMOTE_HOST" "cd $APP_DIR; $1"
+}
+
+# Clear cache
+opt_execute_ssh "docker-compose exec web rails tmp:clear"
+
 # Stop the previous docker-compose
 execute_ssh "docker-compose down"
 
@@ -27,10 +35,8 @@ execute_ssh "docker-compose build"
 # Start the services using docker-compose
 execute_ssh "docker-compose up -d"
 
-# Clear cache
-# execute_ssh "docker-compose exec web rails tmp:clear"
-
 # Start the services using docker-compose
 execute_ssh "sleep 2 && docker-compose ps"
 
-echo "Deployment complete!"
+echo ""
+echo "********Deployment complete!********"
