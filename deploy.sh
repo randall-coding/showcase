@@ -27,4 +27,7 @@ execute_ssh "docker-compose build"
 # Start the services using docker-compose
 execute_ssh "docker-compose up -d"
 
+# Clear cache
+# execute_ssh "docker-compose exec web rails tmp:clear"
+
 echo "Deployment complete!"

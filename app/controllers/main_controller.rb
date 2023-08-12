@@ -1,6 +1,6 @@
 class MainController < ApplicationController
   layout 'homepage'
-  caches_page [:index, :portfolio] unless Rails.env.development?
+  # caches_page [:index, :portfolio] unless Rails.env.development?
 
   def index
       @portfolio_items = PortfolioItem.all
