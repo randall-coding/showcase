@@ -64,9 +64,11 @@ $(document).on("turbolinks:load", function() {
       $('#zoomed-portfolio-item .loading').show()
 
       $.get( "portfolio_items/zoomed_item?id=" + id, function(response) {
+        $('#zoomed-portfolio-item .zoom-content').hide();
         $('#zoomed-portfolio-item .zoom-content').html(response)
         $('#zoomed-portfolio-item .zoom-content img').on('load', function() {
           $('#zoomed-portfolio-item .loading').hide();
+          $('#zoomed-portfolio-item .zoom-content').show();
         });
       })
         .fail(function() {
