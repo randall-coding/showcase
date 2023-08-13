@@ -8,6 +8,6 @@ class MyMailer < ApplicationMailer
     @body = message.body
     @email = message.email
     @from = message.from
-    mail to: ENV['RECEIVER_EMAIL'], subject: 'Email from Showcase'
+    mail to: Rails.application.credentials.receiver_email, subject: 'Email from Showcase'
   end
 end

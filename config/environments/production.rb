@@ -74,13 +74,17 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address:        "smtp.elasticemail.com",
-    port:            2525,
-    authentication: :plain,
-    user_name: ENV['ELASTIC_EMAIL_USERNAME'],
-    password:ENV['ELASTIC_SMTP_KEY']
+    address:        "mx-s3.vivawebhost.com",
+    port:            465,
+    authentication: :login,
+    user_name: Rails.application.credentials.email_username,
+    password:Rails.application.credentials.email_password,
+    ssl: true,
+    # tls: true,
+    open_timeout: 10,
+    read_timeout: 10,
   }
-
+  
   config.action_mailer.default_url_options = { host: 'https://www.randallcoding.com', port: 80 }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

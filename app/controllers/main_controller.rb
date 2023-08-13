@@ -14,12 +14,22 @@ class MainController < ApplicationController
       message.from  = params[:message][:from]
 
       if (message.save)
-        MyMailer.contact_me(message).deliver_later
+        MyMailer.contact_me(message).deliver_now!
         respond_to do |format|
           format.js
         end
       else
         Rails.logger.error {'Error sending and saving message'}
+      end
+
+    rescue => e 
+      Rails.logger.error {'Error sending and saving message'}
+      Rails.logger.error {e}
+      Rails.logger.error {e.backtrace.join("\n")}
+      respond_to do |format|
+        format.js { render js: "$('div.contact_window').css('display','none');
+        $('div.mask').css('display','none');
+        alert('Problem sending e-mail');" }
       end
   end
 
