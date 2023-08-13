@@ -11,9 +11,9 @@ ActiveAdmin.register PortfolioItem do
       row :position
       row :description
       row :image do |portfolio_item|
-        if portfolio_item.image.attached?
+        if portfolio_item.image?
           # Display the image using image_tag helper
-          image_tag portfolio_item.image, style: "width:200px"
+          image_tag portfolio_item.image_url, style: "width:200px"
         else
           "No image available"
         end
@@ -31,9 +31,9 @@ ActiveAdmin.register PortfolioItem do
       f.input :url
       f.input :description
       f.input :position
-      if f.object.image.attached?
+      if f.object.image?
         # Display the existing image preview
-        f.input :image, as: :file, value: f.object.image.id, hint: image_tag(f.object.image, style:"width:200px")
+        f.input :image, as: :file, value: f.object.image.id, hint: image_tag(f.object.image_url, style:"width:200px")
       else
         f.input :image, as: :file
       end    end

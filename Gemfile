@@ -45,6 +45,8 @@ gem 'actionpack-page_caching'
 gem 'image_processing', '~> 1.2'
 gem 'mini_magick'
 
+gem 'carrierwave', '~> 3.0'
+
 group :development, :test do
   gem 'awesome_print'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

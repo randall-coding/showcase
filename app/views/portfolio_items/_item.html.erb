@@ -8,7 +8,9 @@
         <p> <%= raw item.description %> </p>
       </div>
 
-      <%= image_tag item.image, class: 'border card-img-bottom w-100 portfolio_active', alt:'portfolio image of website'%>
+      <% if item.image? %> 
+        <%= image_tag item.image_url, class: 'border card-img-bottom w-100 portfolio_active', alt:'portfolio image of website'%>
+      <% end %>
     </div>
   </div>
 </div>
