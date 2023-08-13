@@ -11,10 +11,9 @@
     </div>
 
     <div class="link-container text-center">
-      <% if item.url %>
+      <% if item.url.present? %>
         <%= link_to 'See live Page!', item.url, target:"_blank" %>
       <% else %>
-        Live link not available
       <% end  %>
     </div>
     <%= link_to image_tag(item.image.variant(compress: "JPEG", quality: 50, resize: "700x600"), class: 'border w-80 mx-auto portfolio_active', alt:'portfolio image of website'), item.url, target:"_blank" %>
