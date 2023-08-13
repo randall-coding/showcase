@@ -20,9 +20,6 @@ opt_execute_ssh() {
     ssh -t -o StrictHostKeyChecking=no "$REMOTE_USER@$REMOTE_HOST" "cd $APP_DIR; $1"
 }
 
-# Clear cache
-opt_execute_ssh "docker-compose exec web rails tmp:clear"
-
 # Stop the previous docker-compose
 execute_ssh "docker-compose down"
 
