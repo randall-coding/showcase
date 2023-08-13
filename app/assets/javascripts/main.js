@@ -1,5 +1,7 @@
 $(document).on("turbolinks:load", function() {
     var changeTabColor, increment, nextSlide, nextSlide2, nextSlide_old;
+
+    // Fade in header
     $('nav.header').children().css('opacity', 0);
     $('nav.header').animate({
       opacity: 1.0
@@ -12,11 +14,8 @@ $(document).on("turbolinks:load", function() {
         }, 1000)
       });
     });
-
-    $('#btn-profile').on('click', function() {
-      return toggleMoustache();
-    });
-
+    
+    // Show contact widget
     $('#contact').on('click', function() {
       var contact_window, pos, scroll;
       $('textarea').val('');
@@ -33,6 +32,7 @@ $(document).on("turbolinks:load", function() {
       return $('textarea').focus();
     });
 
+    // Close contact widget
     $('#cancel').on('click', function(e) {
       $('div.contact_window').css('display', 'none');
       $('div.contact_window').css('opacity', 0);
@@ -40,6 +40,7 @@ $(document).on("turbolinks:load", function() {
       return e.preventDefault();
     });
 
+    // Change tabs
     $('.my-tabs').on('click', function(e) {
       changeTabColor($(e.target));
         content = $('div.content');
@@ -55,7 +56,7 @@ $(document).on("turbolinks:load", function() {
         })
     });
 
-    // Zoom portfolio item
+    // Zoom in portfolio item
     $('.portfolio-container .portfolio_item').click(function(e){
       var id = e.currentTarget.dataset.id;
       $('#zoomed-portfolio-item .zoom-content').html('')
@@ -63,8 +64,10 @@ $(document).on("turbolinks:load", function() {
       $('#zoomed-portfolio-item .loading').show()
 
       $.get( "portfolio_items/zoomed_item?id=" + id, function(response) {
-        $('#zoomed-portfolio-item .loading').hide()
         $('#zoomed-portfolio-item .zoom-content').html(response)
+        $('#zoomed-portfolio-item .zoom-content img').on('load', function() {
+          $('#zoomed-portfolio-item .loading').hide();
+        });
       })
         .fail(function() {
           console.log("Javascript error on portfolio-item click");
