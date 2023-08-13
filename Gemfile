@@ -42,6 +42,8 @@ gem 'bootstrap', '4.6.0'
 gem 'activeadmin'
 gem 'devise'
 gem 'actionpack-page_caching'
+gem 'image_processing', '~> 1.2'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'awesome_print'

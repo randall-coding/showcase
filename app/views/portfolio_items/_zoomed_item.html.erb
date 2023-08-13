@@ -17,6 +17,6 @@
         Live link not available
       <% end  %>
     </div>
-    <%= link_to image_tag(item.image, class: 'border w-80 mx-auto portfolio_active', alt:'portfolio image of website'), item.url, target:"_blank" %>
+    <%= link_to image_tag(item.image.variant(compress: "JPEG", quality: 50, resize: "700x600"), class: 'border w-80 mx-auto portfolio_active', alt:'portfolio image of website'), item.url, target:"_blank" %>
   </div>
 </div>
