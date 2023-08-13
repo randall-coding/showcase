@@ -27,7 +27,7 @@ opt_execute_ssh "docker-compose exec web rails tmp:clear"
 execute_ssh "docker-compose down"
 
 # Pull the latest code from the git repo
-execute_ssh "source ~/.start_ssh && git pull origin master"
+execute_ssh "source ~/.start_ssh && git fetch origin && git reset --hard origin/master && git pull origin master"
 
 # Build using docker-compose
 execute_ssh "docker-compose build"
