@@ -31,6 +31,7 @@ RUN yarn install --check-files
 COPY . ./
 
 # Precompile Rails assets
+RUN RAILS_ENV=production bundle exec rake assets:clean
 RUN RAILS_ENV=production bundle exec rake assets:precompile
 
 # Expose port 3000 to the Docker host, so we can access it
