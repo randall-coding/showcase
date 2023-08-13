@@ -16,6 +16,9 @@ RUN node -v
 
 RUN apt-get update -qq && apt-get install -y build-essential nodejs yarn
 
+RUN apt install libmagickwand-dev -y -qq
+RUN apt install imagemagick -y -qq
+
 # Copy the Gemfile as well as the Gemfile.lock and install
 # the RubyGems. This is a separate step so the dependencies
 # will be cached unless changes to one of those two files
@@ -30,10 +33,6 @@ RUN yarn install --check-files
 # Copy the main application.
 COPY . ./
 
-# Precompile Rails assets
-RUN RAILS_ENV=production bundle exec rake assets:clean
-RUN RAILS_ENV=production bundle exec rake assets:precompile
-
 # Expose port 3000 to the Docker host, so we can access it
 # from the outside.
 EXPOSE 3000:3000
@@ -41,4 +40,8 @@ EXPOSE 3000:3000
 # The main command to run when the container starts. Also
 # tell the Rails dev server to bind to all interfaces by
 # default.
-CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
+# CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
+
+RUN chmod 777 ./entrypoint.sh
+RUN chmod +x ./entrypoint.sh
+ENTRYPOINT [ "bash", "-c", "./entrypoint.sh" ]

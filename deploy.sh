@@ -29,6 +29,9 @@ execute_ssh "docker-compose down"
 # Pull the latest code from the git repo
 execute_ssh "source ~/.start_ssh && git fetch origin && git reset --hard origin/master && git pull origin master"
 
+# Fix permissions
+execute_ssh "chmod 777 ./entrypoint.sh"
+
 # Build using docker-compose
 execute_ssh "docker-compose build"
 
