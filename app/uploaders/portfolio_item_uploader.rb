@@ -28,7 +28,7 @@ class PortfolioItemUploader < CarrierWave::Uploader::Base
 
   def compress
     manipulate! do |img|
-      img.quality("50") # Adjust the quality value (0 to 100) as per your requirement
+      img.quality("75") # Adjust the quality value (0 to 100) as per your requirement
       img = yield(img) if block_given?
       img
     end
