@@ -1,20 +1,22 @@
-<div class="contact_me">
-   <h2 class='center-text center'> Send me an email </h2>
-   <%= form_for @message , url: contact_send_url, html: {class: 'contact_form'}, remote:true do |f| %>
-     <%= f.text_area :body, class:'form-control', required:true %>
-     <table class="contact_me">
-       <tr>
-         <td> Full Name</td>
-         <td> Email Address </td>
-       </tr>
-       <tr>
-         <td> <%= f.text_field :from, class:'form-control  mx-auto', required:true %> </td>
-         <td> <%= f.text_field :email, class:'form-control mx-auto', required:true %></td>
-       </tr>
-     </table>
-     <div class="sendbtn-container">
-       <button id='cancel' class="btn btn-light ml-2 border"> Cancel </button>
-       <%= f.submit 'Send message' , class:"btn btn-light border"%>
-     </div>
-   <% end %>
-</div> <!-- contact_me -->
+<div>
+  <h2 class='center-text center'> Send me an email </h2>
+  <div class="contact_me">
+    <%= form_for @message , url: contact_send_url, html: {class: 'contact_form'}, remote:true do |f| %>
+      <%= f.text_area :body, class:'form-control', required:true %>
+      <table class="contact_me">
+        <tr>
+          <td> Full Name</td>
+          <td> Email Address </td>
+        </tr>
+        <tr>
+          <td> <%= f.text_field :from, class:'form-control  mx-auto', required:true %> </td>
+          <td> <%= f.text_field :email, class:'form-control mx-auto', required:true %></td>
+        </tr>
+      </table>
+      <div class="sendbtn-container">
+        <%= f.submit 'Send message' , class:"btn btn-light border"%>
+        <button id='cancel' class="btn btn-light ml-2 border"> Cancel </button>
+      </div>
+    <% end %>
+  </div> <!-- contact_me -->
+</div>

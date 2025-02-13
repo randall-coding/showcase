@@ -129,10 +129,10 @@ div.contact_window{
     @include roundborder(10px);
     border: 3px solid black;
     position:absolute;
-    width: 60%;
+    width: 50%;
     min-width:700px;
     height: 556px;
-    left:20%;
+    left:25%;
     top: 100px;
     z-index:10;
     display: none;
@@ -152,6 +152,9 @@ div.sendbtn-container{
   margin-top:10px;
   float:right;
   padding-right:10px;
+  display: flex;
+  justify-content: end;
+  gap: 5px;
   & input, button{
     float:right;
   }
