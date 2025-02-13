@@ -31,13 +31,16 @@ docker run -p 3000:3000 showcase
 
 docker-compose up
 
-  ### Create database
-  docker-compose exec web rails db:create
-  docker-compose exec web rails db:migrate
-  
-  ### Copy database 
-  docker cp your_dump_file.dump your_db_container_name:/your_dump_file.dump
-  docker-compose exec db pg_restore -U your_postgres_username -d your_database_name -1 /your_dump_file.dump
+### Create database
+docker-compose exec web rails db:create
+docker-compose exec web rails db:migrate
 
-  ### Ansible
-  ansible-playbook -i hosts.ini deploy.yml -u your_ssh_user --key-file=path_to_ssh_key
+### Copy database 
+docker cp your_dump_file.dump your_db_container_name:/your_dump_file.dump
+docker-compose exec db pg_restore -U your_postgres_username -d your_database_name -1 /your_dump_file.dump
+
+### Ansible
+ansible-playbook -i hosts.ini deploy.yml -u your_ssh_user --key-file=path_to_ssh_key
+
+## Deploy
+bash deploy.sh
